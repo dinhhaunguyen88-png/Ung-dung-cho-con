@@ -42,9 +42,47 @@
                     "avatar_color",
                     "xp",
                     "level",
+                    "role",
+                    "email",
+                    "password_hash",
                     "created_at"
                 ],
-                "description": "Thông tin học sinh: tên, loại pet, XP tích lũy"
+                "description": "Thông tin học sinh/giáo viên: tên, email, role, XP tích lũy"
+            },
+            {
+                "name": "classes",
+                "columns": [
+                    "id",
+                    "name",
+                    "teacher_id",
+                    "join_code",
+                    "created_at"
+                ],
+                "description": "Lớp học do giáo viên quản lý"
+            },
+            {
+                "name": "class_members",
+                "columns": [
+                    "id",
+                    "class_id",
+                    "user_id",
+                    "joined_at"
+                ],
+                "description": "Danh sách học sinh trong lớp (N:N)"
+            },
+            {
+                "name": "assignments",
+                "columns": [
+                    "id",
+                    "class_id",
+                    "title",
+                    "subject",
+                    "topic",
+                    "question_count",
+                    "due_date",
+                    "created_at"
+                ],
+                "description": "Bài tập giao cho lớp"
             },
             {
                 "name": "progress",
@@ -74,7 +112,7 @@
                 "description": "Pet config: loại (dragon/cat/dog/bunny), màu, phụ kiện"
             }
         ],
-        "relationships_explained": "1 user có 1 pet (1:1). 1 user có nhiều progress records (1:N). questions table chứa CSDL trắc nghiệm song ngữ."
+        "relationships_explained": "1 user có 1 pet (1:1). 1 teacher có nhiều classes. 1 class có nhiều students (via class_members). 1 class có nhiều assignments. questions table chứa CSDL trắc nghiệm song ngữ."
     },
     "api_endpoints": [
         {
@@ -164,6 +202,15 @@
             "status": "done",
             "description": "Nạp toàn bộ 110 câu hỏi (Toán + Tiếng Việt, Tập 1 + Tập 2) lên Supabase, fully JSON formats với AI distractors.",
             "files": []
+        },
+        {
+            "name": "Teacher Mode (Phase 2)",
+            "status": "in-progress",
+            "description": "Cho phép giáo viên tạo lớp, giao bài tập, và theo dõi tiến độ của học sinh.",
+            "files": [
+                "migrations/001_phase2_teacher_classes.sql",
+                "src/types/teacher.ts"
+            ]
         }
     ],
     "file_structure": {

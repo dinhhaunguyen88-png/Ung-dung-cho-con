@@ -1,5 +1,19 @@
 # Changelog
 
+## [2026-03-10] — Phase 2 Expansion (Teacher Mode & English) 🚀
+
+### Added
+- **Database Migration**: `migrations/001_phase2_teacher_classes.sql` cho Supabase (roles, classes, assignments)
+- **Teacher Types**: `src/types/teacher.ts` với đầy đủ interfaces cho Class, Assignment, Teacher Auth
+- **Screen Types**: Thêm 4 screens mới (`teacher-login`, `teacher-register`, `teacher-dashboard`, `join-class`)
+
+### Changed
+- **Cleanup**: Xóa 20+ file tạm (*.py, raw.json, test_*.mjs) để làm sạch project
+- **Supabase Sync**: Sửa lỗi kiểu dữ liệu UUID cho user references trong schema mới
+- **Local DB**: Đồng bộ SQLite schema tại `src/server/db.ts` với Supabase Phase 2
+
+---
+
 ## [2026-02-26] — MVP Release 🎉
 
 ### Added
