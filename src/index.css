@@ -12,12 +12,41 @@
   --color-dragon-orange: #ff7e47;
   --color-cloud-blue: #e0f2fe;
   --color-quest-purple: #f3e8ff;
+  
+  /* Additional Premium Colors */
+  --glow-primary: rgba(48, 232, 110, 0.4);
+  --glass-white: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
 }
 
 @layer base {
   body {
-    @apply bg-background-light font-sans text-slate-900;
+    @apply bg-background-light font-sans text-slate-900 selection:bg-primary/30;
   }
+}
+
+/* Glassmorphism Utilities */
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-xl;
+}
+
+.glass-accent {
+  @apply bg-primary/10 backdrop-blur-sm border border-primary/20;
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 20px var(--glow-primary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
 }
 
 .material-symbols-outlined {
@@ -35,6 +64,17 @@
 
 .island-float {
   animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-move 5s ease infinite;
 }
 
 @keyframes ripple {

@@ -1,0 +1,152 @@
+{
+    "app": {
+        "name": "Math Buddy",
+        "title": "Math Buddy — Your Math Friend"
+    },
+    "nav": {
+        "home": "Home",
+        "learning": "Learning",
+        "petRoom": "Pet Room",
+        "parents": "Parents",
+        "leaderboard": "Leaderboard"
+    },
+    "dashboard": {
+        "level": "Level {{level}}",
+        "levelTitle": "Math Explorer",
+        "experience": "Experience",
+        "xpProgress": "{{current}} / {{max}} XP",
+        "sidebar": {
+            "dashboard": "Dashboard",
+            "curriculum": "Curriculum (CTST)",
+            "achievements": "Achievements",
+            "petShop": "Pet Shop"
+        },
+        "promo": {
+            "newArrival": "New Arrival",
+            "dragonWings": "Dragon Wings Decoration",
+            "viewShop": "View Shop"
+        },
+        "pet": {
+            "name": "Sparky",
+            "type": "Fire Dragon",
+            "hunger": "Hunger",
+            "happiness": "Happiness",
+            "feed": "Feed",
+            "play": "Play"
+        },
+        "activity": {
+            "currentChapter": "Current Chapter",
+            "numbersTo1000": "Numbers up to 1000",
+            "continueLesson": "Continue Lesson",
+            "mathPractice": "Math Practice",
+            "addSubtract": "Add, Sub, Mult, Div",
+            "startTraining": "Start Training",
+            "vietnamesePractice": "Vietnamese Practice",
+            "readingWriting": "Reading & Vocabulary"
+        },
+        "quest": {
+            "dailyQuest": "Daily Quest",
+            "completeToEarn": "Complete tasks to earn treats!",
+            "quickAddition": "Quick Addition",
+            "shapeHunter": "Shape Hunter",
+            "morningMath": "Morning Math",
+            "done": "Done",
+            "showAll": "Show All Tasks"
+        },
+        "tip": {
+            "title": "Tip of the Day",
+            "content": "Try counting by 10s! It makes adding big numbers much faster and easier."
+        }
+    },
+    "learning": {
+        "questProgress": "Quest Progress",
+        "solved": "{{current}} / {{total}} Solved",
+        "moreToEarn": "{{count}} more correct answers to earn a '{{reward}}'!",
+        "question": "Question {{number}}",
+        "chooseCorrect": "Choose the tasty fruit with the correct answer!",
+        "encouragement": "You can do it! 🐾",
+        "quitLesson": "Quit Lesson",
+        "skip": "Skip",
+        "nextQuestion": "Next Question",
+        "tryAgain": "Try again! {{a}} + {{b}} = {{answer}}",
+        "errorFetch": "Error loading questions. Please tap 'Try again'!"
+    },
+    "petRoom": {
+        "title": "Pet Dressing Room",
+        "breadcrumb": "Dashboard",
+        "petCare": "Pet Care",
+        "happiness": "Happiness",
+        "energy": "Energy",
+        "diary": "Pet Diary",
+        "diaryContent": "{{name}} is feeling <1>Great</1> today! You have answered <3>15 math questions</3> correctly this week to keep him happy. {{name}}'s favorite food is <5>Magic Apples</5>.",
+        "wardrobe": "Wardrobe",
+        "pantry": "Pantry",
+        "toys": "Toys",
+        "accessories": "Accessories ({{count}})",
+        "drag": "DRAG",
+        "solve20More": "Solve 20 More",
+        "level15": "Level 15",
+        "foodSnacks": "Food & Snacks ({{count}})",
+        "visitPetShop": "Visit Pet Shop"
+    },
+    "parentReport": {
+        "title": "Parent Progress Report",
+        "subtitle": "Tracking Grade 2 Math Journey • Term 1, 2024",
+        "studentName": "Nguyễn Minh Anh",
+        "levelExplorer": "Level: Explorer (Grade 2)",
+        "questsCompleted": "{{count}} Quests Completed",
+        "viewStats": "View Detailed Stats",
+        "learningProgress": "Learning Progress",
+        "complete": "Complete",
+        "numbersTo1000": "Numbers to 1000",
+        "geometryMeasurement": "Geometry & Measurement",
+        "performanceAnalysis": "Performance Analysis",
+        "keyStrengths": "Key Strengths",
+        "focusAreas": "Focus Areas",
+        "additionWithin100": "Addition within 100",
+        "comparingLengths": "Comparing Lengths",
+        "advanced": "Advanced",
+        "identifyingCylinders": "Identifying Cylinders",
+        "practiceRecommended": "Practice recommended",
+        "subtractionRegrouping": "Subtraction with Regrouping",
+        "videoSuggested": "Video tutorial suggested",
+        "recentActivity": "Recent Activity",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "score": "Score: {{score}}",
+        "reward": "Reward: {{reward}}",
+        "viewAll": "View All Activity",
+        "recommendation": "Minh Anh is performing above average for Grade 2. To further improve, encourage focusing on the <1>Geometry</1> section this week."
+    },
+    "celebration": {
+        "congratulations": "Congratulations {{name}}!",
+        "weeklyGoal": "You completed the weekly goal:",
+        "achievement": "{{count}} addition problems!",
+        "specialGift": "Special Gift",
+        "parentReward": "Reward from Parents:",
+        "movieTrip": "Movie trip this weekend!",
+        "awesome": "Awesome!",
+        "continueJourney": "Tap to continue your journey"
+    },
+    "common": {
+        "settings": "Settings",
+        "language": "Language",
+        "readAloud": "Read aloud",
+        "stopReading": "Stop reading"
+    },
+    "setup": {
+        "welcome": "Welcome!",
+        "subtitle": "Let's create your profile to start your math journey.",
+        "nameLabel": "What is your name?",
+        "namePlaceholder": "Enter your name...",
+        "choosePet": "Choose your Pet companion",
+        "chooseColor": "Choose a favorite color",
+        "startReady": "Ready to learn!",
+        "pets": {
+            "dragon": "Dragon",
+            "cat": "Cat",
+            "dog": "Dog",
+            "bunny": "Bunny"
+        }
+    }
+}

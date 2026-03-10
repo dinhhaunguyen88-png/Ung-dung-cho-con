@@ -6,3 +6,12 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Brain context
+.brain/session.json
+.brain/session_log.txt
+data/
+
+# Temp/scratch files
+*.pyc
+__pycache__/

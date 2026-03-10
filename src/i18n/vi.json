@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Math Buddy",
+    "title": "Math Buddy — Bạn Học Toán"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "learning": "Học tập",
+    "petRoom": "Phòng Pet",
+    "parents": "Phụ huynh",
+    "leaderboard": "Xếp hạng"
+  },
+  "dashboard": {
+    "level": "Cấp {{level}}",
+    "levelTitle": "Nhà Toán Học Nhí",
+    "experience": "Kinh nghiệm",
+    "xpProgress": "{{current}} / {{max}} XP",
+    "sidebar": {
+      "dashboard": "Bảng điều khiển",
+      "curriculum": "Chương trình (CTST)",
+      "achievements": "Thành tích",
+      "petShop": "Cửa hàng Pet"
+    },
+    "promo": {
+      "newArrival": "Mới về",
+      "dragonWings": "Đôi cánh Rồng Lửa",
+      "viewShop": "Xem cửa hàng"
+    },
+    "pet": {
+      "name": "Sparky",
+      "type": "Rồng Lửa",
+      "hunger": "Đói bụng",
+      "happiness": "Vui vẻ",
+      "feed": "Cho ăn",
+      "play": "Chơi"
+    },
+    "activity": {
+      "currentChapter": "Chương hiện tại",
+      "numbersTo1000": "Các số đến 1000",
+      "continueLesson": "Tiếp tục học",
+      "mathPractice": "Luyện Toán",
+      "addSubtract": "Cộng, trừ, nhân, chia",
+      "startTraining": "Bắt đầu luyện tập",
+      "vietnamesePractice": "Luyện Tiếng Việt",
+      "readingWriting": "Đọc, viết & Từ vựng"
+    },
+    "quest": {
+      "dailyQuest": "Nhiệm vụ hàng ngày",
+      "completeToEarn": "Hoàn thành nhiệm vụ để nhận thưởng!",
+      "quickAddition": "Cộng nhanh",
+      "shapeHunter": "Tìm hình",
+      "morningMath": "Toán buổi sáng",
+      "done": "Xong",
+      "showAll": "Xem tất cả nhiệm vụ"
+    },
+    "tip": {
+      "title": "Mẹo trong ngày",
+      "content": "Thử đếm theo 10! Nó giúp cộng số lớn nhanh hơn và dễ hơn nhiều."
+    }
+  },
+  "learning": {
+    "questProgress": "Tiến trình nhiệm vụ",
+    "solved": "{{current}} / {{total}} đã giải",
+    "moreToEarn": "Thêm {{count}} câu đúng nữa để nhận '{{reward}}'!",
+    "question": "Câu hỏi {{number}}",
+    "chooseCorrect": "Chọn quả có đáp án đúng!",
+    "encouragement": "Con làm được! 🐾",
+    "quitLesson": "Thoát bài",
+    "skip": "Bỏ qua",
+    "nextQuestion": "Câu tiếp theo",
+    "tryAgain": "Thử lại! {{a}} + {{b}} = {{answer}}",
+    "errorFetch": "Lỗi khi lấy câu hỏi. Con thử nhấn nút 'Thử lại' nhé!"
+  },
+  "petRoom": {
+    "title": "Phòng thay đồ Pet",
+    "breadcrumb": "Bảng điều khiển",
+    "petCare": "Chăm sóc Pet",
+    "happiness": "Vui vẻ",
+    "energy": "Năng lượng",
+    "diary": "Nhật ký Pet",
+    "diaryContent": "{{name}} hôm nay cảm thấy <1>Tuyệt vời</1>! Con đã trả lời đúng <3>15 câu toán</3> tuần này để giữ bạn ấy vui. Món ăn yêu thích của {{name}} là <5>Táo Phép thuật</5>.",
+    "wardrobe": "Tủ đồ",
+    "pantry": "Kho thức ăn",
+    "toys": "Đồ chơi",
+    "accessories": "Phụ kiện ({{count}})",
+    "drag": "KÉO",
+    "solve20More": "Giải thêm 20 bài",
+    "level15": "Cấp 15",
+    "foodSnacks": "Thức ăn & Đồ ăn vặt ({{count}})",
+    "visitPetShop": "Ghé cửa hàng Pet"
+  },
+  "parentReport": {
+    "title": "Báo cáo tiến trình cho Phụ huynh",
+    "subtitle": "Theo dõi hành trình Toán Lớp 2 • Học kỳ 1, 2024",
+    "studentName": "Nguyễn Minh Anh",
+    "levelExplorer": "Cấp: Nhà Thám Hiểm (Lớp 2)",
+    "questsCompleted": "{{count}} Nhiệm vụ đã hoàn thành",
+    "viewStats": "Xem thống kê chi tiết",
+    "learningProgress": "Tiến trình học tập",
+    "complete": "Hoàn thành",
+    "numbersTo1000": "Số đến 1000",
+    "geometryMeasurement": "Hình học & Đo lường",
+    "performanceAnalysis": "Phân tích hiệu suất",
+    "keyStrengths": "Điểm mạnh",
+    "focusAreas": "Cần cải thiện",
+    "additionWithin100": "Cộng trong phạm vi 100",
+    "comparingLengths": "So sánh độ dài",
+    "advanced": "Nâng cao",
+    "identifyingCylinders": "Nhận biết hình trụ",
+    "practiceRecommended": "Cần luyện tập thêm",
+    "subtractionRegrouping": "Trừ có nhớ",
+    "videoSuggested": "Gợi ý xem video hướng dẫn",
+    "recentActivity": "Hoạt động gần đây",
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "score": "Điểm: {{score}}",
+    "reward": "Phần thưởng: {{reward}}",
+    "viewAll": "Xem tất cả hoạt động",
+    "recommendation": "Minh Anh học giỏi hơn mức trung bình Lớp 2. Để tiến bộ hơn, hãy khuyến khích bé tập trung vào phần <1>Hình học</1> trong tuần này."
+  },
+  "celebration": {
+    "congratulations": "Chúc mừng {{name}}!",
+    "weeklyGoal": "Con đã hoàn thành mục tiêu hàng tuần:",
+    "achievement": "{{count}} bài toán cộng!",
+    "specialGift": "Món Quà Đặc Biệt",
+    "parentReward": "Thưởng từ Ba Mẹ:",
+    "movieTrip": "Đi xem phim cuối tuần!",
+    "awesome": "Tuyệt vời!",
+    "continueJourney": "Nhấn để tiếp tục hành trình"
+  },
+  "common": {
+    "settings": "Cài đặt",
+    "language": "Ngôn ngữ",
+    "readAloud": "Đọc to",
+    "stopReading": "Dừng đọc"
+  },
+  "setup": {
+    "welcome": "Chào mừng con!",
+    "subtitle": "Hãy cùng tạo hồ sơ để bắt đầu hành trình toán học nhé.",
+    "nameLabel": "Tên của con là gì?",
+    "namePlaceholder": "Nhập tên của con...",
+    "choosePet": "Chọn bạn Pet đồng hành",
+    "chooseColor": "Chọn màu yêu thích",
+    "startReady": "Sẵn sàng học thôi!",
+    "pets": {
+      "dragon": "Rồng",
+      "cat": "Mèo",
+      "dog": "Chó",
+      "bunny": "Thỏ"
+    }
+  }
+}
