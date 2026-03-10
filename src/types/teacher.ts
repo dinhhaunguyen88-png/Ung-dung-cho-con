@@ -11,7 +11,7 @@ export type UserRole = 'student' | 'teacher';
 export interface ClassData {
     id: string;
     name: string;
-    teacher_id: number;
+    teacher_id: string;
     join_code: string;
     created_at?: string;
 }
@@ -24,7 +24,7 @@ export interface ClassWithMembers extends ClassData {
 export interface ClassMember {
     id: string;
     class_id: string;
-    user_id: number;
+    user_id: string;
     joined_at?: string;
     // Joined user data (from query)
     user_name?: string;
@@ -68,7 +68,7 @@ export interface TeacherRegisterRequest {
 
 export interface TeacherAuthResponse {
     user: {
-        id: number;
+        id: string;
         name: string;
         email: string;
         role: UserRole;
@@ -82,7 +82,7 @@ export interface TeacherAuthResponse {
 // ─── Student Progress (Teacher View) ─────────────────
 
 export interface StudentProgressSummary {
-    user_id: number;
+    user_id: string;
     user_name: string;
     user_avatar: string;
     user_avatar_color: string;

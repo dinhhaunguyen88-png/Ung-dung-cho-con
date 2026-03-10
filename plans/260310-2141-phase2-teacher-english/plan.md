@@ -45,7 +45,7 @@ Mở rộng Math Buddy thêm 2 tính năng lớn:
 | Phase | Name | Status | Tasks | Est. |
 |-------|------|--------|-------|------|
 | 01 | Git Cleanup & Housekeeping | ✅ Complete | 4 | 30 min |
-| 02 | Database Schema Extension | ⬜ Pending | 6 | 1 session |
+| 02 | Database Schema Extension | ✅ Complete | 6 | 1 session |
 | 03 | Teacher Auth & Roles | ⬜ Pending | 7 | 1 session |
 | 04 | Teacher Dashboard & Class Mgmt | ⬜ Pending | 9 | 2 sessions |
 | 05 | Assignment & Progress Tracking | ⬜ Pending | 8 | 1-2 sessions |
