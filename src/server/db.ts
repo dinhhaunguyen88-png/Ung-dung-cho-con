@@ -26,6 +26,9 @@ try {
       avatar_color TEXT DEFAULT '#30e86e',
       xp INTEGER DEFAULT 0,
       level INTEGER DEFAULT 1,
+      role TEXT DEFAULT 'student',
+      email TEXT,
+      password_hash TEXT,
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
@@ -58,6 +61,33 @@ try {
       content TEXT NOT NULL, -- JSON: { questionText, questionReadText }
       choices TEXT NOT NULL, -- JSON: [ { id, value, label } ]
       correct_answer_id INTEGER NOT NULL,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE TABLE IF NOT EXISTS classes (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      teacher_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+      join_code TEXT UNIQUE NOT NULL,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE TABLE IF NOT EXISTS class_members (
+      id TEXT PRIMARY KEY,
+      class_id TEXT REFERENCES classes(id) ON DELETE CASCADE,
+      user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+      joined_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      UNIQUE(class_id, user_id)
+    );
+
+    CREATE TABLE IF NOT EXISTS assignments (
+      id TEXT PRIMARY KEY,
+      class_id TEXT REFERENCES classes(id) ON DELETE CASCADE,
+      title TEXT NOT NULL,
+      subject TEXT NOT NULL DEFAULT 'math',
+      topic TEXT,
+      question_count INTEGER DEFAULT 5,
+      due_date DATETIME,
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );
   `);
