@@ -55,13 +55,25 @@ export function usePet(userId?: string | null) {
         getPet(userId)
             .then((serverPet) => {
                 if (cancelled) return;
+                const parseAccessories = (data: any): string[] => {
+                    if (!data) return DEFAULT_PET.equippedAccessories;
+                    if (Array.isArray(data)) return data;
+                    if (typeof data === 'string') {
+                        try {
+                            const parsed = JSON.parse(data);
+                            return Array.isArray(parsed) ? parsed : [data];
+                        } catch {
+                            return [data];
+                        }
+                    }
+                    return DEFAULT_PET.equippedAccessories;
+                };
+
                 const config: PetConfig = {
                     type: (serverPet.type as PetType) || DEFAULT_PET.type,
                     name: serverPet.name || DEFAULT_PET.name,
                     color: serverPet.color || DEFAULT_PET.color,
-                    equippedAccessories: serverPet.accessories
-                        ? JSON.parse(serverPet.accessories)
-                        : DEFAULT_PET.equippedAccessories,
+                    equippedAccessories: parseAccessories(serverPet.accessories),
                     xp: serverPet.xp ?? 0,
                     level: serverPet.level ?? 1,
                 };

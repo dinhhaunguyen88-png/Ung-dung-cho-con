@@ -179,7 +179,13 @@ export function LearningQuest({
                         {t('learning.question', { number: currentIndex + 1 })}
                     </h3>
                     <div className="mb-6 flex items-center justify-center gap-4">
-                        <h1 className="text-6xl font-black text-slate-900 drop-shadow-sm md:text-8xl">
+                        <h1 className={`font-black text-slate-900 drop-shadow-sm ${
+                            (localizedContent.questionText?.length || 0) > 30
+                                ? 'text-xl md:text-2xl leading-relaxed'
+                                : (localizedContent.questionText?.length || 0) > 15
+                                    ? 'text-3xl md:text-4xl'
+                                    : 'text-6xl md:text-8xl'
+                        }`}>
                             {localizedContent.questionText}
                         </h1>
                         <SpeakerButton

@@ -42,7 +42,9 @@
       "addSubtract": "Cộng, trừ, nhân, chia",
       "startTraining": "Bắt đầu luyện tập",
       "vietnamesePractice": "Luyện Tiếng Việt",
-      "readingWriting": "Đọc, viết & Từ vựng"
+      "readingWriting": "Đọc, viết & Từ vựng",
+      "englishPractice": "Luyện Tiếng Anh",
+      "vocabGrammar": "Từ vựng & Ngữ pháp"
     },
     "quest": {
       "dailyQuest": "Nhiệm vụ hàng ngày",
@@ -50,6 +52,7 @@
       "quickAddition": "Cộng nhanh",
       "shapeHunter": "Tìm hình",
       "morningMath": "Toán buổi sáng",
+      "vocabBuilder": "Tập từ vựng",
       "done": "Xong",
       "showAll": "Xem tất cả nhiệm vụ"
     },
@@ -106,6 +109,7 @@
     "additionWithin100": "Cộng trong phạm vi 100",
     "comparingLengths": "So sánh độ dài",
     "advanced": "Nâng cao",
+    "intermediate": "Trung bình",
     "identifyingCylinders": "Nhận biết hình trụ",
     "practiceRecommended": "Cần luyện tập thêm",
     "subtractionRegrouping": "Trừ có nhớ",
@@ -116,7 +120,9 @@
     "score": "Điểm: {{score}}",
     "reward": "Phần thưởng: {{reward}}",
     "viewAll": "Xem tất cả hoạt động",
-    "recommendation": "Minh Anh học giỏi hơn mức trung bình Lớp 2. Để tiến bộ hơn, hãy khuyến khích bé tập trung vào phần <1>Hình học</1> trong tuần này."
+    "recommendation": "Minh Anh học giỏi hơn mức trung bình Lớp 2. Để tiến bộ hơn, hãy khuyến khích bé tập trung vào phần <1>Hình học</1> trong tuần này.",
+    "englishVocabulary": "Từ vựng Tiếng Anh",
+    "englishGrammar": "Ngữ pháp Tiếng Anh"
   },
   "celebration": {
     "congratulations": "Chúc mừng {{name}}!",
@@ -142,11 +148,98 @@
     "choosePet": "Chọn bạn Pet đồng hành",
     "chooseColor": "Chọn màu yêu thích",
     "startReady": "Sẵn sàng học thôi!",
+    "teacherLink": "Bạn là giáo viên?",
+    "teacherLinkAction": "Đăng nhập tại đây",
     "pets": {
       "dragon": "Rồng",
       "cat": "Mèo",
       "dog": "Chó",
       "bunny": "Thỏ"
     }
+  },
+  "teacherAuth": {
+    "loginTitle": "Đăng nhập Giáo viên",
+    "loginSubtitle": "Quản lý lớp học và theo dõi tiến trình học sinh",
+    "registerTitle": "Đăng ký Giáo viên",
+    "registerSubtitle": "Tạo tài khoản để quản lý lớp học",
+    "name": "Họ và tên",
+    "namePlaceholder": "Nguyễn Văn A",
+    "email": "Email",
+    "emailPlaceholder": "giaovien@school.edu.vn",
+    "password": "Mật khẩu",
+    "passwordPlaceholder": "Tối thiểu 6 ký tự",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "confirmPlaceholder": "Nhập lại mật khẩu",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "noAccount": "Chưa có tài khoản?",
+    "registerHere": "Đăng ký ngay",
+    "hasAccount": "Đã có tài khoản?",
+    "loginHere": "Đăng nhập",
+    "backToStudent": "Quay lại trang học sinh",
+    "loading": "Đang xử lý...",
+    "passwordMismatch": "Mật khẩu không khớp",
+    "passwordTooShort": "Mật khẩu phải có ít nhất 6 ký tự"
+  },
+  "teacherDashboard": {
+    "title": "Bảng điều khiển Giáo viên",
+    "welcome": "Xin chào, {{name}}!",
+    "comingSoon": "Đang phát triển...",
+    "classes": "Lớp học của tôi",
+    "createClass": "Tạo lớp mới",
+    "className": "Tên lớp",
+    "classNamePlaceholder": "Ví dụ: Lớp 2A",
+    "noClasses": "Bạn chưa có lớp học nào. Hãy tạo một lớp để bắt đầu!",
+    "membersCount": "{{count}} học sinh",
+    "joinCode": "Mã tham gia",
+    "viewMembers": "Xem danh sách",
+    "deleteClass": "Xóa lớp",
+    "confirmDeleteClass": "Bạn có chắc chắn muốn xóa lớp này?",
+    "studentList": "Danh sách học sinh — {{className}}",
+    "noMembers": "Chưa có học sinh nào tham gia lớp này.",
+    "removeMember": "Xóa khỏi lớp",
+    "backToClasses": "Quay lại danh sách lớp"
+  },
+  "joinClass": {
+    "title": "Tham gia lớp học",
+    "subtitle": "Nhập mã từ giáo viên để vào lớp",
+    "codeLabel": "Mã tham gia (6 ký tự)",
+    "codePlaceholder": "ABC123",
+    "submit": "Tham gia ngay",
+    "success": "Chúc mừng! Bạn đã tham gia lớp {{className}}",
+    "alreadyIn": "Bạn đã ở trong lớp này rồi",
+    "invalidCode": "Mã tham gia không chính xác",
+    "backToDashboard": "Quay lại Bảng điều khiển"
+  },
+  "assignments": {
+    "title": "Bài tập",
+    "create": "Giao bài mới",
+    "assignmentTitle": "Tiêu đề bài tập",
+    "titlePlaceholder": "Ví dụ: Phép cộng có nhớ",
+    "subject": "Môn học",
+    "math": "Toán",
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh",
+    "questionCount": "Số câu hỏi",
+    "dueDate": "Hạn nộp",
+    "noAssignments": "Chưa có bài tập nào.",
+    "newBadge": "Mới!",
+    "questions": "{{count}} câu",
+    "due": "Hạn: {{date}}",
+    "noDue": "Không có hạn",
+    "startAssignment": "Bắt đầu làm bài"
+  },
+  "progress": {
+    "title": "Báo cáo tiến độ",
+    "accuracy": "Độ chính xác",
+    "sessions": "Buổi học",
+    "correct": "Đúng",
+    "total": "Tổng",
+    "noData": "Chưa có dữ liệu",
+    "viewDetail": "Xem chi tiết",
+    "excellent": "Xuất sắc!",
+    "good": "Tốt!",
+    "average": "Trung bình",
+    "needsWork": "Cần cố gắng"
   }
 }

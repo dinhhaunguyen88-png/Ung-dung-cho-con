@@ -1,8 +1,14 @@
 -- =====================================================
 -- Math Buddy Phase 2: Migration SQL
 -- Run this in Supabase SQL Editor
--- Date: 2026-03-10 (FIXED: UUID types for user references)
+-- Date: 2026-03-10 (FIXED v3: users.id is UUID on Supabase)
 -- =====================================================
+
+-- 0. DROP existing tables from failed previous runs (if any)
+-- Order matters: drop dependent tables first
+DROP TABLE IF EXISTS assignments CASCADE;
+DROP TABLE IF EXISTS class_members CASCADE;
+DROP TABLE IF EXISTS classes CASCADE;
 
 -- 1. Add role, email, password_hash columns to users table
 ALTER TABLE users ADD COLUMN IF NOT EXISTS role TEXT DEFAULT 'student';

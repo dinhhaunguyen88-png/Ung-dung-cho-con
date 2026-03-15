@@ -42,7 +42,9 @@
             "addSubtract": "Add, Sub, Mult, Div",
             "startTraining": "Start Training",
             "vietnamesePractice": "Vietnamese Practice",
-            "readingWriting": "Reading & Vocabulary"
+            "readingWriting": "Reading & Vocabulary",
+            "englishPractice": "English Practice",
+            "vocabGrammar": "Vocabulary & Grammar"
         },
         "quest": {
             "dailyQuest": "Daily Quest",
@@ -50,6 +52,7 @@
             "quickAddition": "Quick Addition",
             "shapeHunter": "Shape Hunter",
             "morningMath": "Morning Math",
+            "vocabBuilder": "Vocab Builder",
             "done": "Done",
             "showAll": "Show All Tasks"
         },
@@ -106,6 +109,7 @@
         "additionWithin100": "Addition within 100",
         "comparingLengths": "Comparing Lengths",
         "advanced": "Advanced",
+        "intermediate": "Intermediate",
         "identifyingCylinders": "Identifying Cylinders",
         "practiceRecommended": "Practice recommended",
         "subtractionRegrouping": "Subtraction with Regrouping",
@@ -116,7 +120,9 @@
         "score": "Score: {{score}}",
         "reward": "Reward: {{reward}}",
         "viewAll": "View All Activity",
-        "recommendation": "Minh Anh is performing above average for Grade 2. To further improve, encourage focusing on the <1>Geometry</1> section this week."
+        "recommendation": "Minh Anh is performing above average for Grade 2. To further improve, encourage focusing on the <1>Geometry</1> section this week.",
+        "englishVocabulary": "English Vocabulary",
+        "englishGrammar": "English Grammar"
     },
     "celebration": {
         "congratulations": "Congratulations {{name}}!",
@@ -142,11 +148,98 @@
         "choosePet": "Choose your Pet companion",
         "chooseColor": "Choose a favorite color",
         "startReady": "Ready to learn!",
+        "teacherLink": "Are you a teacher?",
+        "teacherLinkAction": "Sign in here",
         "pets": {
             "dragon": "Dragon",
             "cat": "Cat",
             "dog": "Dog",
             "bunny": "Bunny"
         }
+    },
+    "teacherAuth": {
+        "loginTitle": "Teacher Sign In",
+        "loginSubtitle": "Manage classes and track student progress",
+        "registerTitle": "Teacher Sign Up",
+        "registerSubtitle": "Create an account to manage your classes",
+        "name": "Full Name",
+        "namePlaceholder": "John Smith",
+        "email": "Email",
+        "emailPlaceholder": "teacher@school.edu",
+        "password": "Password",
+        "passwordPlaceholder": "At least 6 characters",
+        "confirmPassword": "Confirm Password",
+        "confirmPlaceholder": "Re-enter password",
+        "login": "Sign In",
+        "register": "Sign Up",
+        "noAccount": "Don't have an account?",
+        "registerHere": "Sign up now",
+        "hasAccount": "Already have an account?",
+        "loginHere": "Sign in",
+        "backToStudent": "Back to student page",
+        "loading": "Processing...",
+        "passwordMismatch": "Passwords don't match",
+        "passwordTooShort": "Password must be at least 6 characters"
+    },
+    "teacherDashboard": {
+        "title": "Teacher Dashboard",
+        "welcome": "Hello, {{name}}!",
+        "comingSoon": "Coming soon...",
+        "classes": "My Classes",
+        "createClass": "Create New Class",
+        "className": "Class Name",
+        "classNamePlaceholder": "e.g. Grade 2A",
+        "noClasses": "You don't have any classes yet. Create one to get started!",
+        "membersCount": "{{count}} students",
+        "joinCode": "Join Code",
+        "viewMembers": "View Students",
+        "deleteClass": "Delete Class",
+        "confirmDeleteClass": "Are you sure you want to delete this class?",
+        "studentList": "Student List — {{className}}",
+        "noMembers": "No students have joined this class yet.",
+        "removeMember": "Remove from class",
+        "backToClasses": "Back to Classes"
+    },
+    "joinClass": {
+        "title": "Join Class",
+        "subtitle": "Enter the code from your teacher to join",
+        "codeLabel": "Join Code (6 characters)",
+        "codePlaceholder": "ABC123",
+        "submit": "Join Now",
+        "success": "Awesome! You joined class {{className}}",
+        "alreadyIn": "You are already a member of this class",
+        "invalidCode": "Invalid join code",
+        "backToDashboard": "Back to Dashboard"
+    },
+    "assignments": {
+        "title": "Assignments",
+        "create": "Create Assignment",
+        "assignmentTitle": "Assignment Title",
+        "titlePlaceholder": "e.g. Addition with Carrying",
+        "subject": "Subject",
+        "math": "Math",
+        "vietnamese": "Vietnamese",
+        "english": "English",
+        "questionCount": "Number of Questions",
+        "dueDate": "Due Date",
+        "noAssignments": "No assignments yet.",
+        "newBadge": "New!",
+        "questions": "{{count}} questions",
+        "due": "Due: {{date}}",
+        "noDue": "No deadline",
+        "startAssignment": "Start Assignment"
+    },
+    "progress": {
+        "title": "Progress Report",
+        "accuracy": "Accuracy",
+        "sessions": "Sessions",
+        "correct": "Correct",
+        "total": "Total",
+        "noData": "No data yet",
+        "viewDetail": "View Details",
+        "excellent": "Excellent!",
+        "good": "Good!",
+        "average": "Average",
+        "needsWork": "Needs work"
     }
 }

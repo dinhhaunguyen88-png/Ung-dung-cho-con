@@ -1,7 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
+import { Agent, setGlobalDispatcher } from 'undici';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+// Increase undici connect timeout from default 10s to 30s
+// Fixes ConnectTimeoutError when Supabase is freshly restored
+setGlobalDispatcher(new Agent({ connect: { timeout: 30_000 } }));
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(__dirname, '..', '..', '.env') });

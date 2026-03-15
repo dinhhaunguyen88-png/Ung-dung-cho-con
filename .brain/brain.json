@@ -2,13 +2,13 @@
     "meta": {
         "schema_version": "1.1.0",
         "awf_version": "4.0.2",
-        "last_updated": "2026-03-10T21:45:00+07:00"
+        "last_updated": "2026-03-15T18:15:00+07:00"
     },
     "project": {
         "name": "Math Buddy",
         "type": "web-app",
-        "description": "Ứng dụng học toán cho trẻ em với pet ảo, bảng xếp hạng, và hỗ trợ tiếng Việt",
-        "status": "phase2-in-progress",
+        "description": "Ứng dụng học toán & ngoại ngữ cho trẻ em với pet ảo, bảng xếp hạng; Chế độ Giáo viên đầy đủ tính năng Class/Assignment.",
+        "status": "phase2-complete",
         "repo": "https://github.com/dinhhaunguyen88-png/Dinh-Hau-Nguyen.git"
     },
     "tech_stack": {
@@ -24,14 +24,15 @@
         "backend": {
             "framework": "Express 4",
             "runtime": "tsx (Node.js 22)",
-            "database": "better-sqlite3"
+            "database": "Supabase (PostgreSQL) + Local SQLite fallback",
+            "auth": "crypto.scrypt hashing for teachers"
         },
         "apis": {
             "ai": "@google/genai (Gemini)"
         }
     },
     "database_schema": {
-        "summary": "App lưu: thông tin user, tiến trình học, pet config. SQLite file tại data/mathbuddy.db",
+        "summary": "App lưu: thông tin user, tiến trình học, pet config, classes, members, assignments.",
         "tables": [
             {
                 "name": "users",
@@ -47,7 +48,7 @@
                     "password_hash",
                     "created_at"
                 ],
-                "description": "Thông tin học sinh/giáo viên: tên, email, role, XP tích lũy"
+                "description": "Thông tin học sinh/giáo viên"
             },
             {
                 "name": "classes",
@@ -68,7 +69,7 @@
                     "user_id",
                     "joined_at"
                 ],
-                "description": "Danh sách học sinh trong lớp (N:N)"
+                "description": "Danh sách học sinh trong lớp"
             },
             {
                 "name": "assignments",
@@ -91,166 +92,84 @@
                     "user_id",
                     "subject",
                     "topic",
-                    "correct",
-                    "total",
-                    "completed_at"
+                    "correct_answers",
+                    "total_questions",
+                    "created_at"
                 ],
-                "description": "Lịch sử làm bài: môn học, chủ đề, số đúng/tổng"
-            },
-            {
-                "name": "pets",
-                "columns": [
-                    "id",
-                    "user_id",
-                    "type",
-                    "name",
-                    "color",
-                    "accessories",
-                    "level",
-                    "xp"
-                ],
-                "description": "Pet config: loại (dragon/cat/dog/bunny), màu, phụ kiện"
+                "description": "Lịch sử làm bài"
             }
         ],
-        "relationships_explained": "1 user có 1 pet (1:1). 1 teacher có nhiều classes. 1 class có nhiều students (via class_members). 1 class có nhiều assignments. questions table chứa CSDL trắc nghiệm song ngữ."
+        "relationships_explained": "1 teacher -> N classes. 1 class -> N students (via members). 1 class -> N assignments."
     },
     "api_endpoints": [
         {
             "method": "POST",
-            "path": "/api/users",
-            "explained": "Tạo profile mới - gửi tên + avatar, nhận lại user object"
-        },
-        {
-            "method": "GET",
-            "path": "/api/users/:id",
-            "explained": "Lấy thông tin 1 user theo ID"
-        },
-        {
-            "method": "GET",
-            "path": "/api/leaderboard",
-            "explained": "Bảng xếp hạng - top 50 theo XP, kèm thông tin pet"
+            "path": "/api/auth/teacher/register",
+            "explained": "Đăng ký giáo viên"
         },
         {
             "method": "POST",
-            "path": "/api/progress",
-            "explained": "Lưu kết quả làm bài - tự động cộng XP (10 per correct)"
+            "path": "/api/auth/teacher/login",
+            "explained": "Đăng nhập giáo viên"
+        },
+        {
+            "method": "POST",
+            "path": "/api/classes",
+            "explained": "Tạo lớp học mới"
         },
         {
             "method": "GET",
-            "path": "/api/progress/:userId",
-            "explained": "Lịch sử làm bài của 1 user, 20 bài gần nhất"
+            "path": "/api/classes/:teacherId",
+            "explained": "Lấy danh sách lớp của GV"
+        },
+        {
+            "method": "POST",
+            "path": "/api/classes/join",
+            "explained": "HS tham gia lớp bằng mã code"
         },
         {
             "method": "GET",
-            "path": "/api/pets/:userId",
-            "explained": "Lấy pet config của 1 user"
+            "path": "/api/classes/:classId/members",
+            "explained": "Lấy danh sách HS trong lớp"
         },
         {
-            "method": "PUT",
-            "path": "/api/pets/:userId",
-            "explained": "Cập nhật pet: đổi loại, tên, màu, phụ kiện"
+            "method": "POST",
+            "path": "/api/assignments",
+            "explained": "Giao bài tập mới"
         },
         {
             "method": "GET",
-            "path": "/rest/v1/questions",
-            "explained": "Supabase endpoint tự động lấy danh sách 110 câu hỏi trắc nghiệm song ngữ."
+            "path": "/api/teacher/progress/:classId",
+            "explained": "Báo cáo progress cả lớp"
         }
     ],
     "features": [
         {
-            "name": "Đa ngôn ngữ (i18n)",
+            "name": "Teacher Mode",
             "status": "done",
-            "description": "Hỗ trợ Tiếng Việt (mặc định) và English. Đổi ngôn ngữ lưu localStorage.",
-            "files": [
-                "src/i18n/index.ts",
-                "src/i18n/vi.json",
-                "src/i18n/en.json"
-            ]
+            "description": "Auth, Class Mgmt, Assignment & Progress tracking hoàn thiện."
         },
         {
-            "name": "Text-to-Speech (TTS)",
+            "name": "English Quest Support",
             "status": "done",
-            "description": "Đọc đề bài bằng giọng nói. Hỗ trợ tiếng Việt. Web Speech API.",
-            "files": [
-                "src/hooks/useSpeech.ts",
-                "src/components/ui/SpeakerButton.tsx"
-            ]
+            "description": "Hệ thống Quest tiếng Anh với ngân hàng câu hỏi ngẫu nhiên."
         },
         {
-            "name": "Pet Customization",
+            "name": "Pet System",
             "status": "done",
-            "description": "4 loại pet SVG (Dragon, Cat, Dog, Bunny), 8 màu, 8 phụ kiện (XP-locked), evolution stages.",
-            "files": [
-                "src/types/pet.ts",
-                "src/hooks/usePet.ts",
-                "src/components/pet/PetAvatar.tsx",
-                "src/components/pet/PetRoom.tsx"
-            ]
-        },
-        {
-            "name": "Backend + Leaderboard",
-            "status": "done",
-            "description": "Express + SQLite backend. 8 học sinh mẫu. Bảng xếp hạng với podium UI.",
-            "files": [
-                "src/server/db.ts",
-                "src/server/index.ts",
-                "src/components/leaderboard/Leaderboard.tsx"
-            ]
-        },
-        {
-            "name": "Ngân hàng câu hỏi song ngữ (DB)",
-            "status": "done",
-            "description": "Nạp toàn bộ 110 câu hỏi (Toán + Tiếng Việt, Tập 1 + Tập 2) lên Supabase, fully JSON formats với AI distractors.",
-            "files": []
-        },
-        {
-            "name": "Teacher Mode (Phase 2)",
-            "status": "in-progress",
-            "description": "Cho phép giáo viên tạo lớp, giao bài tập, và theo dõi tiến độ của học sinh.",
-            "files": [
-                "migrations/001_phase2_teacher_classes.sql",
-                "src/types/teacher.ts"
-            ]
+            "description": "Customizable SVG pets with XP progression & evolution."
         }
     ],
-    "file_structure": {
-        "src/App.tsx": "Router chính - 120 dòng, điều hướng 6 screens",
-        "src/components/layout/Header.tsx": "Header với nav + language switcher + stars",
-        "src/components/dashboard/": "3 files: Sidebar (XP/level), Main (pet island), Right (quests)",
-        "src/components/learning/LearningQuest.tsx": "Câu hỏi toán + TTS + progress bar",
-        "src/components/pet/PetAvatar.tsx": "4 SVG pets vẽ tay (Dragon, Cat, Dog, Bunny)",
-        "src/components/pet/PetRoom.tsx": "Pet customization UI: type/color/accessories/name",
-        "src/components/leaderboard/Leaderboard.tsx": "Podium top 3 + ranked list",
-        "src/components/parent/ParentReport.tsx": "Báo cáo cho phụ huynh",
-        "src/hooks/usePet.ts": "Pet state hook + localStorage persistence",
-        "src/hooks/useSpeech.ts": "Web Speech API wrapper",
-        "src/server/db.ts": "SQLite setup + seed 8 students",
-        "src/server/index.ts": "Express API server (port 3001)"
-    },
     "knowledge_items": {
         "patterns": [
-            "Tất cả components dùng named export (không default export)",
-            "Pet state quản lý qua usePet hook, truyền props từ App.tsx",
-            "Leaderboard có fallback mock data khi server offline",
-            "Vite proxy /api → localhost:3001 cho backend"
+            "Named exports for components",
+            "Unified App.tsx router logic",
+            "Teacher system uses scrypt hashing"
         ],
         "gotchas": [
-            "Node.js portable cần set PATH trước khi chạy: C:\\Users\\user\\node\\node-v22.22.0-win-x64",
-            "npm.cmd thay vì npm để bypass PowerShell execution policy",
-            "React 19 + TypeScript không có implicit React namespace — dùng ReactNode import",
-            "vite.config.ts có ký tự đặc biệt trong comment — cẩn thận khi edit"
-        ],
-        "conventions": [
-            "Tiếng Việt là ngôn ngữ mặc định (vi-VN)",
-            "Tất cả UI text qua t() function từ react-i18next",
-            "SVG pets dùng inline SVG, không external files",
-            "Colors dùng CSS custom properties (--color-primary, etc.)"
+            "Supabase uses UUID - match with strings in TS",
+            "Backend accessory data may return plain strings (e.g. 'party-hat') instead of JSON arrays; use robust parsing in src/hooks/usePet.ts",
+            "Use npm.cmd for PowerShell on Windows"
         ]
-    },
-    "scripts": {
-        "dev": "npm run dev — Vite dev server (port 3000)",
-        "server": "npm run server — Express API (port 3001)",
-        "build": "npm run build — Production build",
-        "lint": "npm run lint — TypeScript check"
     }
 }

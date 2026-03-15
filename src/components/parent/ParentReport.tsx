@@ -95,6 +95,8 @@ export function ParentReport() {
                         <div className="mt-8 w-full space-y-4">
                             <ProgressRow label={t('parentReport.numbersTo1000')} value={90} />
                             <ProgressRow label={t('parentReport.geometryMeasurement')} value={45} />
+                            <ProgressRow label={t('parentReport.englishVocabulary')} value={70} />
+                            <ProgressRow label={t('parentReport.englishGrammar')} value={55} />
                         </div>
                     </div>
                 </div>
@@ -113,6 +115,7 @@ export function ParentReport() {
                             <div className="space-y-3">
                                 <StrengthItem title={t('parentReport.additionWithin100')} level={t('parentReport.advanced')} />
                                 <StrengthItem title={t('parentReport.comparingLengths')} level={t('parentReport.advanced')} />
+                                <StrengthItem title={t('parentReport.englishVocabulary')} level={t('parentReport.intermediate')} />
                             </div>
                         </div>
                         <div>

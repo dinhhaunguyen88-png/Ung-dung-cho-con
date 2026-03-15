@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 
 const STORAGE_KEY = 'math-buddy-user';
 
@@ -9,6 +9,8 @@ export interface User {
     avatar_color: string;
     xp: number;
     level: number;
+    role?: 'student' | 'teacher';
+    email?: string;
 }
 
 export function useUser() {
@@ -38,5 +40,7 @@ export function useUser() {
         setUser(null);
     }, []);
 
-    return { user, login, logout, isLoggedIn: !!user };
+    const isTeacher = user?.role === 'teacher';
+
+    return { user, login, logout, isLoggedIn: !!user, isTeacher };
 }

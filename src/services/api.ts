@@ -153,3 +153,140 @@ export async function getQuestions(
 export async function getLeaderboard(): Promise<LeaderboardEntry[]> {
     return request<LeaderboardEntry[]>('/api/leaderboard');
 }
+
+// ─── Teacher Auth ────────────────────────────────────
+
+export interface TeacherUserData extends UserData {
+    role: 'teacher' | 'student';
+    email: string;
+}
+
+export interface TeacherAuthResponse {
+    user: TeacherUserData;
+}
+
+export async function teacherRegister(
+    name: string,
+    email: string,
+    password: string,
+): Promise<TeacherAuthResponse> {
+    return request<TeacherAuthResponse>('/api/auth/teacher/register', {
+        method: 'POST',
+        body: JSON.stringify({ name, email, password }),
+    });
+}
+
+export async function teacherLogin(
+    email: string,
+    password: string,
+): Promise<TeacherAuthResponse> {
+    return request<TeacherAuthResponse>('/api/auth/teacher/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+    });
+}
+
+// ─── Classes ────────────────────────────────────────
+
+export interface ClassData {
+    id: string;
+    name: string;
+    teacher_id: string;
+    join_code: string;
+    created_at: string;
+}
+
+export interface JoinClassResponse {
+    success: boolean;
+    className: string;
+    classId: string;
+}
+
+export async function createClass(name: string, teacherId: string): Promise<ClassData> {
+    return request<ClassData>('/api/classes', {
+        method: 'POST',
+        body: JSON.stringify({ name, teacherId }),
+    });
+}
+
+export async function getTeacherClasses(teacherId: string): Promise<ClassData[]> {
+    return request<ClassData[]>(`/api/classes/${encodeURIComponent(teacherId)}`);
+}
+
+export async function joinClass(joinCode: string, userId: string): Promise<JoinClassResponse> {
+    return request<JoinClassResponse>('/api/classes/join', {
+        method: 'POST',
+        body: JSON.stringify({ joinCode, userId }),
+    });
+}
+
+export async function getClassMembers(classId: string): Promise<UserData[]> {
+    return request<UserData[]>(`/api/classes/${encodeURIComponent(classId)}/members`);
+}
+
+export async function removeClassMember(classId: string, userId: string): Promise<{ success: boolean }> {
+    return request<{ success: boolean }>(`/api/classes/${encodeURIComponent(classId)}/members/${encodeURIComponent(userId)}`, {
+        method: 'DELETE',
+    });
+}
+
+// ─── Assignments ────────────────────────────────────
+
+export interface AssignmentData {
+    id: string;
+    class_id: string;
+    title: string;
+    subject: string;
+    topic: string | null;
+    question_count: number;
+    due_date: string | null;
+    created_at: string;
+}
+
+export interface StudentProgressSummary {
+    id: string;
+    name: string;
+    xp: number;
+    level: number;
+    avatar: string;
+    avatar_color: string;
+    totalCorrect: number;
+    totalQuestions: number;
+    accuracy: number;
+    sessionsCount: number;
+}
+
+export interface ProgressRecord {
+    id: string;
+    user_id: string;
+    subject: string;
+    correct_answers: number;
+    total_questions: number;
+    created_at: string;
+}
+
+export async function createAssignment(params: {
+    classId: string;
+    title: string;
+    subject?: string;
+    topic?: string;
+    questionCount?: number;
+    dueDate?: string;
+}): Promise<AssignmentData> {
+    return request<AssignmentData>('/api/assignments', {
+        method: 'POST',
+        body: JSON.stringify(params),
+    });
+}
+
+export async function getClassAssignments(classId: string): Promise<AssignmentData[]> {
+    return request<AssignmentData[]>(`/api/assignments/${encodeURIComponent(classId)}`);
+}
+
+export async function getClassProgress(classId: string): Promise<StudentProgressSummary[]> {
+    return request<StudentProgressSummary[]>(`/api/teacher/progress/${encodeURIComponent(classId)}`);
+}
+
+export async function getStudentProgress(classId: string, userId: string): Promise<ProgressRecord[]> {
+    return request<ProgressRecord[]>(`/api/teacher/progress/${encodeURIComponent(classId)}/${encodeURIComponent(userId)}`);
+}

@@ -25,6 +25,7 @@ export function DashboardRight() {
                 <div className="space-y-4 p-4">
                     <QuestItem title={t('dashboard.quest.quickAddition')} progress="3/5" xp={50} percent={60} />
                     <QuestItem title={t('dashboard.quest.shapeHunter')} progress="1/5" xp={80} percent={20} />
+                    <QuestItem title={t('dashboard.quest.vocabBuilder')} progress="2/5" xp={60} percent={40} />
                     <QuestItem
                         title={t('dashboard.quest.morningMath')}
                         progress={t('dashboard.quest.done')}

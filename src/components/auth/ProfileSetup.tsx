@@ -7,6 +7,7 @@ import type { PetType } from '../../types/pet';
 
 interface ProfileSetupProps {
     onComplete: (userData: any) => void;
+    onTeacherLogin?: () => void;
 }
 
 const PET_TYPES: PetType[] = ['dragon', 'cat', 'dog', 'bunny'];
@@ -21,7 +22,7 @@ const COLORS = [
     '#475569', // Slate
 ];
 
-export function ProfileSetup({ onComplete }: ProfileSetupProps) {
+export function ProfileSetup({ onComplete, onTeacherLogin }: ProfileSetupProps) {
     const { t } = useTranslation();
     const [name, setName] = useState('');
     const [selectedPet, setSelectedPet] = useState<PetType>('dragon');
@@ -165,6 +166,22 @@ export function ProfileSetup({ onComplete }: ProfileSetupProps) {
                         </motion.button>
                     </div>
                 </form>
+
+                {/* Teacher Link */}
+                {onTeacherLogin && (
+                    <div className="border-t border-slate-100 px-8 py-5 text-center">
+                        <p className="text-sm text-slate-400">
+                            {t('setup.teacherLink')}{' '}
+                            <button
+                                type="button"
+                                onClick={onTeacherLogin}
+                                className="font-semibold text-blue-500 hover:text-blue-600"
+                            >
+                                {t('setup.teacherLinkAction')}
+                            </button>
+                        </p>
+                    </div>
+                )}
             </motion.div>
         </div>
     );

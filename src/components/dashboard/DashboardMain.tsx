@@ -4,10 +4,12 @@ import { motion } from 'motion/react';
 import {
     BookOpen,
     BrainCircuit,
+    Languages,
     Utensils,
     Heart,
     Gamepad2,
     Star,
+    Users,
 } from 'lucide-react';
 import { PetAvatar } from '../pet/PetAvatar';
 import { PET_INFO } from '../../types/pet';
@@ -18,11 +20,13 @@ export function DashboardMain({
     onFeed,
     onPlay,
     onStartQuest,
+    onJoinClass,
 }: {
     pet: PetConfig;
     onFeed: () => void;
     onPlay: () => void;
     onStartQuest: (subject: string) => void;
+    onJoinClass: () => void;
 }) {
     const { t, i18n } = useTranslation();
     const isVi = i18n.language === 'vi';
@@ -131,6 +135,22 @@ export function DashboardMain({
                     action={t('dashboard.activity.continueLesson')}
                     color="bg-blue-100 text-blue-600 shadow-blue-100"
                     onClick={() => onStartQuest('math')}
+                />
+                <ActivityCard
+                    icon={<Languages size={32} />}
+                    title={t('dashboard.activity.englishPractice')}
+                    subtitle={t('dashboard.activity.vocabGrammar')}
+                    action={t('dashboard.activity.startTraining')}
+                    color="bg-teal-100 text-teal-600 shadow-teal-100"
+                    onClick={() => onStartQuest('english')}
+                />
+                <ActivityCard
+                    icon={<Users size={32} />}
+                    title={t('joinClass.title')}
+                    subtitle={t('joinClass.subtitle')}
+                    action={t('joinClass.submit')}
+                    color="bg-orange-100 text-orange-600 shadow-orange-100"
+                    onClick={onJoinClass}
                 />
             </div>
         </section>

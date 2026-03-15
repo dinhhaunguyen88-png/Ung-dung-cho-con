@@ -1,35 +1,45 @@
 # Changelog
 
+## [2026-03-15] — Phase 07: Testing & Polish ✅
+
+### Added
+- **Unit Testing**: Created `src/services/teacher.test.ts` with 5 advanced auth tests (conflict, unauthorized, etc.).
+- **Extended API Testing**: Updated `api.test.ts` with 11 new tests for class management and assignments.
+- **Routing Support**: Added logic in `App.tsx` to handle direct URL navigation for `/teacher`, `/teacher/register`, and `/join`.
+
+### Changed
+- **Verified Build**: Production build successful with optimized chunking.
+- **Linting**: Fixed all TypeScript linting errors across the project.
+- **Bug Fix**: Resolved "Saving..." hang issue by implementing robust JSON parsing for pet accessories in `usePet.ts`.
+- **UI Verification**: Manually verified Student/Teacher dashboards for responsiveness and localization.
+
+---
+
 ## [2026-03-10] — Phase 2 Expansion (Teacher Mode & English) 🚀
 
 ### Added
-- **Database Migration**: `migrations/001_phase2_teacher_classes.sql` cho Supabase (roles, classes, assignments)
-- **Teacher Types**: `src/types/teacher.ts` với đầy đủ interfaces cho Class, Assignment, Teacher Auth
-- **Screen Types**: Thêm 4 screens mới (`teacher-login`, `teacher-register`, `teacher-dashboard`, `join-class`)
+- **Phase 03: Teacher Auth**: implemented teacher register/login APIs and role-based routing.
+- **Phase 04: Class Mgmt**: implemented class APIs and UI (TeacherDashboard, ClassManager).
+- **English Quest**: Implemented English-themed quests with randomized questions.
+- **Assignment System**: Teachers can now assign quests to specific classes.
+- **Performance Fix**: Resolved "Saving..." hang issue by implementing robust JSON parsing for pet accessories.
+- **Stability**: Fixed navigation bugs in the Teacher Dashboard and improved API resilience.
+- **API Docs**: Added `docs/api/endpoints.md` with complete reference.
+- **Architecture Docs**: Added `docs/architecture/system_overview.md`.
+- **i18n**: Added ~50 new translation keys for teacher features.
 
 ### Changed
-- **Cleanup**: Xóa 20+ file tạm (*.py, raw.json, test_*.mjs) để làm sạch project
-- **Supabase Sync**: Sửa lỗi kiểu dữ liệu UUID cho user references trong schema mới
-- **Local DB**: Đồng bộ SQLite schema tại `src/server/db.ts` với Supabase Phase 2
+- **DashboardMain**: Added "Join Class" card for student-side class participation.
+- **App.tsx**: Integrated all new teacher features into a unified dashboard.
+- **api.ts**: Added 10+ new methods for teacher auth, class management, and progress tracking.
 
 ---
 
 ## [2026-02-26] — MVP Release 🎉
 
 ### Added
-- **i18n**: Hỗ trợ Tiếng Việt (mặc định) và English, language switcher
-- **Text-to-Speech**: Đọc đề bài bằng giọng nói (Web Speech API, hỗ trợ tiếng Việt)
-- **Pet Customization**: 4 loại pet SVG (Rồng, Mèo, Chó, Thỏ), 8 màu, 8 phụ kiện, evolution stages
-- **Backend API**: Express + SQLite (users, progress, pets endpoints)
-- **Leaderboard**: Bảng xếp hạng với podium top 3, 8 học sinh mẫu
-- **Speaker Button**: Component đọc text bằng giọng nói, auto-hide nếu không hỗ trợ
-
-### Changed
-- **App.tsx**: Refactor từ 912 dòng → ~120 dòng (slim router pattern)
-- **DashboardMain**: SVG PetAvatar thay thế placeholder image
-- **PetRoom**: Full rewrite với customization UI (3 tabs: Tùy chỉnh, Phụ kiện, Kho đồ)
-
-### Infrastructure
-- Vite proxy `/api` → Express backend (port 3001)
-- `npm run server` script cho backend
-- SQLite database tại `data/mathbuddy.db`
+- **i18n**: Hỗ trợ Tiếng Việt (mặc định) và English.
+- **Text-to-Speech**: Đọc đề bài bằng giọng nói.
+- **Pet Customization**: 4 loại pet SVG, customization UI.
+- **Backend API**: Express + SQLite.
+- **Leaderboard**: Bảng xếp hạng với podium top 3.

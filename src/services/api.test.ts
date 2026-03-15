@@ -8,6 +8,17 @@ import {
     getProgress,
     getQuestions,
     getLeaderboard,
+    teacherRegister,
+    teacherLogin,
+    createClass,
+    getTeacherClasses,
+    joinClass,
+    getClassMembers,
+    removeClassMember,
+    createAssignment,
+    getClassAssignments,
+    getClassProgress,
+    getStudentProgress,
     ApiError,
 } from './api';
 
@@ -65,7 +76,6 @@ describe('createUser', () => {
         mockResponse({ error: 'Name is required' }, 400);
 
         await expect(createUser('')).rejects.toThrow(ApiError);
-        await expect(createUser('')).rejects.toThrow(); // reset needed
     });
 });
 
@@ -193,6 +203,122 @@ describe('getLeaderboard', () => {
             headers: { 'Content-Type': 'application/json' },
         });
         expect(result).toHaveLength(1);
+    });
+});
+
+// ─── Teacher Auth ────────────────────────────────────
+
+describe('Teacher Auth', () => {
+    const mockTeacher = { user: { id: 't1', name: 'Teacher', email: 't@e.com', role: 'teacher' } };
+
+    it('teacherRegister should POST to /api/auth/teacher/register', async () => {
+        mockResponse(mockTeacher);
+        const result = await teacherRegister('Teacher', 't@e.com', 'pass123');
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/auth/teacher/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Teacher', email: 't@e.com', password: 'pass123' }),
+        });
+        expect(result).toEqual(mockTeacher);
+    });
+
+    it('teacherLogin should POST to /api/auth/teacher/login', async () => {
+        mockResponse(mockTeacher);
+        const result = await teacherLogin('t@e.com', 'pass123');
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/auth/teacher/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: 't@e.com', password: 'pass123' }),
+        });
+        expect(result).toEqual(mockTeacher);
+    });
+});
+
+// ─── Classes ─────────────────────────────────────────
+
+describe('Classes', () => {
+    it('createClass should POST to /api/classes', async () => {
+        const mockClass = { id: 'c1', name: 'Math 101', teacher_id: 't1', join_code: 'MX123' };
+        mockResponse(mockClass);
+
+        const result = await createClass('Math 101', 't1');
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/classes', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Math 101', teacherId: 't1' }),
+        });
+        expect(result).toEqual(mockClass);
+    });
+
+    it('getTeacherClasses should GET /api/classes/:teacherId', async () => {
+        mockResponse([]);
+        await getTeacherClasses('t1');
+        expect(mockFetch).toHaveBeenCalledWith('/api/classes/t1', expect.any(Object));
+    });
+
+    it('joinClass should POST to /api/classes/join', async () => {
+        mockResponse({ success: true, className: 'Math 101', classId: 'c1' });
+        const result = await joinClass('MX123', 'u1');
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/classes/join', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ joinCode: 'MX123', userId: 'u1' }),
+        });
+        expect(result.success).toBe(true);
+    });
+
+    it('getClassMembers should GET members list', async () => {
+        mockResponse([]);
+        await getClassMembers('c1');
+        expect(mockFetch).toHaveBeenCalledWith('/api/classes/c1/members', expect.any(Object));
+    });
+
+    it('removeClassMember should DELETE member', async () => {
+        mockResponse({ success: true });
+        await removeClassMember('c1', 'u1');
+        expect(mockFetch).toHaveBeenCalledWith('/api/classes/c1/members/u1', {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+        });
+    });
+});
+
+// ─── Assignments ─────────────────────────────────────
+
+describe('Assignments', () => {
+    it('createAssignment should POST to /api/assignments', async () => {
+        const params = { classId: 'c1', title: 'Work', subject: 'math', questionCount: 10 };
+        mockResponse({ id: 'a1', ...params });
+
+        await createAssignment(params);
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/assignments', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(params),
+        });
+    });
+
+    it('getClassAssignments should GET list', async () => {
+        mockResponse([]);
+        await getClassAssignments('c1');
+        expect(mockFetch).toHaveBeenCalledWith('/api/assignments/c1', expect.any(Object));
+    });
+
+    it('getClassProgress should GET class progress summary', async () => {
+        mockResponse([]);
+        await getClassProgress('c1');
+        expect(mockFetch).toHaveBeenCalledWith('/api/teacher/progress/c1', expect.any(Object));
+    });
+
+    it('getStudentProgress should GET specific student records', async () => {
+        mockResponse([]);
+        await getStudentProgress('c1', 'u1');
+        expect(mockFetch).toHaveBeenCalledWith('/api/teacher/progress/c1/u1', expect.any(Object));
     });
 });
 
