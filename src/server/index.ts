@@ -1,8 +1,10 @@
 import express, { type Request, type Response } from 'express';
 import { scrypt, randomBytes, timingSafeEqual } from 'node:crypto';
+import path from 'node:path';
 import { promisify } from 'node:util';
+import { fileURLToPath } from 'node:url';
 import { createTeacherSessionToken, type TeacherSession, verifyTeacherSessionToken } from './auth.js';
-import { supabase } from './supabaseClient.js';
+import { getSupabaseAccessMode, getSupabaseConfigError, supabase } from './supabaseRuntimeClient.js';
 
 const scryptAsync = promisify(scrypt);
 
@@ -28,6 +30,39 @@ async function withRetry<T = any>(fn: () => Promise<T> | any, retries = 3, delay
         await new Promise(resolve => setTimeout(resolve, delay));
         return withRetry(fn, retries - 1, delay + 500); // Linear backoff
     }
+}
+
+function getErrorMessage(error: unknown): string {
+    if (error instanceof Error) return error.message;
+    if (typeof error === 'object' && error !== null && 'message' in error && typeof (error as { message: unknown }).message === 'string') {
+        return (error as { message: string }).message;
+    }
+    return 'Unknown server error';
+}
+
+function buildSupabaseWriteError(action: string, error: unknown): string {
+    const configError = getSupabaseConfigError();
+    if (configError) return configError;
+
+    const rawMessage = getErrorMessage(error);
+    const normalizedMessage = rawMessage.toLowerCase();
+
+    if (normalizedMessage.includes('row-level security') || normalizedMessage.includes('permission denied')) {
+        if (getSupabaseAccessMode() !== 'service_role') {
+            return `Supabase denied ${action}. Add SUPABASE_SERVICE_ROLE_KEY in Vercel or create INSERT/UPDATE policies for the affected tables.`;
+        }
+        return `Supabase denied ${action}. Check the RLS policies for the affected tables.`;
+    }
+
+    if (normalizedMessage.includes('relation') && normalizedMessage.includes('does not exist')) {
+        return `Supabase schema is incomplete for ${action}. Run the SQL files in migrations/ on the deployed Supabase project.`;
+    }
+
+    if (normalizedMessage.includes('column') && normalizedMessage.includes('does not exist')) {
+        return `Supabase is missing a required column for ${action}. Run the latest migrations on the deployed Supabase project.`;
+    }
+
+    return rawMessage;
 }
 
 function requireTeacherSession(req: Request, res: Response): TeacherSession | null {
@@ -101,6 +136,10 @@ function normalizeProgressRecord(progress: any) {
 app.post('/api/users', async (req, res) => {
     const { name, avatar, avatarColor } = req.body;
     if (!name) return res.status(400).json({ error: 'Name is required' });
+    const configError = getSupabaseConfigError();
+    if (configError) {
+        return res.status(500).json({ error: configError });
+    }
 
     console.log('👤 Creating user on Supabase:', name);
 
@@ -112,7 +151,12 @@ app.post('/api/users', async (req, res) => {
             .single()
         );
 
-        if (userError) return res.status(500).json({ error: userError.message });
+        if (userError) {
+            return res.status(500).json({
+                error: buildSupabaseWriteError('student profile creation', userError),
+                details: userError.message,
+            });
+        }
 
         // Also create a pet for the user
         const { error: petError } = await withRetry(() => supabase
@@ -127,10 +171,31 @@ app.post('/api/users', async (req, res) => {
 
         if (petError) console.error('❌ Error creating pet:', petError.message);
 
+        if (petError) {
+            try {
+                await withRetry(() => supabase
+                    .from('users')
+                    .delete()
+                    .eq('id', user.id)
+                );
+            } catch (cleanupError) {
+                console.error('Failed to rollback user after pet creation error:', getErrorMessage(cleanupError));
+            }
+
+            return res.status(500).json({
+                error: buildSupabaseWriteError('starter pet creation', petError),
+                details: petError.message,
+            });
+        }
+
         res.json(user);
     } catch (err: any) {
+        const details = getErrorMessage(err);
         console.error('❌ User creation error:', err.message);
-        res.status(500).json({ error: err.message });
+        res.status(500).json({
+            error: buildSupabaseWriteError('student profile creation', err),
+            details,
+        });
     }
 });
 
@@ -967,14 +1032,14 @@ app.post('/api/shop/inventory/equip', async (req, res) => {
 
 // ─── Start Server ───────────────────────────────────
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
+const currentFilePath = fileURLToPath(import.meta.url);
+const entryFilePath = process.argv[1] ? path.resolve(process.argv[1]) : '';
+const isDirectServerStart = entryFilePath === currentFilePath;
+if (isDirectServerStart) {
+    app.listen(PORT, () => {
     console.log(`🚀 Math Buddy API running at http://localhost:${PORT}`);
     console.log('☁️ Connected to Supabase');
 });
-
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        console.log('?? Local dev server running');
-    });
 }
+
 export default app;

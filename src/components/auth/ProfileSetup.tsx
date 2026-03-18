@@ -51,7 +51,21 @@ export function ProfileSetup({ onComplete, onTeacherLogin }: ProfileSetupProps) 
                 const userData = await response.json();
                 onComplete(userData);
             } else {
-                const errData = await response.json().catch(() => ({}));
+                const rawError = await response.text();
+                let errorMessage = '';
+
+                if (rawError) {
+                    try {
+                        const errData = JSON.parse(rawError);
+                        errorMessage = errData.error || errData.details || '';
+                    } catch {
+                        const plainText = rawError.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+                        if (plainText && !plainText.toLowerCase().startsWith('<!doctype')) {
+                            errorMessage = plainText;
+                        }
+                    }
+                }
+                const errData = { error: errorMessage };
                 setError(errData.error || t('setup.errorGeneric', 'Không thể tạo hồ sơ. Vui lòng thử lại!'));
             }
         } catch (err) {
