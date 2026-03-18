@@ -1,0 +1,8400 @@
+[
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Predecessor of 30?",
+        "questionReadText": "Predecessor of 30?"
+      },
+      "vi": {
+        "questionText": "Số liền trước của 30 là?",
+        "questionReadText": "Số liền trước của 30 là?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "29"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "31"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "20"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "30"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Successor of 49?",
+        "questionReadText": "Successor of 49?"
+      },
+      "vi": {
+        "questionText": "Số liền sau của 49 là?",
+        "questionReadText": "Số liền sau của 49 là?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "48"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "50"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "51"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "60"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "96 = ? tens and ? units",
+        "questionReadText": "96 = ? tens and ? units"
+      },
+      "vi": {
+        "questionText": "Số 96 gồm mấy chục và mấy đơn vị?",
+        "questionReadText": "Số 96 gồm mấy chục và mấy đơn vị?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9 chục 6 đơn vị"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6 chục 9 đơn vị"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "90 chục"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "96 đơn vị"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Smallest 2-digit number?",
+        "questionReadText": "Smallest 2-digit number?"
+      },
+      "vi": {
+        "questionText": "Số bé nhất có hai chữ số là?",
+        "questionReadText": "Số bé nhất có hai chữ số là?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "01"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "99"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Largest 2-digit number?",
+        "questionReadText": "Largest 2-digit number?"
+      },
+      "vi": {
+        "questionText": "Số lớn nhất có hai chữ số là?",
+        "questionReadText": "Số lớn nhất có hai chữ số là?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "90"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "99"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "100"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "89"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Order smallest to largest: 34,12,56,21",
+        "questionReadText": "Order smallest to largest: 34,12,56,21"
+      },
+      "vi": {
+        "questionText": "Sắp xếp từ bé đến lớn: 34, 12, 56, 21",
+        "questionReadText": "Sắp xếp từ bé đến lớn: 34, 12, 56, 21"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "12, 21, 34, 56"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12, 34, 21, 56"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "56, 34, 21, 12"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "21, 12, 56, 34"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Double of 10?",
+        "questionReadText": "Double of 10?"
+      },
+      "vi": {
+        "questionText": "Số gấp đôi của 10 là?",
+        "questionReadText": "Số gấp đôi của 10 là?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "5"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Number between 67 and 69?",
+        "questionReadText": "Number between 67 and 69?"
+      },
+      "vi": {
+        "questionText": "Số nào ở giữa 67 và 69?",
+        "questionReadText": "Số nào ở giữa 67 và 69?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "66"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "70"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "68"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "65"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "How many numbers from 1 to 10?",
+        "questionReadText": "How many numbers from 1 to 10?"
+      },
+      "vi": {
+        "questionText": "Từ 1 đến 10 có bao nhiêu số?",
+        "questionReadText": "Từ 1 đến 10 có bao nhiêu số?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Half of 20?",
+        "questionReadText": "Half of 20?"
+      },
+      "vi": {
+        "questionText": "Một nửa của 20 là?",
+        "questionReadText": "Một nửa của 20 là?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "20"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Predecessor of 15?",
+        "questionReadText": "Predecessor of 15?"
+      },
+      "vi": {
+        "questionText": "Số liền trước của 15 là?",
+        "questionReadText": "Số liền trước của 15 là?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "14"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "16"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "13"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Successor of 89?",
+        "questionReadText": "Successor of 89?"
+      },
+      "vi": {
+        "questionText": "Số liền sau của 89 là?",
+        "questionReadText": "Số liền sau của 89 là?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "88"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "90"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "91"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "80"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "75 = ? tens and ? units",
+        "questionReadText": "75 = ? tens and ? units"
+      },
+      "vi": {
+        "questionText": "Số 75 gồm mấy chục và mấy đơn vị?",
+        "questionReadText": "Số 75 gồm mấy chục và mấy đơn vị?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5 chục 7 đơn vị"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7 chục 5 đơn vị"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "70 chục"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "75 đơn vị"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Largest: 45, 54, 39, 61?",
+        "questionReadText": "Largest: 45, 54, 39, 61?"
+      },
+      "vi": {
+        "questionText": "Số nào lớn nhất: 45, 54, 39, 61?",
+        "questionReadText": "Số nào lớn nhất: 45, 54, 39, 61?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "45"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "54"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "39"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "61"
+      }
+    ],
+    "correct_answer_id": 4
+  },
+  {
+    "subject": "math",
+    "topic": "Ôn tập số đến 100",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Smallest: 12, 21, 10, 20?",
+        "questionReadText": "Smallest: 12, 21, 10, 20?"
+      },
+      "vi": {
+        "questionText": "Số nào bé nhất: 12, 21, 10, 20?",
+        "questionReadText": "Số nào bé nhất: 12, 21, 10, 20?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "12"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "21"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "20"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "In 15+4=19, what is 15 called?",
+        "questionReadText": "In 15+4=19, what is 15 called?"
+      },
+      "vi": {
+        "questionText": "Trong 15 + 4 = 19, số 15 gọi là gì?",
+        "questionReadText": "Trong 15 + 4 = 19, số 15 gọi là gì?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "Số hạng"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "Tổng"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "Hiệu"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "Số trừ"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Sum of 20 and 30?",
+        "questionReadText": "Sum of 20 and 30?"
+      },
+      "vi": {
+        "questionText": "Tổng của 20 và 30?",
+        "questionReadText": "Tổng của 20 và 30?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "50"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "40"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "60"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "In 50-20=30, what is 50 called?",
+        "questionReadText": "In 50-20=30, what is 50 called?"
+      },
+      "vi": {
+        "questionText": "Trong 50 - 20 = 30, số 50 gọi là gì?",
+        "questionReadText": "Trong 50 - 20 = 30, số 50 gọi là gì?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "Số bị trừ"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "Số trừ"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "Hiệu"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "Tổng"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Difference of 45 and 5?",
+        "questionReadText": "Difference of 45 and 5?"
+      },
+      "vi": {
+        "questionText": "Hiệu của 45 và 5?",
+        "questionReadText": "Hiệu của 45 và 5?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "50"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "40"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "45"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "35"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "10 + ... = 10. Fill in?",
+        "questionReadText": "10 + ... = 10. Fill in?"
+      },
+      "vi": {
+        "questionText": "10 + ... = 10. Điền số?",
+        "questionReadText": "10 + ... = 10. Điền số?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "0"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "2"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "20 + 10 = ?",
+        "questionReadText": "20 + 10 = ?"
+      },
+      "vi": {
+        "questionText": "20 + 10 = ?",
+        "questionReadText": "20 + 10 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "30"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "40"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "40 - 20 = ?",
+        "questionReadText": "40 - 20 = ?"
+      },
+      "vi": {
+        "questionText": "40 - 20 = ?",
+        "questionReadText": "40 - 20 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "30"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "40"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "30 + 30 = ?",
+        "questionReadText": "30 + 30 = ?"
+      },
+      "vi": {
+        "questionText": "30 + 30 = ?",
+        "questionReadText": "30 + 30 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "50"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "30"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "60"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "70"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "70 - 40 = ?",
+        "questionReadText": "70 - 40 = ?"
+      },
+      "vi": {
+        "questionText": "70 - 40 = ?",
+        "questionReadText": "70 - 40 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "30"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "40"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "20"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "50 + 0 = ?",
+        "questionReadText": "50 + 0 = ?"
+      },
+      "vi": {
+        "questionText": "50 + 0 = ?",
+        "questionReadText": "50 + 0 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "0"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "50"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "55"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "45"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "80 - 80 = ?",
+        "questionReadText": "80 - 80 = ?"
+      },
+      "vi": {
+        "questionText": "80 - 80 = ?",
+        "questionReadText": "80 - 80 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "0"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "80"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "1"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "25 + 5 = ?",
+        "questionReadText": "25 + 5 = ?"
+      },
+      "vi": {
+        "questionText": "25 + 5 = ?",
+        "questionReadText": "25 + 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "30"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "35"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "25"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "99 - 9 = ?",
+        "questionReadText": "99 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "99 - 9 = ?",
+        "questionReadText": "99 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "99"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "90"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "89"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "91"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Sum of 0 and 5?",
+        "questionReadText": "Sum of 0 and 5?"
+      },
+      "vi": {
+        "questionText": "Tổng của 0 và 5?",
+        "questionReadText": "Tổng của 0 và 5?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "0"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "50"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ cơ bản",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Difference of 10 and 10?",
+        "questionReadText": "Difference of 10 and 10?"
+      },
+      "vi": {
+        "questionText": "Hiệu của 10 và 10?",
+        "questionReadText": "Hiệu của 10 và 10?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "0"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "20"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "1"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 1 = ?",
+        "questionReadText": "9 + 1 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 1 = ?",
+        "questionReadText": "9 + 1 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "12"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 2 = ?",
+        "questionReadText": "9 + 2 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 2 = ?",
+        "questionReadText": "9 + 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "11"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "12"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "13"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 3 = ?",
+        "questionReadText": "9 + 3 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 3 = ?",
+        "questionReadText": "9 + 3 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "11"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "13"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "14"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 4 = ?",
+        "questionReadText": "9 + 4 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 4 = ?",
+        "questionReadText": "9 + 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "12"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "13"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "14"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 5 = ?",
+        "questionReadText": "9 + 5 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 5 = ?",
+        "questionReadText": "9 + 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "13"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "14"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "16"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 6 = ?",
+        "questionReadText": "9 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 6 = ?",
+        "questionReadText": "9 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "14"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "15"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "16"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "17"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 7 = ?",
+        "questionReadText": "9 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 7 = ?",
+        "questionReadText": "9 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "15"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "16"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "17"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "18"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 8 = ?",
+        "questionReadText": "9 + 8 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 8 = ?",
+        "questionReadText": "9 + 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "16"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "17"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "18"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "19"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "9 + 9 = ?",
+        "questionReadText": "9 + 9 = ?"
+      },
+      "vi": {
+        "questionText": "9 + 9 = ?",
+        "questionReadText": "9 + 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "17"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "18"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "19"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "20"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 9",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "19 + 9 = ?",
+        "questionReadText": "19 + 9 = ?"
+      },
+      "vi": {
+        "questionText": "19 + 9 = ?",
+        "questionReadText": "19 + 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "27"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "29"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "28"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "30"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 2 = ?",
+        "questionReadText": "8 + 2 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 2 = ?",
+        "questionReadText": "8 + 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "12"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 3 = ?",
+        "questionReadText": "8 + 3 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 3 = ?",
+        "questionReadText": "8 + 3 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "11"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "12"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "13"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 4 = ?",
+        "questionReadText": "8 + 4 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 4 = ?",
+        "questionReadText": "8 + 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "11"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "13"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "14"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 5 = ?",
+        "questionReadText": "8 + 5 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 5 = ?",
+        "questionReadText": "8 + 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "12"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "13"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "14"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 6 = ?",
+        "questionReadText": "8 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 6 = ?",
+        "questionReadText": "8 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "13"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "14"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "16"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 7 = ?",
+        "questionReadText": "8 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 7 = ?",
+        "questionReadText": "8 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "14"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "15"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "16"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "17"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 8 = ?",
+        "questionReadText": "8 + 8 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 8 = ?",
+        "questionReadText": "8 + 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "15"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "16"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "17"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "18"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 9 = ?",
+        "questionReadText": "8 + 9 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 9 = ?",
+        "questionReadText": "8 + 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "16"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "17"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "18"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "19"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "28 + 8 = ?",
+        "questionReadText": "28 + 8 = ?"
+      },
+      "vi": {
+        "questionText": "28 + 8 = ?",
+        "questionReadText": "28 + 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "34"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "35"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "36"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "37"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 8",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 + 8 = ?",
+        "questionReadText": "8 + 8 = ?"
+      },
+      "vi": {
+        "questionText": "8 + 8 = ?",
+        "questionReadText": "8 + 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "15"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "16"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "17"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "18"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "7 + 3 = ?",
+        "questionReadText": "7 + 3 = ?"
+      },
+      "vi": {
+        "questionText": "7 + 3 = ?",
+        "questionReadText": "7 + 3 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "12"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "7 + 4 = ?",
+        "questionReadText": "7 + 4 = ?"
+      },
+      "vi": {
+        "questionText": "7 + 4 = ?",
+        "questionReadText": "7 + 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "11"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "12"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "13"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "7 + 5 = ?",
+        "questionReadText": "7 + 5 = ?"
+      },
+      "vi": {
+        "questionText": "7 + 5 = ?",
+        "questionReadText": "7 + 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "11"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "13"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "14"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "7 + 6 = ?",
+        "questionReadText": "7 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "7 + 6 = ?",
+        "questionReadText": "7 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "12"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "13"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "14"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "7 + 7 = ?",
+        "questionReadText": "7 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "7 + 7 = ?",
+        "questionReadText": "7 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "13"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "14"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "16"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "7 + 8 = ?",
+        "questionReadText": "7 + 8 = ?"
+      },
+      "vi": {
+        "questionText": "7 + 8 = ?",
+        "questionReadText": "7 + 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "14"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "15"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "16"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "17"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "7 + 9 = ?",
+        "questionReadText": "7 + 9 = ?"
+      },
+      "vi": {
+        "questionText": "7 + 9 = ?",
+        "questionReadText": "7 + 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "15"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "16"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "17"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "18"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "7 + 7 = ?",
+        "questionReadText": "7 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "7 + 7 = ?",
+        "questionReadText": "7 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "13"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "14"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "16"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "17 + 7 = ?",
+        "questionReadText": "17 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "17 + 7 = ?",
+        "questionReadText": "17 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "23"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "25"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "24"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "26"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 7",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "37 + 7 = ?",
+        "questionReadText": "37 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "37 + 7 = ?",
+        "questionReadText": "37 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "44"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "45"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "43"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "46"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "6 + 4 = ?",
+        "questionReadText": "6 + 4 = ?"
+      },
+      "vi": {
+        "questionText": "6 + 4 = ?",
+        "questionReadText": "6 + 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "12"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "6 + 5 = ?",
+        "questionReadText": "6 + 5 = ?"
+      },
+      "vi": {
+        "questionText": "6 + 5 = ?",
+        "questionReadText": "6 + 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "11"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "12"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "13"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "6 + 6 = ?",
+        "questionReadText": "6 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "6 + 6 = ?",
+        "questionReadText": "6 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "11"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "13"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "14"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "6 + 7 = ?",
+        "questionReadText": "6 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "6 + 7 = ?",
+        "questionReadText": "6 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "12"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "13"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "14"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "6 + 8 = ?",
+        "questionReadText": "6 + 8 = ?"
+      },
+      "vi": {
+        "questionText": "6 + 8 = ?",
+        "questionReadText": "6 + 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "13"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "14"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "16"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "6 + 9 = ?",
+        "questionReadText": "6 + 9 = ?"
+      },
+      "vi": {
+        "questionText": "6 + 9 = ?",
+        "questionReadText": "6 + 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "14"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "15"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "16"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "17"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "16 + 6 = ?",
+        "questionReadText": "16 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "16 + 6 = ?",
+        "questionReadText": "16 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "22"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "23"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "24"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "21"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "26 + 6 = ?",
+        "questionReadText": "26 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "26 + 6 = ?",
+        "questionReadText": "26 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "31"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "32"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "33"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "30"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "36 + 6 = ?",
+        "questionReadText": "36 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "36 + 6 = ?",
+        "questionReadText": "36 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "41"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "43"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "42"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "44"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng cộng 6",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "46 + 6 = ?",
+        "questionReadText": "46 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "46 + 6 = ?",
+        "questionReadText": "46 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "51"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "52"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "53"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "50"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 11",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "11 - 2 = ?",
+        "questionReadText": "11 - 2 = ?"
+      },
+      "vi": {
+        "questionText": "11 - 2 = ?",
+        "questionReadText": "11 - 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 11",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "11 - 3 = ?",
+        "questionReadText": "11 - 3 = ?"
+      },
+      "vi": {
+        "questionText": "11 - 3 = ?",
+        "questionReadText": "11 - 3 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 11",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "11 - 4 = ?",
+        "questionReadText": "11 - 4 = ?"
+      },
+      "vi": {
+        "questionText": "11 - 4 = ?",
+        "questionReadText": "11 - 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 11",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "11 - 5 = ?",
+        "questionReadText": "11 - 5 = ?"
+      },
+      "vi": {
+        "questionText": "11 - 5 = ?",
+        "questionReadText": "11 - 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 11",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "11 - 6 = ?",
+        "questionReadText": "11 - 6 = ?"
+      },
+      "vi": {
+        "questionText": "11 - 6 = ?",
+        "questionReadText": "11 - 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "4"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "5"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "6"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "7"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 11",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "11 - 7 = ?",
+        "questionReadText": "11 - 7 = ?"
+      },
+      "vi": {
+        "questionText": "11 - 7 = ?",
+        "questionReadText": "11 - 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "3"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "5"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "6"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 11",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "11 - 8 = ?",
+        "questionReadText": "11 - 8 = ?"
+      },
+      "vi": {
+        "questionText": "11 - 8 = ?",
+        "questionReadText": "11 - 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "3"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "4"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 11",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "11 - 9 = ?",
+        "questionReadText": "11 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "11 - 9 = ?",
+        "questionReadText": "11 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "4"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 12",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "12 - 3 = ?",
+        "questionReadText": "12 - 3 = ?"
+      },
+      "vi": {
+        "questionText": "12 - 3 = ?",
+        "questionReadText": "12 - 3 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 12",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "12 - 4 = ?",
+        "questionReadText": "12 - 4 = ?"
+      },
+      "vi": {
+        "questionText": "12 - 4 = ?",
+        "questionReadText": "12 - 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 12",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "12 - 5 = ?",
+        "questionReadText": "12 - 5 = ?"
+      },
+      "vi": {
+        "questionText": "12 - 5 = ?",
+        "questionReadText": "12 - 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 12",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "12 - 6 = ?",
+        "questionReadText": "12 - 6 = ?"
+      },
+      "vi": {
+        "questionText": "12 - 6 = ?",
+        "questionReadText": "12 - 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 12",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "12 - 7 = ?",
+        "questionReadText": "12 - 7 = ?"
+      },
+      "vi": {
+        "questionText": "12 - 7 = ?",
+        "questionReadText": "12 - 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "4"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "5"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "6"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "7"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 12",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "12 - 8 = ?",
+        "questionReadText": "12 - 8 = ?"
+      },
+      "vi": {
+        "questionText": "12 - 8 = ?",
+        "questionReadText": "12 - 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "3"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "5"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "6"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 12",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "12 - 9 = ?",
+        "questionReadText": "12 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "12 - 9 = ?",
+        "questionReadText": "12 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "3"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "4"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 13",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "13 - 4 = ?",
+        "questionReadText": "13 - 4 = ?"
+      },
+      "vi": {
+        "questionText": "13 - 4 = ?",
+        "questionReadText": "13 - 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 13",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "13 - 5 = ?",
+        "questionReadText": "13 - 5 = ?"
+      },
+      "vi": {
+        "questionText": "13 - 5 = ?",
+        "questionReadText": "13 - 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 13",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "13 - 6 = ?",
+        "questionReadText": "13 - 6 = ?"
+      },
+      "vi": {
+        "questionText": "13 - 6 = ?",
+        "questionReadText": "13 - 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 13",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "13 - 7 = ?",
+        "questionReadText": "13 - 7 = ?"
+      },
+      "vi": {
+        "questionText": "13 - 7 = ?",
+        "questionReadText": "13 - 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 13",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "13 - 8 = ?",
+        "questionReadText": "13 - 8 = ?"
+      },
+      "vi": {
+        "questionText": "13 - 8 = ?",
+        "questionReadText": "13 - 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "4"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "5"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "6"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "7"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 13",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "13 - 9 = ?",
+        "questionReadText": "13 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "13 - 9 = ?",
+        "questionReadText": "13 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "3"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "5"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "6"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 14",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "14 - 5 = ?",
+        "questionReadText": "14 - 5 = ?"
+      },
+      "vi": {
+        "questionText": "14 - 5 = ?",
+        "questionReadText": "14 - 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 14",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "14 - 6 = ?",
+        "questionReadText": "14 - 6 = ?"
+      },
+      "vi": {
+        "questionText": "14 - 6 = ?",
+        "questionReadText": "14 - 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 14",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "14 - 7 = ?",
+        "questionReadText": "14 - 7 = ?"
+      },
+      "vi": {
+        "questionText": "14 - 7 = ?",
+        "questionReadText": "14 - 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 14",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "14 - 8 = ?",
+        "questionReadText": "14 - 8 = ?"
+      },
+      "vi": {
+        "questionText": "14 - 8 = ?",
+        "questionReadText": "14 - 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 14",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "14 - 9 = ?",
+        "questionReadText": "14 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "14 - 9 = ?",
+        "questionReadText": "14 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "4"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "5"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "6"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "7"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 15",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "15 - 6 = ?",
+        "questionReadText": "15 - 6 = ?"
+      },
+      "vi": {
+        "questionText": "15 - 6 = ?",
+        "questionReadText": "15 - 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 15",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "15 - 7 = ?",
+        "questionReadText": "15 - 7 = ?"
+      },
+      "vi": {
+        "questionText": "15 - 7 = ?",
+        "questionReadText": "15 - 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 15",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "15 - 8 = ?",
+        "questionReadText": "15 - 8 = ?"
+      },
+      "vi": {
+        "questionText": "15 - 8 = ?",
+        "questionReadText": "15 - 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 15",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "15 - 9 = ?",
+        "questionReadText": "15 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "15 - 9 = ?",
+        "questionReadText": "15 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 16",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "16 - 7 = ?",
+        "questionReadText": "16 - 7 = ?"
+      },
+      "vi": {
+        "questionText": "16 - 7 = ?",
+        "questionReadText": "16 - 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 16",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "16 - 8 = ?",
+        "questionReadText": "16 - 8 = ?"
+      },
+      "vi": {
+        "questionText": "16 - 8 = ?",
+        "questionReadText": "16 - 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 16",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "16 - 9 = ?",
+        "questionReadText": "16 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "16 - 9 = ?",
+        "questionReadText": "16 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 17",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "17 - 8 = ?",
+        "questionReadText": "17 - 8 = ?"
+      },
+      "vi": {
+        "questionText": "17 - 8 = ?",
+        "questionReadText": "17 - 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 17",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "17 - 9 = ?",
+        "questionReadText": "17 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "17 - 9 = ?",
+        "questionReadText": "17 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng trừ 18",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "18 - 9 = ?",
+        "questionReadText": "18 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "18 - 9 = ?",
+        "questionReadText": "18 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "25 + 7 = ?",
+        "questionReadText": "25 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "25 + 7 = ?",
+        "questionReadText": "25 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "31"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "32"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "33"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "30"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "38 + 5 = ?",
+        "questionReadText": "38 + 5 = ?"
+      },
+      "vi": {
+        "questionText": "38 + 5 = ?",
+        "questionReadText": "38 + 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "42"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "44"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "43"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "41"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "47 + 6 = ?",
+        "questionReadText": "47 + 6 = ?"
+      },
+      "vi": {
+        "questionText": "47 + 6 = ?",
+        "questionReadText": "47 + 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "53"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "54"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "52"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "55"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "56 + 8 = ?",
+        "questionReadText": "56 + 8 = ?"
+      },
+      "vi": {
+        "questionText": "56 + 8 = ?",
+        "questionReadText": "56 + 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "63"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "65"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "62"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "64"
+      }
+    ],
+    "correct_answer_id": 4
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "69 + 4 = ?",
+        "questionReadText": "69 + 4 = ?"
+      },
+      "vi": {
+        "questionText": "69 + 4 = ?",
+        "questionReadText": "69 + 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "72"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "74"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "73"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "71"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "74 + 9 = ?",
+        "questionReadText": "74 + 9 = ?"
+      },
+      "vi": {
+        "questionText": "74 + 9 = ?",
+        "questionReadText": "74 + 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "83"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "84"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "82"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "85"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "86 + 7 = ?",
+        "questionReadText": "86 + 7 = ?"
+      },
+      "vi": {
+        "questionText": "86 + 7 = ?",
+        "questionReadText": "86 + 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "92"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "94"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "93"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "91"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "35 + 18 = ?",
+        "questionReadText": "35 + 18 = ?"
+      },
+      "vi": {
+        "questionText": "35 + 18 = ?",
+        "questionReadText": "35 + 18 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "53"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "54"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "52"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "55"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "46 + 27 = ?",
+        "questionReadText": "46 + 27 = ?"
+      },
+      "vi": {
+        "questionText": "46 + 27 = ?",
+        "questionReadText": "46 + 27 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "72"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "74"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "73"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "71"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "58 + 34 = ?",
+        "questionReadText": "58 + 34 = ?"
+      },
+      "vi": {
+        "questionText": "58 + 34 = ?",
+        "questionReadText": "58 + 34 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "91"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "92"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "93"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "90"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "32 - 7 = ?",
+        "questionReadText": "32 - 7 = ?"
+      },
+      "vi": {
+        "questionText": "32 - 7 = ?",
+        "questionReadText": "32 - 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "25"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "24"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "26"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "23"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "41 - 5 = ?",
+        "questionReadText": "41 - 5 = ?"
+      },
+      "vi": {
+        "questionText": "41 - 5 = ?",
+        "questionReadText": "41 - 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "35"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "37"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "36"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "34"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "53 - 8 = ?",
+        "questionReadText": "53 - 8 = ?"
+      },
+      "vi": {
+        "questionText": "53 - 8 = ?",
+        "questionReadText": "53 - 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "44"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "45"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "46"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "43"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "64 - 9 = ?",
+        "questionReadText": "64 - 9 = ?"
+      },
+      "vi": {
+        "questionText": "64 - 9 = ?",
+        "questionReadText": "64 - 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "55"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "54"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "56"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "53"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "72 - 6 = ?",
+        "questionReadText": "72 - 6 = ?"
+      },
+      "vi": {
+        "questionText": "72 - 6 = ?",
+        "questionReadText": "72 - 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "65"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "67"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "66"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "64"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "questionText": "85 - 37 = ?",
+        "questionReadText": "85 - 37 = ?"
+      },
+      "vi": {
+        "questionText": "85 - 37 = ?",
+        "questionReadText": "85 - 37 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "47"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "48"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "49"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "46"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "questionText": "63 - 28 = ?",
+        "questionReadText": "63 - 28 = ?"
+      },
+      "vi": {
+        "questionText": "63 - 28 = ?",
+        "questionReadText": "63 - 28 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "35"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "34"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "36"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "33"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "questionText": "91 - 45 = ?",
+        "questionReadText": "91 - 45 = ?"
+      },
+      "vi": {
+        "questionText": "91 - 45 = ?",
+        "questionReadText": "91 - 45 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "45"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "47"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "46"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "44"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "50 - 16 = ?",
+        "questionReadText": "50 - 16 = ?"
+      },
+      "vi": {
+        "questionText": "50 - 16 = ?",
+        "questionReadText": "50 - 16 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "33"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "35"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "36"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "34"
+      }
+    ],
+    "correct_answer_id": 4
+  },
+  {
+    "subject": "math",
+    "topic": "Cộng trừ có nhớ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "questionText": "100 - 47 = ?",
+        "questionReadText": "100 - 47 = ?"
+      },
+      "vi": {
+        "questionText": "100 - 47 = ?",
+        "questionReadText": "100 - 47 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "53"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "54"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "52"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "55"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Lan has 15 candies, Mai has 5 more. How many does Mai have?",
+        "questionReadText": "Lan has 15 candies, Mai has 5 more. How many does Mai have?"
+      },
+      "vi": {
+        "questionText": "Lan có 15 cái kẹo, Mai nhiều hơn Lan 5 cái. Mai có mấy cái?",
+        "questionReadText": "Lan có 15 cái kẹo, Mai nhiều hơn Lan 5 cái. Mai có mấy cái?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "25"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Minh has 12 pens, Tung has 4 fewer. How many?",
+        "questionReadText": "Minh has 12 pens, Tung has 4 fewer. How many?"
+      },
+      "vi": {
+        "questionText": "Minh có 12 bút, Tùng ít hơn 4 cái. Tùng có mấy cái?",
+        "questionReadText": "Minh có 12 bút, Tùng ít hơn 4 cái. Tùng có mấy cái?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "16"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Mom has 11 eggs, uses 4. How many left?",
+        "questionReadText": "Mom has 11 eggs, uses 4. How many left?"
+      },
+      "vi": {
+        "questionText": "Mẹ có 11 trứng, dùng 4 quả. Còn mấy quả?",
+        "questionReadText": "Mẹ có 11 trứng, dùng 4 quả. Còn mấy quả?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Bag A: 9kg rice, B has 5kg more. How much in B?",
+        "questionReadText": "Bag A: 9kg rice, B has 5kg more. How much in B?"
+      },
+      "vi": {
+        "questionText": "Túi A 9kg gạo, túi B nhiều hơn 5kg. Túi B mấy kg?",
+        "questionReadText": "Túi A 9kg gạo, túi B nhiều hơn 5kg. Túi B mấy kg?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "13"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "14"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "4"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Class 2A: 30, 2B has 2 fewer. Students in 2B?",
+        "questionReadText": "Class 2A: 30, 2B has 2 fewer. Students in 2B?"
+      },
+      "vi": {
+        "questionText": "Lớp 2A: 30 HS, lớp 2B ít hơn 2. Lớp 2B mấy HS?",
+        "questionReadText": "Lớp 2A: 30 HS, lớp 2B ít hơn 2. Lớp 2B mấy HS?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "28"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "32"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "30"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "29"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "An has 8 marbles, Binh has 6 more. How many?",
+        "questionReadText": "An has 8 marbles, Binh has 6 more. How many?"
+      },
+      "vi": {
+        "questionText": "An có 8 bi, Bình nhiều hơn 6. Bình có mấy viên?",
+        "questionReadText": "An có 8 bi, Bình nhiều hơn 6. Bình có mấy viên?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "13"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "14"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "2"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Hoa picked 16 flowers, Mai 7 fewer. How many?",
+        "questionReadText": "Hoa picked 16 flowers, Mai 7 fewer. How many?"
+      },
+      "vi": {
+        "questionText": "Hoa hái 16 bông, Mai ít hơn 7. Mai hái mấy bông?",
+        "questionReadText": "Hoa hái 16 bông, Mai ít hơn 7. Mai hái mấy bông?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "23"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "An: 25 chickens, Binh has 8 more. How many?",
+        "questionReadText": "An: 25 chickens, Binh has 8 more. How many?"
+      },
+      "vi": {
+        "questionText": "Nhà An 25 gà, nhà Bình nhiều hơn 8. Nhà Bình mấy con?",
+        "questionReadText": "Nhà An 25 gà, nhà Bình nhiều hơn 8. Nhà Bình mấy con?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "32"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "34"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "33"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "17"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "40 candies, gives 15. How many left?",
+        "questionReadText": "40 candies, gives 15. How many left?"
+      },
+      "vi": {
+        "questionText": "Anh có 40 kẹo, cho em 15 cái. Anh còn mấy cái?",
+        "questionReadText": "Anh có 40 kẹo, cho em 15 cái. Anh còn mấy cái?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "25"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "55"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "30"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "20"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "18 orange + 7 pomelo trees. Total?",
+        "questionReadText": "18 orange + 7 pomelo trees. Total?"
+      },
+      "vi": {
+        "questionText": "Vườn có 18 cam và 7 bưởi. Tổng mấy cây?",
+        "questionReadText": "Vườn có 18 cam và 7 bưởi. Tổng mấy cây?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "25"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "11"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "26"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "24"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "35 students, 20 girls. How many boys?",
+        "questionReadText": "35 students, 20 girls. How many boys?"
+      },
+      "vi": {
+        "questionText": "Lớp có 35 HS, 20 nữ. Bao nhiêu nam?",
+        "questionReadText": "Lớp có 35 HS, 20 nữ. Bao nhiêu nam?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "55"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "14"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Bus: 42 people, 17 get off. How many remain?",
+        "questionReadText": "Bus: 42 people, 17 get off. How many remain?"
+      },
+      "vi": {
+        "questionText": "Xe buýt 42 người, 17 xuống. Còn mấy người?",
+        "questionReadText": "Xe buýt 42 người, 17 xuống. Còn mấy người?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "25"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "59"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "24"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "26"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "13 notebooks + 9 more. Total?",
+        "questionReadText": "13 notebooks + 9 more. Total?"
+      },
+      "vi": {
+        "questionText": "Tùng có 13 vở, mẹ mua thêm 9. Tổng mấy quyển?",
+        "questionReadText": "Tùng có 13 vở, mẹ mua thêm 9. Tổng mấy quyển?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "21"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "22"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "23"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "4"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "50 red, 28 blue marbles. How many more red?",
+        "questionReadText": "50 red, 28 blue marbles. How many more red?"
+      },
+      "vi": {
+        "questionText": "50 bi đỏ, 28 bi xanh. Đỏ hơn xanh mấy viên?",
+        "questionReadText": "50 bi đỏ, 28 bi xanh. Đỏ hơn xanh mấy viên?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "78"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "22"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "23"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "21"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bài toán có lời văn",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "questionText": "Team A: 45, Team B: 38 trees. Total?",
+        "questionReadText": "Team A: 45, Team B: 38 trees. Total?"
+      },
+      "vi": {
+        "questionText": "Đội A trồng 45 cây, đội B 38 cây. Tổng?",
+        "questionReadText": "Đội A trồng 45 cây, đội B 38 cây. Tổng?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "82"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "83"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "84"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "How many endpoints in a segment?",
+        "questionReadText": "How many endpoints in a segment?"
+      },
+      "vi": {
+        "questionText": "Đoạn thẳng có mấy đầu mút?",
+        "questionReadText": "Đoạn thẳng có mấy đầu mút?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "4"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Tool to measure segment length?",
+        "questionReadText": "Tool to measure segment length?"
+      },
+      "vi": {
+        "questionText": "Dụng cụ đo độ dài đoạn thẳng?",
+        "questionReadText": "Dụng cụ đo độ dài đoạn thẳng?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "Compa"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "Thước thẳng"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "Ê-ke"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "Bút chì"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Triangle has how many sides?",
+        "questionReadText": "Triangle has how many sides?"
+      },
+      "vi": {
+        "questionText": "Tam giác có mấy cạnh?",
+        "questionReadText": "Tam giác có mấy cạnh?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Square has how many sides?",
+        "questionReadText": "Square has how many sides?"
+      },
+      "vi": {
+        "questionText": "Hình vuông có mấy cạnh?",
+        "questionReadText": "Hình vuông có mấy cạnh?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "3"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "5"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "6"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Rectangle has how many right angles?",
+        "questionReadText": "Rectangle has how many right angles?"
+      },
+      "vi": {
+        "questionText": "Hình chữ nhật có mấy góc vuông?",
+        "questionReadText": "Hình chữ nhật có mấy góc vuông?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "1"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Sides of a square are?",
+        "questionReadText": "Sides of a square are?"
+      },
+      "vi": {
+        "questionText": "Các cạnh hình vuông như thế nào?",
+        "questionReadText": "Các cạnh hình vuông như thế nào?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "Bằng nhau"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "Không bằng nhau"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "2 cạnh bằng"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "3 cạnh bằng"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Zigzag ABC has how many segments?",
+        "questionReadText": "Zigzag ABC has how many segments?"
+      },
+      "vi": {
+        "questionText": "Đường gấp khúc ABC có bao nhiêu đoạn?",
+        "questionReadText": "Đường gấp khúc ABC có bao nhiêu đoạn?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "4"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Collinear points means?",
+        "questionReadText": "Collinear points means?"
+      },
+      "vi": {
+        "questionText": "3 điểm thẳng hàng nghĩa là gì?",
+        "questionReadText": "3 điểm thẳng hàng nghĩa là gì?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "Cùng nằm trên 1 đường thẳng"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "Tạo tam giác"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "Song song"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "Vuông góc"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Circle has how many sides?",
+        "questionReadText": "Circle has how many sides?"
+      },
+      "vi": {
+        "questionText": "Hình tròn có mấy cạnh?",
+        "questionReadText": "Hình tròn có mấy cạnh?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "0"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "1"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "2"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "Vô số"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Perimeter: triangle 3,4,5 cm?",
+        "questionReadText": "Perimeter: triangle 3,4,5 cm?"
+      },
+      "vi": {
+        "questionText": "Chu vi tam giác cạnh 3, 4, 5 cm?",
+        "questionReadText": "Chu vi tam giác cạnh 3, 4, 5 cm?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "11 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12 cm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "13 cm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10 cm"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Perimeter: square side 5 cm?",
+        "questionReadText": "Perimeter: square side 5 cm?"
+      },
+      "vi": {
+        "questionText": "Chu vi hình vuông cạnh 5 cm?",
+        "questionReadText": "Chu vi hình vuông cạnh 5 cm?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "15 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20 cm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "25 cm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10 cm"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Perimeter: rect 6x4 cm?",
+        "questionReadText": "Perimeter: rect 6x4 cm?"
+      },
+      "vi": {
+        "questionText": "Chu vi HCN dài 6, rộng 4 cm?",
+        "questionReadText": "Chu vi HCN dài 6, rộng 4 cm?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20 cm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "24 cm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "18 cm"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Zigzag ABCD: how many segments?",
+        "questionReadText": "Zigzag ABCD: how many segments?"
+      },
+      "vi": {
+        "questionText": "Đường gấp khúc ABCD có mấy đoạn?",
+        "questionReadText": "Đường gấp khúc ABCD có mấy đoạn?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Which is a straight line?",
+        "questionReadText": "Which is a straight line?"
+      },
+      "vi": {
+        "questionText": "Hình nào là đường thẳng?",
+        "questionReadText": "Hình nào là đường thẳng?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "Đường cong"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "Đường gấp khúc"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "Đường thẳng"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "Đường tròn"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Hình học",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Closed zigzag is what?",
+        "questionReadText": "Closed zigzag is what?"
+      },
+      "vi": {
+        "questionText": "Đường gấp khúc khép kín là hình gì?",
+        "questionReadText": "Đường gấp khúc khép kín là hình gì?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "Đa giác"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "Đường thẳng"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "Đường tròn"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "Đoạn thẳng"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "1 dm = ? cm",
+        "questionReadText": "1 dm = ? cm"
+      },
+      "vi": {
+        "questionText": "1 dm = ? cm",
+        "questionReadText": "1 dm = ? cm"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10 cm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "100 cm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "0 cm"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "20 cm = ? dm",
+        "questionReadText": "20 cm = ? dm"
+      },
+      "vi": {
+        "questionText": "20 cm = ? dm",
+        "questionReadText": "20 cm = ? dm"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2 dm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20 dm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "1 dm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "3 dm"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "5 dm = ? cm",
+        "questionReadText": "5 dm = ? cm"
+      },
+      "vi": {
+        "questionText": "5 dm = ? cm",
+        "questionReadText": "5 dm = ? cm"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "50 cm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "500 cm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15 cm"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "1 dm + 5 dm = ?",
+        "questionReadText": "1 dm + 5 dm = ?"
+      },
+      "vi": {
+        "questionText": "1 dm + 5 dm = ?",
+        "questionReadText": "1 dm + 5 dm = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6 dm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "60 dm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15 dm"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "10 dm - 2 dm = ?",
+        "questionReadText": "10 dm - 2 dm = ?"
+      },
+      "vi": {
+        "questionText": "10 dm - 2 dm = ?",
+        "questionReadText": "10 dm - 2 dm = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8 dm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "12 dm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "80 cm"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "1 m = ? cm",
+        "questionReadText": "1 m = ? cm"
+      },
+      "vi": {
+        "questionText": "1 m = ? cm",
+        "questionReadText": "1 m = ? cm"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "50 cm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "100 cm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "1000 cm"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "1 m = ? dm",
+        "questionReadText": "1 m = ? dm"
+      },
+      "vi": {
+        "questionText": "1 m = ? dm",
+        "questionReadText": "1 m = ? dm"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1 dm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10 dm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "100 dm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5 dm"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "3 m = ? dm",
+        "questionReadText": "3 m = ? dm"
+      },
+      "vi": {
+        "questionText": "3 m = ? dm",
+        "questionReadText": "3 m = ? dm"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "30 dm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "3 dm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "300 dm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "13 dm"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "1 km = ? m",
+        "questionReadText": "1 km = ? m"
+      },
+      "vi": {
+        "questionText": "1 km = ? m",
+        "questionReadText": "1 km = ? m"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10 m"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "100 m"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "1000 m"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10000 m"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "1m 20cm = ? cm",
+        "questionReadText": "1m 20cm = ? cm"
+      },
+      "vi": {
+        "questionText": "1 m 20 cm = ? cm",
+        "questionReadText": "1 m 20 cm = ? cm"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "120 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12 cm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "102 cm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "210 cm"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Unit for mass?",
+        "questionReadText": "Unit for mass?"
+      },
+      "vi": {
+        "questionText": "Đơn vị đo khối lượng?",
+        "questionReadText": "Đơn vị đo khối lượng?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "dm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "kg"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "lít"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Unit for capacity?",
+        "questionReadText": "Unit for capacity?"
+      },
+      "vi": {
+        "questionText": "Đơn vị đo dung tích?",
+        "questionReadText": "Đơn vị đo dung tích?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "m"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "kg"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "lít"
+      }
+    ],
+    "correct_answer_id": 4
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Bag 10kg. Two bags = ?",
+        "questionReadText": "Bag 10kg. Two bags = ?"
+      },
+      "vi": {
+        "questionText": "Bao gạo 10 kg. Hai bao = ? kg",
+        "questionReadText": "Bao gạo 10 kg. Hai bao = ? kg"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10 kg"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20 kg"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15 kg"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "12 kg"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Can 5L, used 2L. Left?",
+        "questionReadText": "Can 5L, used 2L. Left?"
+      },
+      "vi": {
+        "questionText": "Can 5 lít, dùng 2 lít. Còn?",
+        "questionReadText": "Can 5 lít, dùng 2 lít. Còn?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7 lít"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "2 lít"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3 lít"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5 lít"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "40 cm + 60 cm = ?",
+        "questionReadText": "40 cm + 60 cm = ?"
+      },
+      "vi": {
+        "questionText": "40 cm + 60 cm = ?",
+        "questionReadText": "40 cm + 60 cm = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "100 cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10 cm"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10 dm"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "1 dm"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "100 cm = ? m",
+        "questionReadText": "100 cm = ? m"
+      },
+      "vi": {
+        "questionText": "100 cm = ? m",
+        "questionReadText": "100 cm = ? m"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1 m"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10 m"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "100 m"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "0 m"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "50 dm = ? m",
+        "questionReadText": "50 dm = ? m"
+      },
+      "vi": {
+        "questionText": "50 dm = ? m",
+        "questionReadText": "50 dm = ? m"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "50 m"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "5 m"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "500 m"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "0.5 m"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "15 kg - 7 kg = ?",
+        "questionReadText": "15 kg - 7 kg = ?"
+      },
+      "vi": {
+        "questionText": "15 kg - 7 kg = ?",
+        "questionReadText": "15 kg - 7 kg = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7 kg"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8 kg"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9 kg"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "22 kg"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3L + 4L = ?",
+        "questionReadText": "3L + 4L = ?"
+      },
+      "vi": {
+        "questionText": "3 lít + 4 lít = ?",
+        "questionReadText": "3 lít + 4 lít = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1 lít"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12 lít"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7 lít"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "34 lít"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Đơn vị đo",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Unit for length?",
+        "questionReadText": "Unit for length?"
+      },
+      "vi": {
+        "questionText": "Đơn vị đo chiều dài?",
+        "questionReadText": "Đơn vị đo chiều dài?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "cm"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "kg"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "lít"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "giờ"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "1 hour = ? minutes",
+        "questionReadText": "1 hour = ? minutes"
+      },
+      "vi": {
+        "questionText": "1 giờ = ? phút",
+        "questionReadText": "1 giờ = ? phút"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "30 phút"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "60 phút"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "100 phút"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "24 phút"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "1 day = ? hours",
+        "questionReadText": "1 day = ? hours"
+      },
+      "vi": {
+        "questionText": "1 ngày = ? giờ",
+        "questionReadText": "1 ngày = ? giờ"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "12 giờ"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20 giờ"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "24 giờ"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "48 giờ"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Short hand 3, long hand 12. What time?",
+        "questionReadText": "Short hand 3, long hand 12. What time?"
+      },
+      "vi": {
+        "questionText": "Kim ngắn chỉ 3, kim dài chỉ 12. Mấy giờ?",
+        "questionReadText": "Kim ngắn chỉ 3, kim dài chỉ 12. Mấy giờ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "3 giờ"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12 giờ"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3 giờ 12"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "15 phút"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "Short hand 8, long hand 6. What time?",
+        "questionReadText": "Short hand 8, long hand 6. What time?"
+      },
+      "vi": {
+        "questionText": "Kim ngắn chỉ 8, kim dài chỉ 6. Mấy giờ?",
+        "questionReadText": "Kim ngắn chỉ 8, kim dài chỉ 6. Mấy giờ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8 giờ"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8 giờ 30"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "6 giờ 8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8 giờ 6"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "1 week = ? days",
+        "questionReadText": "1 week = ? days"
+      },
+      "vi": {
+        "questionText": "1 tuần = ? ngày",
+        "questionReadText": "1 tuần = ? ngày"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5 ngày"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6 ngày"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7 ngày"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10 ngày"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Long hand at 12 = ? minutes",
+        "questionReadText": "Long hand at 12 = ? minutes"
+      },
+      "vi": {
+        "questionText": "Kim dài chỉ 12 là mấy phút?",
+        "questionReadText": "Kim dài chỉ 12 là mấy phút?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "0 phút"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12 phút"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "60 phút"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "30 phút"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Half hour = ? minutes",
+        "questionReadText": "Half hour = ? minutes"
+      },
+      "vi": {
+        "questionText": "Nửa giờ = ? phút",
+        "questionReadText": "Nửa giờ = ? phút"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "15 phút"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "30 phút"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "45 phút"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "60 phút"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "questionText": "2 hours = ? minutes",
+        "questionReadText": "2 hours = ? minutes"
+      },
+      "vi": {
+        "questionText": "2 giờ = ? phút",
+        "questionReadText": "2 giờ = ? phút"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "60 phút"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "90 phút"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "120 phút"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "180 phút"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "1 year = ? months",
+        "questionReadText": "1 year = ? months"
+      },
+      "vi": {
+        "questionText": "1 năm = ? tháng",
+        "questionReadText": "1 năm = ? tháng"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "10 tháng"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12 tháng"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "24 tháng"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "6 tháng"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Thời gian",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "School starts at?",
+        "questionReadText": "School starts at?"
+      },
+      "vi": {
+        "questionText": "Em đi học lúc mấy giờ sáng?",
+        "questionReadText": "Em đi học lúc mấy giờ sáng?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7 giờ sáng"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7 giờ tối"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "12 giờ trưa"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "2 giờ chiều"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Số chẵn lẻ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Which is even?",
+        "questionReadText": "Which is even?"
+      },
+      "vi": {
+        "questionText": "Số nào là số chẵn?",
+        "questionReadText": "Số nào là số chẵn?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Số chẵn lẻ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Which is odd?",
+        "questionReadText": "Which is odd?"
+      },
+      "vi": {
+        "questionText": "Số nào là số lẻ?",
+        "questionReadText": "Số nào là số lẻ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 3
+  },
+  {
+    "subject": "math",
+    "topic": "Số chẵn lẻ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Smallest even number > 0?",
+        "questionReadText": "Smallest even number > 0?"
+      },
+      "vi": {
+        "questionText": "Số chẵn nhỏ nhất > 0?",
+        "questionReadText": "Số chẵn nhỏ nhất > 0?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "0"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "1"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "4"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Số chẵn lẻ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Even numbers 2 to 10?",
+        "questionReadText": "Even numbers 2 to 10?"
+      },
+      "vi": {
+        "questionText": "Số chẵn từ 2 đến 10?",
+        "questionReadText": "Số chẵn từ 2 đến 10?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2, 4, 6, 8, 10"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "1, 3, 5, 7, 9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "2, 3, 4, 5, 6"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "1, 2, 3, 4, 5"
+      }
+    ],
+    "correct_answer_id": 1
+  },
+  {
+    "subject": "math",
+    "topic": "Số chẵn lẻ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "Odd numbers 1 to 9?",
+        "questionReadText": "Odd numbers 1 to 9?"
+      },
+      "vi": {
+        "questionText": "Số lẻ từ 1 đến 9?",
+        "questionReadText": "Số lẻ từ 1 đến 9?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2, 4, 6, 8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "1, 3, 5, 7, 9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "1, 2, 3, 4, 5"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "3, 6, 9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 1 = ?",
+        "questionReadText": "2 × 1 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 1 = ?",
+        "questionReadText": "2 x 1 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "4"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 2 = ?",
+        "questionReadText": "2 × 2 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 2 = ?",
+        "questionReadText": "2 x 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "3"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "5"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "6"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 3 = ?",
+        "questionReadText": "2 × 3 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 3 = ?",
+        "questionReadText": "2 x 3 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 4 = ?",
+        "questionReadText": "2 × 4 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 4 = ?",
+        "questionReadText": "2 x 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 5 = ?",
+        "questionReadText": "2 × 5 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 5 = ?",
+        "questionReadText": "2 x 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "12"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 6 = ?",
+        "questionReadText": "2 × 6 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 6 = ?",
+        "questionReadText": "2 x 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "11"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "13"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "14"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 7 = ?",
+        "questionReadText": "2 × 7 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 7 = ?",
+        "questionReadText": "2 x 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "13"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "14"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "15"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "16"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 8 = ?",
+        "questionReadText": "2 × 8 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 8 = ?",
+        "questionReadText": "2 x 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "15"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "16"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "17"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "18"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 9 = ?",
+        "questionReadText": "2 × 9 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 9 = ?",
+        "questionReadText": "2 x 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "17"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "18"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "19"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "20"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 × 10 = ?",
+        "questionReadText": "2 × 10 = ?"
+      },
+      "vi": {
+        "questionText": "2 x 10 = ?",
+        "questionReadText": "2 x 10 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "19"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "20"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "21"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "22"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 1 = ?",
+        "questionReadText": "3 × 1 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 1 = ?",
+        "questionReadText": "3 x 1 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "3"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "4"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 2 = ?",
+        "questionReadText": "3 × 2 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 2 = ?",
+        "questionReadText": "3 x 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 3 = ?",
+        "questionReadText": "3 × 3 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 3 = ?",
+        "questionReadText": "3 x 3 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 4 = ?",
+        "questionReadText": "3 × 4 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 4 = ?",
+        "questionReadText": "3 x 4 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "11"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "12"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "13"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "14"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 5 = ?",
+        "questionReadText": "3 × 5 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 5 = ?",
+        "questionReadText": "3 x 5 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "14"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "15"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "16"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "17"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 6 = ?",
+        "questionReadText": "3 × 6 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 6 = ?",
+        "questionReadText": "3 x 6 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "17"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "18"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "19"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "20"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 7 = ?",
+        "questionReadText": "3 × 7 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 7 = ?",
+        "questionReadText": "3 x 7 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "20"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "21"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "22"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "23"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 8 = ?",
+        "questionReadText": "3 × 8 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 8 = ?",
+        "questionReadText": "3 x 8 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "23"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "24"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "25"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "26"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 9 = ?",
+        "questionReadText": "3 × 9 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 9 = ?",
+        "questionReadText": "3 x 9 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "26"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "27"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "28"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "29"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng nhân 3",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "3 × 10 = ?",
+        "questionReadText": "3 × 10 = ?"
+      },
+      "vi": {
+        "questionText": "3 x 10 = ?",
+        "questionReadText": "3 x 10 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "29"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "30"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "31"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "32"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "2 ÷ 2 = ?",
+        "questionReadText": "2 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "2 : 2 = ?",
+        "questionReadText": "2 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "0"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "1"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "2"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "3"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "4 ÷ 2 = ?",
+        "questionReadText": "4 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "4 : 2 = ?",
+        "questionReadText": "4 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "1"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "2"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "3"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "4"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "6 ÷ 2 = ?",
+        "questionReadText": "6 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "6 : 2 = ?",
+        "questionReadText": "6 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "2"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "3"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "4"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "5"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "8 ÷ 2 = ?",
+        "questionReadText": "8 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "8 : 2 = ?",
+        "questionReadText": "8 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "3"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "4"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "5"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "6"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "10 ÷ 2 = ?",
+        "questionReadText": "10 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "10 : 2 = ?",
+        "questionReadText": "10 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "4"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "5"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "6"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "7"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "12 ÷ 2 = ?",
+        "questionReadText": "12 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "12 : 2 = ?",
+        "questionReadText": "12 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "6"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "7"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "8"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "14 ÷ 2 = ?",
+        "questionReadText": "14 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "14 : 2 = ?",
+        "questionReadText": "14 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "6"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "7"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "8"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "9"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "16 ÷ 2 = ?",
+        "questionReadText": "16 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "16 : 2 = ?",
+        "questionReadText": "16 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "7"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "8"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "9"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "10"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "18 ÷ 2 = ?",
+        "questionReadText": "18 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "18 : 2 = ?",
+        "questionReadText": "18 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "8"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "9"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "10"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "11"
+      }
+    ],
+    "correct_answer_id": 2
+  },
+  {
+    "subject": "math",
+    "topic": "Bảng chia 2",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "questionText": "20 ÷ 2 = ?",
+        "questionReadText": "20 ÷ 2 = ?"
+      },
+      "vi": {
+        "questionText": "20 : 2 = ?",
+        "questionReadText": "20 : 2 = ?"
+      }
+    },
+    "choices": [
+      {
+        "id": 1,
+        "label": "A",
+        "value": "9"
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "value": "10"
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "value": "11"
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "value": "12"
+      }
+    ],
+    "correct_answer_id": 2
+  }
+]

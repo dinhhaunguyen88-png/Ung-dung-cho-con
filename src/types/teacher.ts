@@ -76,22 +76,39 @@ export interface TeacherAuthResponse {
         avatar_color: string;
         xp: number;
         level: number;
+        stars: number;
     };
+    token: string;
 }
 
 // ─── Student Progress (Teacher View) ─────────────────
 
 export interface StudentProgressSummary {
-    user_id: string;
-    user_name: string;
-    user_avatar: string;
-    user_avatar_color: string;
-    total_quests: number;
-    total_correct: number;
-    total_questions: number;
-    accuracy: number; // percentage
+    id: string;
+    name: string;
+    avatar: string;
+    avatar_color: string;
     xp: number;
     level: number;
+    totalCorrect: number;
+    totalQuestions: number;
+    accuracy: number;
+    sessionsCount: number;
+}
+
+export interface ProgressRecord {
+    id: string | number;
+    user_id: string;
+    subject: string;
+    topic: string;
+    correct: number;
+    total: number;
+    completed_at?: string | null;
+    created_at?: string;
+}
+
+export interface StudentAssignmentData extends AssignmentData {
+    class_name: string;
 }
 
 export interface ClassProgressReport {

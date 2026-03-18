@@ -1,175 +1,104 @@
 {
-    "meta": {
-        "schema_version": "1.1.0",
-        "awf_version": "4.0.2",
-        "last_updated": "2026-03-15T18:15:00+07:00"
+  "meta": {
+    "schema_version": "1.1.0",
+    "awf_version": "3.3.0"
+  },
+  "project": {
+    "name": "Math Buddy",
+    "type": "Educational Web App (LMS/Gamification)",
+    "status": "In Development - Expanding Content"
+  },
+  "tech_stack": {
+    "frontend": {
+      "framework": "React 19 (Vite)",
+      "styling": "TailwindCSS v4",
+      "animations": "Motion (Framer)",
+      "icons": "Lucide-React",
+      "i18n": "react-i18next",
+      "state": "React Hooks"
     },
-    "project": {
-        "name": "Math Buddy",
-        "type": "web-app",
-        "description": "Ứng dụng học toán & ngoại ngữ cho trẻ em với pet ảo, bảng xếp hạng; Chế độ Giáo viên đầy đủ tính năng Class/Assignment.",
-        "status": "phase2-complete",
-        "repo": "https://github.com/dinhhaunguyen88-png/Dinh-Hau-Nguyen.git"
+    "backend": {
+      "runtime": "Node.js (tsx)",
+      "framework": "Express",
+      "database_client": "@supabase/supabase-js"
     },
-    "tech_stack": {
-        "frontend": {
-            "framework": "React 19",
-            "bundler": "Vite 6.4",
-            "styling": "TailwindCSS v4",
-            "animation": "motion (Framer Motion)",
-            "icons": "lucide-react",
-            "i18n": "react-i18next + i18next",
-            "language": "TypeScript 5.8"
-        },
-        "backend": {
-            "framework": "Express 4",
-            "runtime": "tsx (Node.js 22)",
-            "database": "Supabase (PostgreSQL) + Local SQLite fallback",
-            "auth": "crypto.scrypt hashing for teachers"
-        },
-        "apis": {
-            "ai": "@google/genai (Gemini)"
-        }
-    },
-    "database_schema": {
-        "summary": "App lưu: thông tin user, tiến trình học, pet config, classes, members, assignments.",
-        "tables": [
-            {
-                "name": "users",
-                "columns": [
-                    "id",
-                    "name",
-                    "avatar",
-                    "avatar_color",
-                    "xp",
-                    "level",
-                    "role",
-                    "email",
-                    "password_hash",
-                    "created_at"
-                ],
-                "description": "Thông tin học sinh/giáo viên"
-            },
-            {
-                "name": "classes",
-                "columns": [
-                    "id",
-                    "name",
-                    "teacher_id",
-                    "join_code",
-                    "created_at"
-                ],
-                "description": "Lớp học do giáo viên quản lý"
-            },
-            {
-                "name": "class_members",
-                "columns": [
-                    "id",
-                    "class_id",
-                    "user_id",
-                    "joined_at"
-                ],
-                "description": "Danh sách học sinh trong lớp"
-            },
-            {
-                "name": "assignments",
-                "columns": [
-                    "id",
-                    "class_id",
-                    "title",
-                    "subject",
-                    "topic",
-                    "question_count",
-                    "due_date",
-                    "created_at"
-                ],
-                "description": "Bài tập giao cho lớp"
-            },
-            {
-                "name": "progress",
-                "columns": [
-                    "id",
-                    "user_id",
-                    "subject",
-                    "topic",
-                    "correct_answers",
-                    "total_questions",
-                    "created_at"
-                ],
-                "description": "Lịch sử làm bài"
-            }
-        ],
-        "relationships_explained": "1 teacher -> N classes. 1 class -> N students (via members). 1 class -> N assignments."
-    },
-    "api_endpoints": [
-        {
-            "method": "POST",
-            "path": "/api/auth/teacher/register",
-            "explained": "Đăng ký giáo viên"
-        },
-        {
-            "method": "POST",
-            "path": "/api/auth/teacher/login",
-            "explained": "Đăng nhập giáo viên"
-        },
-        {
-            "method": "POST",
-            "path": "/api/classes",
-            "explained": "Tạo lớp học mới"
-        },
-        {
-            "method": "GET",
-            "path": "/api/classes/:teacherId",
-            "explained": "Lấy danh sách lớp của GV"
-        },
-        {
-            "method": "POST",
-            "path": "/api/classes/join",
-            "explained": "HS tham gia lớp bằng mã code"
-        },
-        {
-            "method": "GET",
-            "path": "/api/classes/:classId/members",
-            "explained": "Lấy danh sách HS trong lớp"
-        },
-        {
-            "method": "POST",
-            "path": "/api/assignments",
-            "explained": "Giao bài tập mới"
-        },
-        {
-            "method": "GET",
-            "path": "/api/teacher/progress/:classId",
-            "explained": "Báo cáo progress cả lớp"
-        }
-    ],
-    "features": [
-        {
-            "name": "Teacher Mode",
-            "status": "done",
-            "description": "Auth, Class Mgmt, Assignment & Progress tracking hoàn thiện."
-        },
-        {
-            "name": "English Quest Support",
-            "status": "done",
-            "description": "Hệ thống Quest tiếng Anh với ngân hàng câu hỏi ngẫu nhiên."
-        },
-        {
-            "name": "Pet System",
-            "status": "done",
-            "description": "Customizable SVG pets with XP progression & evolution."
-        }
-    ],
-    "knowledge_items": {
-        "patterns": [
-            "Named exports for components",
-            "Unified App.tsx router logic",
-            "Teacher system uses scrypt hashing"
-        ],
-        "gotchas": [
-            "Supabase uses UUID - match with strings in TS",
-            "Backend accessory data may return plain strings (e.g. 'party-hat') instead of JSON arrays; use robust parsing in src/hooks/usePet.ts",
-            "Use npm.cmd for PowerShell on Windows"
-        ]
+    "database": {
+      "provider": "Supabase (PostgreSQL)",
+      "schema_source": "Supabase Tables"
     }
+  },
+  "database_schema": {
+    "summary": "Hệ thống lưu trữ thông tin người dùng, tiến độ học tập, lớp học, bài tập và hệ thống Pet/Cửa hàng.",
+    "tables": [
+      {
+        "name": "users",
+        "description": "Thông tin học sinh/giáo viên, cấp độ, XP, tiền (stars), và pet đang active."
+      },
+      {
+        "name": "progress",
+        "description": "Lịch sử trả lời câu hỏi, độ chính xác, thời gian học."
+      },
+      {
+        "name": "questions",
+        "description": "Ngân hàng câu hỏi phân theo khối lớp, môn học, chủ đề."
+      },
+      {
+        "name": "shop_items",
+        "description": "Vật phẩm trang trí cho pet (phụ kiện, màu sắc)."
+      },
+      {
+        "name": "user_inventory",
+        "description": "Vật phẩm người dùng đã mua và trạng thái trang bị (equipped)."
+      },
+      {
+        "name": "classes",
+        "description": "Thông tin lớp học do giáo viên tạo."
+      },
+      {
+        "name": "class_members",
+        "description": "Quan hệ giữa học sinh và lớp học."
+      },
+      {
+        "name": "assignments",
+        "description": "Bài tập giáo viên giao cho lớp."
+      }
+    ],
+    "relationships_explained": "1 Giáo viên tạo nhiều Lớp. 1 Lớp có nhiều Học sinh. 1 Học sinh có 1 Pet và nhiều Vật phẩm. 1 Lớp có nhiều Bài tập."
+  },
+  "api_endpoints": [
+    { "path": "/api/users", "method": "POST", "explained": "Tạo hoặc lấy thông tin người dùng dựa trên email." },
+    { "path": "/api/questions", "method": "GET", "explained": "Lấy danh sách câu hỏi theo môn/chủ đề/giới hạn." },
+    { "path": "/api/progress", "method": "POST", "explained": "Lưu kết quả học tập và cập nhật XP/Stars cho user." },
+    { "path": "/api/leaderboard", "method": "GET", "explained": "Lấy bảng xếp hạng theo XP." },
+    { "path": "/api/shop/items", "method": "GET", "explained": "Lấy danh sách vật phẩm trong cửa hàng." },
+    { "path": "/api/shop/buy", "method": "POST", "explained": "Mua vật phẩm bằng stars." }
+  ],
+  "business_rules": [
+    { "rule": "XP Calculation", "description": "Mỗi câu đúng nhận 10 XP, mỗi sao nhận 1-2 Stars." },
+    { "rule": "Onboarding", "description": "Người dùng mới phải chọn Pet và màu sắc trước khi vào trang chủ." },
+    { "rule": "Math Expansion", "description": "Dữ liệu toán lớp 2 được mở rộng lên 215 câu hỏi (v4)." }
+  ],
+  "features": [
+    "Learning Quests (Interactive quiz)",
+    "Pet System (Dragon, Cat, Dog, Rabbit with levels/evolution)",
+    "Shop & Inventory (Accessories, Colors)",
+    "Teacher Dashboard (Class management, Progress tracking)",
+    "Leaderboard",
+    "Vietnamese TTS & Math Normalization"
+  ],
+  "knowledge_items": {
+    "patterns": [
+      "Layered Architecture (UI -> API -> Supabase)",
+      "Retry Pattern for Supabase connection",
+      "Seed Scripts for rapid data population",
+      "TTS Fallback (Web Speech API -> Google Translate TTS)",
+      "Vietnamese Math Normalization for natural speech"
+    ],
+    "gotchas": [
+      "Backend server (3001) must run alongside Frontend (5173).",
+      "Vite proxy resolves /api requests to port 3001.",
+      "Pet accessories parsing requires safe handling of JSON/strings.",
+      "Native Vietnamese voices (vi-VN) are often missing on OS level; requires fallback."
+    ]
+  }
 }

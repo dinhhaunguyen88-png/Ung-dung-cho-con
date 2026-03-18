@@ -2,22 +2,28 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
     Gift,
-    Star,
     ArrowLeft,
     ArrowRight,
 } from 'lucide-react';
+import { motion } from 'motion/react';
 import { SpeakerButton } from '../ui/SpeakerButton';
 import { useSpeech } from '../../hooks/useSpeech';
-import { saveProgress } from '../../services/api';
+import { getQuestions, saveProgress } from '../../services/api';
 
 export function LearningQuest({
     subject = 'math',
     userId = null,
+    topic,
+    questionLimit = 15,
+    title,
     onComplete,
     onBack,
 }: {
     subject?: string;
     userId?: string | null;
+    topic?: string;
+    questionLimit?: number;
+    title?: string;
     onComplete: () => void;
     onBack: () => void;
 }) {
@@ -35,17 +41,21 @@ export function LearningQuest({
     const fetchQuestions = async () => {
         setIsLoading(true);
         setError(null);
+        setCurrentIndex(0);
+        setSelected(null);
+        setCorrectCount(0);
+        setIsFinishing(false);
         try {
-            const response = await fetch(`/api/questions?subject=${subject}&limit=5`);
-            if (response.ok) {
-                const data = await response.json();
-                setQuestions(data);
-            } else {
-                setError(t('learning.errorFetch') || 'Failed to load questions');
+            const data = await getQuestions(subject, questionLimit, topic);
+            if (data.length === 0) {
+                setQuestions([]);
+                setError(t('learning.noQuestions') || 'No questions match this lesson yet.');
+                return;
             }
+            setQuestions(data);
         } catch (err) {
             console.error('Failed to fetch questions:', err);
-            setError('Network error. Please check your connection.');
+            setError(t('learning.errorFetch') || 'Failed to load questions');
         } finally {
             setIsLoading(false);
         }
@@ -54,7 +64,7 @@ export function LearningQuest({
     // Fetch questions on mount
     useEffect(() => {
         fetchQuestions();
-    }, [subject]);
+    }, [subject, topic, questionLimit]);
 
     const currentQuestion = questions[currentIndex];
     const currentLang = i18n.language === 'vi' ? 'vi' : 'en';
@@ -134,7 +144,7 @@ export function LearningQuest({
                     await saveProgress(
                         userId,
                         subject,
-                        questions[0]?.topic || 'general',
+                        topic || questions[0]?.topic || 'general',
                         finalCorrect,
                         questions.length,
                     );
@@ -159,7 +169,12 @@ export function LearningQuest({
                 <div className="mb-3 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <Gift className="text-primary" />
-                        <p className="text-lg font-bold text-slate-900">{t('learning.questProgress')}</p>
+                        <div>
+                            <p className="text-lg font-bold text-slate-900">{t('learning.questProgress')}</p>
+                            {title && (
+                                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">{title}</p>
+                            )}
+                        </div>
                     </div>
                     <p className="text-sm font-bold text-slate-600">
                         {t('learning.solved', { current: currentIndex + 1, total: questions.length })}
@@ -178,6 +193,19 @@ export function LearningQuest({
                     <h3 className="mb-4 text-xl font-bold uppercase tracking-widest text-slate-500">
                         {t('learning.question', { number: currentIndex + 1 })}
                     </h3>
+                    {localizedContent.imageUrl && (
+                        <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            className="mb-6 w-full max-w-sm overflow-hidden rounded-2xl border-4 border-slate-50 shadow-inner"
+                        >
+                            <img
+                                src={localizedContent.imageUrl}
+                                alt="Question illustration"
+                                className="h-48 w-full object-cover md:h-64"
+                            />
+                        </motion.div>
+                    )}
                     <div className="mb-6 flex items-center justify-center gap-4">
                         <h1 className={`font-black text-slate-900 drop-shadow-sm ${
                             (localizedContent.questionText?.length || 0) > 30

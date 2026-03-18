@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <meta name="description" content="Math Buddy - Người bạn đồng hành cùng bé học Toán vui vẻ và hiệu quả!" />
+    <meta name="keywords" content="học toán, toán tiểu học, math buddy, giáo dục" />
+    <meta property="og:title" content="Math Buddy - Học Toán Thật Vui" />
+    <meta property="og:description" content="Khám phá thế giới toán học cùng những người bạn rồng đáng yêu." />
+    <meta property="og:image" content="/sparky-og.png" />
+    <title>Math Buddy - Học Toán Cùng Bạn Đồng Hành</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <footer style="position: fixed; bottom: 10px; right: 10px; font-size: 10px; color: #666; font-family: sans-serif;">
+      <a href="/privacy" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+    </footer>
   </body>
 </html>
 

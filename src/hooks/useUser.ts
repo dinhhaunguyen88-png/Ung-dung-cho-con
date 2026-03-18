@@ -9,8 +9,10 @@ export interface User {
     avatar_color: string;
     xp: number;
     level: number;
+    stars: number;
     role?: 'student' | 'teacher';
     email?: string;
+    auth_token?: string;
 }
 
 export function useUser() {
@@ -21,6 +23,10 @@ export function useUser() {
             const parsed = JSON.parse(saved);
             // Migration: Clear old integer IDs from SQLite era
             if (typeof parsed.id === 'number') {
+                localStorage.removeItem(STORAGE_KEY);
+                return null;
+            }
+            if (parsed.role === 'teacher' && typeof parsed.auth_token !== 'string') {
                 localStorage.removeItem(STORAGE_KEY);
                 return null;
             }

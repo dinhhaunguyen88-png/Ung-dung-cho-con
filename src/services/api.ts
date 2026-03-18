@@ -22,6 +22,7 @@ export interface UserData {
     avatar_color: string;
     xp: number;
     level: number;
+    stars: number;
     created_at?: string;
 }
 
@@ -37,13 +38,14 @@ export interface PetData {
 }
 
 export interface ProgressData {
-    id?: number;
+    id?: number | string;
     user_id: string;
     subject: string;
     topic: string;
     correct: number;
     total: number;
-    completed_at?: string;
+    completed_at?: string | null;
+    created_at?: string;
 }
 
 export interface ProgressResponse {
@@ -56,9 +58,9 @@ export interface QuestionData {
     subject: string;
     topic: string;
     difficulty: string;
-    content: Record<string, { questionText: string; questionReadText: string }>;
-    choices: Array<{ id: number; value: number | string; label: string }>;
-    correct_answer_id: number;
+    content: Record<string, { questionText: string; questionReadText: string; imageUrl?: string }>;
+    choices: Array<{ id: number | string; value: number | string; label: string }>;
+    correct_answer_id: number | string;
 }
 
 export interface LeaderboardEntry extends UserData {
@@ -69,10 +71,37 @@ export interface LeaderboardEntry extends UserData {
 
 // ─── Helper ──────────────────────────────────────────
 
+const USER_STORAGE_KEY = 'math-buddy-user';
+
+function readStoredAuthToken(): string | null {
+    if (typeof localStorage === 'undefined') return null;
+
+    try {
+        const saved = localStorage.getItem(USER_STORAGE_KEY);
+        if (!saved) return null;
+        const parsed = JSON.parse(saved);
+        return typeof parsed?.auth_token === 'string' ? parsed.auth_token : null;
+    } catch {
+        return null;
+    }
+}
+
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
+    const headers = new Headers(options?.headers);
+    if (!headers.has('Content-Type')) {
+        headers.set('Content-Type', 'application/json');
+    }
+
+    const authToken = readStoredAuthToken();
+    if (authToken && !headers.has('Authorization')) {
+        headers.set('Authorization', `Bearer ${authToken}`);
+    }
+
+    const resolvedHeaders = Object.fromEntries(headers.entries());
+
     const response = await fetch(url, {
-        headers: { 'Content-Type': 'application/json' },
         ...options,
+        headers: resolvedHeaders,
     });
 
     if (!response.ok) {
@@ -143,9 +172,18 @@ export async function getProgress(userId: string): Promise<ProgressData[]> {
 
 export async function getQuestions(
     subject: string = 'math',
-    limit: number = 5,
+    limit: number = 15,
+    topic?: string,
 ): Promise<QuestionData[]> {
-    return request<QuestionData[]>(`/api/questions?subject=${encodeURIComponent(subject)}&limit=${limit}`);
+    const params = new URLSearchParams({
+        subject,
+        limit: String(limit),
+    });
+    if (topic?.trim()) {
+        params.set('topic', topic.trim());
+    }
+
+    return request<QuestionData[]>(`/api/questions?${params.toString()}`);
 }
 
 // ─── Leaderboard ─────────────────────────────────────
@@ -159,10 +197,12 @@ export async function getLeaderboard(): Promise<LeaderboardEntry[]> {
 export interface TeacherUserData extends UserData {
     role: 'teacher' | 'student';
     email: string;
+    auth_token?: string;
 }
 
 export interface TeacherAuthResponse {
     user: TeacherUserData;
+    token: string;
 }
 
 export async function teacherRegister(
@@ -202,10 +242,10 @@ export interface JoinClassResponse {
     classId: string;
 }
 
-export async function createClass(name: string, teacherId: string): Promise<ClassData> {
+export async function createClass(name: string): Promise<ClassData> {
     return request<ClassData>('/api/classes', {
         method: 'POST',
-        body: JSON.stringify({ name, teacherId }),
+        body: JSON.stringify({ name }),
     });
 }
 
@@ -243,6 +283,10 @@ export interface AssignmentData {
     created_at: string;
 }
 
+export interface StudentAssignmentData extends AssignmentData {
+    class_name: string;
+}
+
 export interface StudentProgressSummary {
     id: string;
     name: string;
@@ -256,13 +300,49 @@ export interface StudentProgressSummary {
     sessionsCount: number;
 }
 
-export interface ProgressRecord {
+export type ProgressRecord = ProgressData;
+
+// ─── Shop & Inventory ───────────────────────────────
+
+export interface ShopItem {
+    id: string;
+    name: string;
+    description: string;
+    category: 'food' | 'accessory' | 'toy';
+    price: number;
+    image_url: string;
+    properties?: Record<string, any>;
+}
+
+export interface UserItem {
     id: string;
     user_id: string;
-    subject: string;
-    correct_answers: number;
-    total_questions: number;
-    created_at: string;
+    item_id: string;
+    is_equipped: boolean;
+    quantity: number;
+    item?: ShopItem;
+}
+
+export async function getShopItems(): Promise<ShopItem[]> {
+    return request<ShopItem[]>('/api/shop/items');
+}
+
+export async function buyItem(userId: string, itemId: string): Promise<{ success: boolean; stars: number }> {
+    return request<{ success: boolean; stars: number }>('/api/shop/buy', {
+        method: 'POST',
+        body: JSON.stringify({ userId, itemId }),
+    });
+}
+
+export async function getUserInventory(userId: string): Promise<UserItem[]> {
+    return request<UserItem[]>(`/api/shop/inventory/${encodeURIComponent(userId)}`);
+}
+
+export async function equipItem(userId: string, userItemId: string, isEquipped: boolean): Promise<{ success: boolean }> {
+    return request<{ success: boolean }>('/api/shop/inventory/equip', {
+        method: 'POST',
+        body: JSON.stringify({ userId, userItemId, isEquipped }),
+    });
 }
 
 export async function createAssignment(params: {
@@ -281,6 +361,10 @@ export async function createAssignment(params: {
 
 export async function getClassAssignments(classId: string): Promise<AssignmentData[]> {
     return request<AssignmentData[]>(`/api/assignments/${encodeURIComponent(classId)}`);
+}
+
+export async function getStudentAssignments(userId: string): Promise<StudentAssignmentData[]> {
+    return request<StudentAssignmentData[]>(`/api/student/assignments/${encodeURIComponent(userId)}`);
 }
 
 export async function getClassProgress(classId: string): Promise<StudentProgressSummary[]> {

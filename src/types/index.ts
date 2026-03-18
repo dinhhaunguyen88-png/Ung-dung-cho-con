@@ -8,7 +8,8 @@ export type Screen =
     | 'teacher-login'
     | 'teacher-register'
     | 'teacher-dashboard'
-    | 'join-class';
+    | 'join-class'
+    | 'pet-shop';
 
 // Re-export teacher types
-export type { UserRole, ClassData, ClassWithMembers, ClassMember, AssignmentData, AssignmentWithProgress, TeacherLoginRequest, TeacherRegisterRequest, TeacherAuthResponse, StudentProgressSummary, ClassProgressReport } from './teacher';
+export type { UserRole, ClassData, ClassWithMembers, ClassMember, AssignmentData, StudentAssignmentData, AssignmentWithProgress, TeacherLoginRequest, TeacherRegisterRequest, TeacherAuthResponse, StudentProgressSummary, ClassProgressReport } from './teacher';

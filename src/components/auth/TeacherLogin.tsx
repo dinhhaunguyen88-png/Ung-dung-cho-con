@@ -22,8 +22,8 @@ export function TeacherLogin({ onLogin, onNavigate }: TeacherLoginProps) {
         setLoading(true);
 
         try {
-            const { user } = await teacherLogin(email, password);
-            onLogin(user);
+            const { user, token } = await teacherLogin(email, password);
+            onLogin({ ...user, auth_token: token });
         } catch (err: any) {
             setError(err.message || 'Login failed');
         } finally {

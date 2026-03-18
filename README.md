@@ -8,11 +8,17 @@
 
 ---
 
-## Phase 2: Teacher Mode & English Subject 🚀
+## Phase 3: Science Subject 🧪
 
-Dự án đang trong Phase 2 với các tính năng mới:
-- **Teacher Mode**: Quản lý lớp học, học sinh và bài tập.
-- **English Subject**: Thêm môn Tiếng Anh vào ngân hàng câu hỏi.
+Dự án đã hoàn thành Phase 3 với:
+- **Science Subject**: Thêm môn Tự nhiên & Xã hội với 150+ câu hỏi.
+- **Multimedia Support**: Hỗ trợ hiển thị hình ảnh trong câu hỏi.
+- **Teacher Mode**: Giao bài tập môn Khoa học.
+
+### Technical Notes
+- **Database**: Sử dụng Supabase là primary DB. SQLite chỉ dùng cho local test.
+- **Migrations**: Chạy các file SQL trong `migrations/` vào Supabase SQL Editor.
+- **Plans**: Chi tiết từng bước tại `plans/260310-2141-phase2-teacher-english/` và Phase 3 task brain.
 
 ### Technical Notes
 - **Database**: Sử dụng Supabase là primary DB. SQLite chỉ dùng cho local test.

@@ -44,7 +44,9 @@
             "vietnamesePractice": "Vietnamese Practice",
             "readingWriting": "Reading & Vocabulary",
             "englishPractice": "English Practice",
-            "vocabGrammar": "Vocabulary & Grammar"
+            "vocabGrammar": "Vocabulary & Grammar",
+            "sciencePractice": "Science Practice",
+            "scienceTopics": "Family, School & Nature"
         },
         "quest": {
             "dailyQuest": "Daily Quest",
@@ -72,7 +74,8 @@
         "skip": "Skip",
         "nextQuestion": "Next Question",
         "tryAgain": "Try again! {{a}} + {{b}} = {{answer}}",
-        "errorFetch": "Error loading questions. Please tap 'Try again'!"
+        "errorFetch": "Error loading questions. Please tap 'Try again'!",
+        "noQuestions": "No questions match this lesson yet."
     },
     "petRoom": {
         "title": "Pet Dressing Room",
@@ -220,13 +223,19 @@
         "math": "Math",
         "vietnamese": "Vietnamese",
         "english": "English",
+        "science": "Science",
         "questionCount": "Number of Questions",
+        "topic": "Topic",
+        "topicPlaceholder": "Optional focus topic",
         "dueDate": "Due Date",
         "noAssignments": "No assignments yet.",
+        "loading": "Loading assignments...",
+        "available": "assignments ready",
         "newBadge": "New!",
         "questions": "{{count}} questions",
         "due": "Due: {{date}}",
         "noDue": "No deadline",
+        "noTopic": "General practice",
         "startAssignment": "Start Assignment"
     },
     "progress": {

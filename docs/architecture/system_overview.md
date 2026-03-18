@@ -24,9 +24,12 @@ Implemented in Phase 2:
 - state managed via `usePet` hook with `localStorage` persistence and periodic Supabase sync.
 
 ### 3. Bilingual Question Engine
-- 160+ questions supporting Mathematics, Vietnamese, and English Class 2 curriculum.
+- 215+ questions (Math G2 expanded) supporting Mathematics, Vietnamese, and English Class 2 curriculum.
 - Fully JSON-based schema with AI-driven distractors.
 - Dual-language support (VI/EN) handled via `react-i18next`.
+- **Robust Text-to-Speech (TTS):** 
+    - Implemented a standard-compliant hook with a **Google Translate TTS fallback** to overcome missing system voices.
+    - **Math Normalization:** Client-side processing that converts math symbols (+, -, x, =) into natural language words for educational accessibility.
 
 ---
 

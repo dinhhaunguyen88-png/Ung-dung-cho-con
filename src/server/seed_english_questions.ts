@@ -1,7 +1,7 @@
 import { supabase } from './supabaseClient.js';
 
 // Helper to build a question object
-function q(topic: string, diff: string, vi: string, en: string, choices: string[], correct: number) {
+export function q(topic: string, diff: string, vi: string, en: string, choices: string[], correct: number) {
     return {
         subject: 'english',
         topic,
@@ -15,7 +15,7 @@ function q(topic: string, diff: string, vi: string, en: string, choices: string[
     };
 }
 
-const vocabQuestions = [
+export const vocabQuestions = [
     // ── Animals (10) ──
     q('Animals', 'easy', 'Con vật nào kêu "meow"?', 'Which animal says "meow"?', ['Cat', 'Dog', 'Cow', 'Duck'], 1),
     q('Animals', 'easy', '"Dog" nghĩa là gì?', 'What does "dog" mean?', ['Con chó', 'Con mèo', 'Con gà', 'Con vịt'], 1),
@@ -77,7 +77,7 @@ const vocabQuestions = [
     q('School', 'medium', 'Bạn cùng lớp tiếng Anh là gì?', 'What is "classmate" in English?', ['Classmate', 'Teacher', 'Student', 'Friend'], 1),
 ];
 
-const grammarQuestions = [
+export const grammarQuestions = [
     // ── This/That (10) ──
     q('This/That', 'easy', 'Điền vào: ___ is a cat. (gần)', 'Fill in: ___ is a cat. (near)', ['This', 'That', 'Those', 'These'], 1),
     q('This/That', 'easy', 'Điền vào: ___ is a bird. (xa)', 'Fill in: ___ is a bird. (far)', ['That', 'This', 'These', 'Those'], 1),
@@ -157,4 +157,4 @@ const seedEnglishQuestions = async () => {
     }
 };
 
-seedEnglishQuestions();
+// seedEnglishQuestions();

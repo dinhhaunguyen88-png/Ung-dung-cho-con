@@ -57,13 +57,16 @@ export function usePet(userId?: string | null) {
                 if (cancelled) return;
                 const parseAccessories = (data: any): string[] => {
                     if (!data) return DEFAULT_PET.equippedAccessories;
-                    if (Array.isArray(data)) return data;
+                    if (Array.isArray(data)) return data.filter(id => !!id);
                     if (typeof data === 'string') {
+                        const trimmed = data.trim();
+                        if (!trimmed || trimmed === '[]' || trimmed === 'null') return [];
                         try {
-                            const parsed = JSON.parse(data);
-                            return Array.isArray(parsed) ? parsed : [data];
+                            const parsed = JSON.parse(trimmed);
+                            return Array.isArray(parsed) ? parsed.filter(id => !!id) : [trimmed];
                         } catch {
-                            return [data];
+                            // If not JSON, treat as single ID (legacy fallback)
+                            return [trimmed];
                         }
                     }
                     return DEFAULT_PET.equippedAccessories;

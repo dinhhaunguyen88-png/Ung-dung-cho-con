@@ -34,8 +34,8 @@ export function TeacherRegister({ onRegister, onNavigate }: TeacherRegisterProps
 
         setLoading(true);
         try {
-            const { user } = await teacherRegister(name, email, password);
-            onRegister(user);
+            const { user, token } = await teacherRegister(name, email, password);
+            onRegister({ ...user, auth_token: token });
         } catch (err: any) {
             setError(err.message || 'Registration failed');
         } finally {

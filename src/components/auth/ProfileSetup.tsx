@@ -28,12 +28,14 @@ export function ProfileSetup({ onComplete, onTeacherLogin }: ProfileSetupProps) 
     const [selectedPet, setSelectedPet] = useState<PetType>('dragon');
     const [selectedColor, setSelectedColor] = useState(COLORS[0]);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!name.trim()) return;
 
         setIsSubmitting(true);
+        setError(null);
         try {
             const response = await fetch('/api/users', {
                 method: 'POST',
@@ -48,9 +50,13 @@ export function ProfileSetup({ onComplete, onTeacherLogin }: ProfileSetupProps) 
             if (response.ok) {
                 const userData = await response.json();
                 onComplete(userData);
+            } else {
+                const errData = await response.json().catch(() => ({}));
+                setError(errData.error || t('setup.errorGeneric', 'Không thể tạo hồ sơ. Vui lòng thử lại!'));
             }
-        } catch (error) {
-            console.error('Failed to create profile:', error);
+        } catch (err) {
+            console.error('Failed to create profile:', err);
+            setError(t('setup.errorConnection', 'Không thể kết nối máy chủ. Vui lòng kiểm tra kết nối và thử lại!'));
         } finally {
             setIsSubmitting(false);
         }
@@ -146,6 +152,17 @@ export function ProfileSetup({ onComplete, onTeacherLogin }: ProfileSetupProps) 
                                 ))}
                             </div>
                         </div>
+
+                        {/* Error Message */}
+                        {error && (
+                            <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="rounded-xl bg-red-50 border-2 border-red-200 p-4 text-center text-red-600 font-medium"
+                            >
+                                ⚠️ {error}
+                            </motion.div>
+                        )}
 
                         {/* Submit Button */}
                         <motion.button

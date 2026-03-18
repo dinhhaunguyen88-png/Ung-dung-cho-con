@@ -62,7 +62,6 @@ ALTER TABLE classes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE class_members ENABLE ROW LEVEL SECURITY;
 ALTER TABLE assignments ENABLE ROW LEVEL SECURITY;
 
--- Allow anon access for now (same as existing tables)
-CREATE POLICY "Allow all access to classes" ON classes FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "Allow all access to class_members" ON class_members FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "Allow all access to assignments" ON assignments FOR ALL USING (true) WITH CHECK (true);
+-- Intentionally no blanket anon policies.
+-- These tables should be accessed through the Express API using
+-- SUPABASE_SERVICE_ROLE_KEY, with authorization enforced in app code.

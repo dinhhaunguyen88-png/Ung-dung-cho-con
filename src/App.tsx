@@ -27,15 +27,19 @@ import { TeacherRegister } from './components/auth/TeacherRegister';
 import { TeacherDashboard } from './components/teacher/TeacherDashboard';
 import { ClassManager } from './components/teacher/ClassManager';
 import { JoinClass } from './components/auth/JoinClass';
+import { PetShop } from './components/pet/PetShop';
+import type { StudentAssignmentData } from './services/api';
 
 export default function App() {
   const { t } = useTranslation();
   const [currentScreen, setCurrentScreen] = useState<Screen>('dashboard');
   const [currentSubject, setCurrentSubject] = useState<string>('math');
   const [showCelebration, setShowCelebration] = useState(false);
-  const [stars, setStars] = useState(1240);
   const [selectedClassId, setSelectedClassId] = useState<string | null>(null);
   const [selectedClassName, setSelectedClassName] = useState<string>('');
+  const [currentTopic, setCurrentTopic] = useState<string | undefined>(undefined);
+  const [currentQuestionLimit, setCurrentQuestionLimit] = useState(15);
+  const [currentQuestTitle, setCurrentQuestTitle] = useState<string | undefined>(undefined);
   const { user, login, logout, isTeacher } = useUser();
   const { pet, setType, setColor, setName, toggleAccessory, addXp } = usePet(user?.id);
 
@@ -79,7 +83,10 @@ export default function App() {
   const handleGoalComplete = async () => {
     setShowCelebration(true);
     setCurrentScreen('dashboard');
-    // Refresh user data to get updated XP/level from backend
+    setCurrentTopic(undefined);
+    setCurrentQuestionLimit(15);
+    setCurrentQuestTitle(undefined);
+    // Refresh user data to get updated XP, level, and stars from backend.
     if (user?.id) {
       try {
         const freshUser = await getUser(user.id);
@@ -88,9 +95,30 @@ export default function App() {
     }
   };
 
-  const handleStartQuest = (subject: string) => {
+  const handleStartQuest = (
+    subject: string,
+    options?: { topic?: string; questionLimit?: number; title?: string },
+  ) => {
     setCurrentSubject(subject);
+    setCurrentTopic(options?.topic?.trim() || undefined);
+    setCurrentQuestionLimit(options?.questionLimit || 15);
+    setCurrentQuestTitle(options?.title?.trim() || undefined);
     setCurrentScreen('learning');
+  };
+
+  const handleStartAssignment = (assignment: StudentAssignmentData) => {
+    handleStartQuest(assignment.subject, {
+      topic: assignment.topic || undefined,
+      questionLimit: assignment.question_count,
+      title: assignment.title,
+    });
+  };
+
+  const handleExitQuest = () => {
+    setCurrentTopic(undefined);
+    setCurrentQuestionLimit(15);
+    setCurrentQuestTitle(undefined);
+    setCurrentScreen('dashboard');
   };
 
   return (
@@ -100,7 +128,8 @@ export default function App() {
         <Header
           currentScreen={currentScreen}
           setCurrentScreen={setCurrentScreen}
-          stars={stars}
+          stars={user?.stars || 0}
+          onOpenShop={() => setCurrentScreen('pet-shop')}
         />
       )}
 
@@ -114,12 +143,18 @@ export default function App() {
               exit={{ opacity: 0, y: -20 }}
               className="flex flex-col gap-8 lg:flex-row"
             >
-              <DashboardSidebar xp={pet.xp} onGoalComplete={handleGoalComplete} />
+              <DashboardSidebar
+                xp={user?.xp || pet.xp}
+                level={user?.level || pet.level}
+                onOpenShop={() => setCurrentScreen('pet-shop')}
+              />
               <DashboardMain
                 pet={pet}
-                onFeed={() => setStars((s) => s - 10)}
+                userId={user?.id}
+                onFeed={() => {/* Deduct stars via API in future */}}
                 onPlay={() => addXp(20)}
                 onStartQuest={handleStartQuest}
+                onStartAssignment={handleStartAssignment}
                 onJoinClass={() => setCurrentScreen('join-class')}
               />
               <DashboardRight />
@@ -137,8 +172,11 @@ export default function App() {
               <LearningQuest
                 subject={currentSubject}
                 userId={user?.id || null}
+                topic={currentTopic}
+                questionLimit={currentQuestionLimit}
+                title={currentQuestTitle}
                 onComplete={handleGoalComplete}
-                onBack={() => setCurrentScreen('dashboard')}
+                onBack={handleExitQuest}
               />
             </motion.div>
           )}
@@ -153,11 +191,13 @@ export default function App() {
             >
               <PetRoom
                 onBack={() => setCurrentScreen('dashboard')}
-                pet={pet}
+                pet={pet!}
+                userId={user?.id || ''}
                 onSetType={setType}
                 onSetColor={setColor}
                 onSetName={setName}
                 onToggleAccessory={toggleAccessory}
+                onVisitShop={() => setCurrentScreen('pet-shop')}
               />
             </motion.div>
           )}
@@ -171,6 +211,24 @@ export default function App() {
               className="w-full"
             >
               <ParentReport />
+            </motion.div>
+          )}
+
+          {currentScreen === 'pet-shop' && (
+            <motion.div
+              key="pet-shop"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 1.1 }}
+              className="w-full"
+            >
+              <PetShop 
+                onBack={() => setCurrentScreen('dashboard')} 
+                userId={user?.id || ''}
+                onPurchaseSuccess={(newStars) => {
+                  if (user) login({ ...user, stars: newStars });
+                }}
+              />
             </motion.div>
           )}
 
@@ -280,15 +338,17 @@ export default function App() {
                   <ClassManager
                     classId={selectedClassId}
                     className={selectedClassName}
-                    onBack={() => setSelectedClassId(null)}
+                    onBack={() => {
+                      setSelectedClassId(null);
+                      setSelectedClassName('');
+                    }}
                   />
                 ) : (
                   <TeacherDashboard
                     teacherId={user?.id || ''}
-                    onViewClass={(id) => {
+                    onViewClass={(id, className) => {
                       setSelectedClassId(id);
-                      // Fetch logic for class name could be here or in component
-                      // For now, let's keep it simple
+                      setSelectedClassName(className);
                     }}
                   />
                 )}

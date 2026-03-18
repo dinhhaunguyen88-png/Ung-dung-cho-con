@@ -1,6 +1,7 @@
-import express from 'express';
+import express, { type Request, type Response } from 'express';
 import { scrypt, randomBytes, timingSafeEqual } from 'node:crypto';
 import { promisify } from 'node:util';
+import { createTeacherSessionToken, type TeacherSession, verifyTeacherSessionToken } from './auth.js';
 import { supabase } from './supabaseClient.js';
 
 const scryptAsync = promisify(scrypt);
@@ -27,6 +28,73 @@ async function withRetry<T = any>(fn: () => Promise<T> | any, retries = 3, delay
         await new Promise(resolve => setTimeout(resolve, delay));
         return withRetry(fn, retries - 1, delay + 500); // Linear backoff
     }
+}
+
+function requireTeacherSession(req: Request, res: Response): TeacherSession | null {
+    const authHeader = req.headers.authorization;
+    if (!authHeader?.startsWith('Bearer ')) {
+        res.status(401).json({ error: 'Teacher authentication is required' });
+        return null;
+    }
+
+    const session = verifyTeacherSessionToken(authHeader.slice('Bearer '.length).trim());
+    if (!session) {
+        res.status(401).json({ error: 'Teacher session is invalid or expired' });
+        return null;
+    }
+
+    return session;
+}
+
+async function requireOwnedClass(
+    classId: string,
+    teacherId: string,
+    res: Response,
+): Promise<{ id: string; name: string; teacher_id: string } | null> {
+    const { data: classObj, error } = await withRetry(() => supabase
+        .from('classes')
+        .select('id, name, teacher_id')
+        .eq('id', classId)
+        .maybeSingle()
+    );
+
+    if (error) {
+        res.status(500).json({ error: error.message });
+        return null;
+    }
+
+    if (!classObj) {
+        res.status(404).json({ error: 'Class not found' });
+        return null;
+    }
+
+    if (classObj.teacher_id !== teacherId) {
+        res.status(403).json({ error: 'You do not have access to this class' });
+        return null;
+    }
+
+    return classObj;
+}
+
+function getProgressCorrectCount(progress: any): number {
+    return Number(progress?.correct ?? progress?.correct_answers ?? 0);
+}
+
+function getProgressTotalCount(progress: any): number {
+    return Number(progress?.total ?? progress?.total_questions ?? 0);
+}
+
+function getProgressCompletedAt(progress: any): string | null {
+    return progress?.completed_at ?? progress?.created_at ?? null;
+}
+
+function normalizeProgressRecord(progress: any) {
+    return {
+        ...progress,
+        correct: getProgressCorrectCount(progress),
+        total: getProgressTotalCount(progress),
+        completed_at: getProgressCompletedAt(progress),
+    };
 }
 
 // ─── Users ───────────────────────────────────────────
@@ -88,7 +156,7 @@ app.get('/api/leaderboard', async (_req, res) => {
         const { data, error } = await withRetry(() => supabase
             .from('users')
             .select(`
-                id, name, avatar, avatar_color, xp, level,
+                id, name, avatar, avatar_color, xp, level, stars,
                 pets ( type, name, color )
             `)
             .order('xp', { ascending: false })
@@ -117,6 +185,10 @@ app.post('/api/progress', async (req, res) => {
     if (!userId) return res.status(400).json({ error: 'userId is required' });
 
     try {
+        const safeCorrect = Math.max(0, Number(correct) || 0);
+        const safeTotal = Math.max(safeCorrect, Number(total) || 0);
+        const completedAt = new Date().toISOString();
+
         // Save progress
         const { error: progressError } = await withRetry(() => supabase
             .from('progress')
@@ -124,33 +196,36 @@ app.post('/api/progress', async (req, res) => {
                 user_id: userId,
                 subject: subject || 'math',
                 topic: topic || '',
-                correct: correct || 0,
-                total: total || 0
+                correct: safeCorrect,
+                total: safeTotal,
+                completed_at: completedAt
             }])
         );
 
         if (progressError) console.error('❌ Progress save error:', progressError.message);
 
         // Award XP (10 per correct answer)
-        const xpGain = (correct || 0) * 10;
+        const xpGain = safeCorrect * 10;
         let user = null;
 
         if (xpGain > 0) {
             // Get current XP
             const { data: currentUser } = await withRetry(() => supabase
                 .from('users')
-                .select('xp')
+                .select('xp, stars')
                 .eq('id', userId)
                 .single()
             );
 
             if (currentUser) {
                 const newXp = (currentUser.xp || 0) + xpGain;
+                const starsGain = safeCorrect * 10;
+                const newStars = (currentUser.stars || 0) + starsGain;
                 const newLevel = Math.floor(newXp / 200) + 1;
 
                 const { data: updatedUser } = await withRetry(() => supabase
                     .from('users')
-                    .update({ xp: newXp, level: newLevel })
+                    .update({ xp: newXp, level: newLevel, stars: newStars })
                     .eq('id', userId)
                     .select()
                     .single()
@@ -185,7 +260,7 @@ app.get('/api/progress/:userId', async (req, res) => {
         );
 
         if (error) return res.status(500).json({ error: error.message });
-        res.json(data);
+        res.json((data || []).map(normalizeProgressRecord));
     } catch (err: any) {
         res.status(500).json({ error: err.message });
     }
@@ -234,29 +309,33 @@ app.put('/api/pets/:userId', async (req, res) => {
 
 // ─── Questions ──────────────────────────────────────
 app.get('/api/questions', async (req, res) => {
-    const { subject = 'math', limit = 5 } = req.query;
+    const { subject = 'math', limit = 15, topic } = req.query;
     const subjectStr = String(subject);
-    console.log(`🔍 Fetching questions for subject: ${subjectStr}`);
+    const topicStr = typeof topic === 'string' ? topic.trim() : '';
+    const cacheKey = `${subjectStr}::${topicStr || '__all__'}`;
+    console.log(`🔍 Fetching questions for subject: ${subjectStr}${topicStr ? ` topic: ${topicStr}` : ''}`);
 
     try {
         // Check cache first
         const now = Date.now();
-        if (questionCache[subjectStr] && (now - questionCache[subjectStr].timestamp < CACHE_TTL)) {
-            console.log(`⚡ Serving ${subjectStr} from cache`);
-            const cached = questionCache[subjectStr].data;
+        if (questionCache[cacheKey] && (now - questionCache[cacheKey].timestamp < CACHE_TTL)) {
+            console.log(`⚡ Serving ${cacheKey} from cache`);
+            const cached = questionCache[cacheKey].data;
             const shuffled = [...cached].sort(() => 0.5 - Math.random()).slice(0, Number(limit));
             return res.json(shuffled);
         }
 
-        // To avoid fetching ~1000 questions into memory, fetch a broad slice or let Supabase limit the raw pull.
-        // We fetch up to 100 random rows directly via the Supabase client logic to shuffle locally, 
-        // to prevent node hang 'fetch failed' exceptions on huge subject datasets.
-        const { data, error } = await withRetry(() => supabase
+        let query = supabase
             .from('questions')
             .select('*')
             .eq('subject', subjectStr)
-            .limit(100) // CRITICAL: Stop V8 engine timeouts on big datasets
-        );
+            .limit(1000);
+
+        if (topicStr) {
+            query = query.ilike('topic', topicStr);
+        }
+
+        const { data, error } = await withRetry(() => query);
 
         if (error) {
             console.error('❌ Questions fetch error:', error.message);
@@ -264,16 +343,25 @@ app.get('/api/questions', async (req, res) => {
         }
 
         if (!data || data.length === 0) {
-            console.warn(`⚠️ No questions found for subject: ${subjectStr}`);
+            console.warn(`⚠️ No questions found for subject: ${subjectStr}${topicStr ? ` topic: ${topicStr}` : ''}`);
             return res.json([]);
         }
 
-        console.log(`✅ Found ${data.length} questions for ${subjectStr}`);
+        console.log(`✅ Found ${data.length} questions for ${subjectStr}${topicStr ? ` / ${topicStr}` : ''}`);
 
         // Normalize question format for frontend compatibility
         const normalized = data.map((q: any) => {
-            let content = q.content || {}; // Defensive default
+            let content = q.content; // Try nested first
 
+            // If it's the old flat format (content_vi/content_en)
+            if (!content && (q.content_vi || q.content_en)) {
+                content = {
+                    vi: { questionText: q.content_vi || '', questionReadText: q.content_vi || '' },
+                    en: { questionText: q.content_en || q.content_vi || '', questionReadText: q.content_en || q.content_vi || '' },
+                };
+            }
+
+            // If it's just a string (legacy math format)
             if (typeof content === 'string') {
                 const normalizeForReading = (text: string) => {
                     if (!text) return '';
@@ -289,7 +377,6 @@ app.get('/api/questions', async (req, res) => {
                 };
 
                 const readTextVi = normalizeForReading(content);
-
                 const readTextEn = content
                     .replace(/:/g, ' divide ')
                     .replace(/x/g, ' multiple ')
@@ -304,22 +391,32 @@ app.get('/api/questions', async (req, res) => {
                     vi: { questionText: content, questionReadText: readTextVi },
                     en: { questionText: content, questionReadText: readTextEn },
                 };
-            } else if (typeof content === 'object' && content !== null && !content.vi && !content.en) {
-                content = { vi: content, en: content };
+            }
+
+            // Final fallback
+            if (!content || typeof content !== 'object') {
+                content = {
+                    vi: { questionText: '', questionReadText: '' },
+                    en: { questionText: '', questionReadText: '' },
+                };
             }
 
             // Defensively handle choices array to prevent iteration TypeError
             const rawChoices = Array.isArray(q.choices) ? q.choices : [];
             const choices = rawChoices.map((c: any) => ({
-                ...c,
+                id: c?.id ?? '',
+                label: c?.label ?? '',
                 value: c?.value ?? c?.text ?? '',
             }));
 
-            return { ...q, content, choices };
+            // Normalize correct_answer_id to string for consistency
+            const correctAnswerId = String(q.correct_answer_id || '');
+
+            return { ...q, content, choices, correct_answer_id: correctAnswerId };
         });
 
         // Save to cache
-        questionCache[subjectStr] = { data: normalized, timestamp: now };
+        questionCache[cacheKey] = { data: normalized, timestamp: now };
 
         const shuffled = [...normalized].sort(() => 0.5 - Math.random()).slice(0, Number(limit));
         res.json(shuffled);
@@ -373,7 +470,7 @@ app.post('/api/auth/teacher/register', async (req, res) => {
                 avatar: 'dragon',
                 avatar_color: '#30a5e8',
             }])
-            .select('id, name, email, role, avatar, avatar_color, xp, level')
+            .select('id, name, email, role, avatar, avatar_color, xp, level, stars')
             .single()
         );
 
@@ -390,8 +487,10 @@ app.post('/api/auth/teacher/register', async (req, res) => {
             }])
         );
 
+        const token = createTeacherSessionToken({ userId: user.id, email: user.email });
+
         console.log(`👩‍🏫 Teacher registered: ${email}`);
-        res.json({ user });
+        res.json({ user, token });
     } catch (err: any) {
         console.error('❌ Teacher register error:', err.message);
         res.status(500).json({ error: err.message });
@@ -409,13 +508,13 @@ app.post('/api/auth/teacher/login', async (req, res) => {
         // Find teacher by email
         const { data: user, error } = await withRetry(() => supabase
             .from('users')
-            .select('id, name, email, role, avatar, avatar_color, xp, level, password_hash')
+            .select('id, name, email, role, avatar, avatar_color, xp, level, stars, password_hash')
             .eq('email', email)
             .eq('role', 'teacher')
             .maybeSingle()
         );
 
-        if (error || !user) {
+        if (error || !user || !user.password_hash) {
             return res.status(401).json({ error: 'Invalid email or password' });
         }
 
@@ -428,10 +527,12 @@ app.post('/api/auth/teacher/login', async (req, res) => {
             return res.status(401).json({ error: 'Invalid email or password' });
         }
 
+        const token = createTeacherSessionToken({ userId: user.id, email: user.email });
+
         // Return user without password_hash
         const { password_hash: _, ...safeUser } = user;
         console.log(`👩‍🏫 Teacher logged in: ${email}`);
-        res.json({ user: safeUser });
+        res.json({ user: safeUser, token });
     } catch (err: any) {
         console.error('❌ Teacher login error:', err.message);
         res.status(500).json({ error: err.message });
@@ -450,16 +551,19 @@ const generateJoinCode = () => {
 };
 
 app.post('/api/classes', async (req, res) => {
-    const { name, teacherId } = req.body;
-    if (!name || !teacherId) {
-        return res.status(400).json({ error: 'Name and teacherId are required' });
+    const teacher = requireTeacherSession(req, res);
+    if (!teacher) return;
+
+    const { name } = req.body;
+    if (!name) {
+        return res.status(400).json({ error: 'Class name is required' });
     }
 
     try {
         const join_code = generateJoinCode();
         const { data, error } = await withRetry(() => supabase
             .from('classes')
-            .insert([{ name, teacher_id: teacherId, join_code }])
+            .insert([{ name, teacher_id: teacher.userId, join_code }])
             .select()
             .single()
         );
@@ -472,11 +576,17 @@ app.post('/api/classes', async (req, res) => {
 });
 
 app.get('/api/classes/:teacherId', async (req, res) => {
+    const teacher = requireTeacherSession(req, res);
+    if (!teacher) return;
+    if (req.params.teacherId !== teacher.userId) {
+        return res.status(403).json({ error: 'You can only view your own classes' });
+    }
+
     try {
         const { data, error } = await withRetry(() => supabase
             .from('classes')
             .select('*')
-            .eq('teacher_id', req.params.teacherId)
+            .eq('teacher_id', teacher.userId)
             .order('created_at', { ascending: false })
         );
 
@@ -526,14 +636,21 @@ app.post('/api/classes/join', async (req, res) => {
 });
 
 app.get('/api/classes/:classId/members', async (req, res) => {
+    const teacher = requireTeacherSession(req, res);
+    if (!teacher) return;
+
+    const classObj = await requireOwnedClass(req.params.classId, teacher.userId, res);
+    if (!classObj) return;
+
     try {
         const { data, error } = await withRetry(() => supabase
             .from('class_members')
             .select(`
                 user_id,
+                joined_at,
                 users ( id, name, xp, level, avatar, avatar_color )
             `)
-            .eq('class_id', req.params.classId)
+            .eq('class_id', classObj.id)
         );
 
         if (error) return res.status(500).json({ error: error.message });
@@ -551,11 +668,17 @@ app.get('/api/classes/:classId/members', async (req, res) => {
 });
 
 app.delete('/api/classes/:classId/members/:userId', async (req, res) => {
+    const teacher = requireTeacherSession(req, res);
+    if (!teacher) return;
+
+    const classObj = await requireOwnedClass(req.params.classId, teacher.userId, res);
+    if (!classObj) return;
+
     try {
         const { error } = await withRetry(() => supabase
             .from('class_members')
             .delete()
-            .eq('class_id', req.params.classId)
+            .eq('class_id', classObj.id)
             .eq('user_id', req.params.userId)
         );
 
@@ -569,16 +692,22 @@ app.delete('/api/classes/:classId/members/:userId', async (req, res) => {
 // ─── Assignments ────────────────────────────────────
 
 app.post('/api/assignments', async (req, res) => {
+    const teacher = requireTeacherSession(req, res);
+    if (!teacher) return;
+
     const { classId, title, subject, topic, questionCount, dueDate } = req.body;
     if (!classId || !title) {
         return res.status(400).json({ error: 'classId and title are required' });
     }
 
     try {
+        const classObj = await requireOwnedClass(classId, teacher.userId, res);
+        if (!classObj) return;
+
         const { data, error } = await withRetry(() => supabase
             .from('assignments')
             .insert([{
-                class_id: classId,
+                class_id: classObj.id,
                 title,
                 subject: subject || 'math',
                 topic: topic || null,
@@ -597,11 +726,17 @@ app.post('/api/assignments', async (req, res) => {
 });
 
 app.get('/api/assignments/:classId', async (req, res) => {
+    const teacher = requireTeacherSession(req, res);
+    if (!teacher) return;
+
     try {
+        const classObj = await requireOwnedClass(req.params.classId, teacher.userId, res);
+        if (!classObj) return;
+
         const { data, error } = await withRetry(() => supabase
             .from('assignments')
             .select('*')
-            .eq('class_id', req.params.classId)
+            .eq('class_id', classObj.id)
             .order('created_at', { ascending: false })
         );
 
@@ -614,13 +749,62 @@ app.get('/api/assignments/:classId', async (req, res) => {
 
 // ─── Teacher Progress ───────────────────────────────
 
-app.get('/api/teacher/progress/:classId', async (req, res) => {
+app.get('/api/student/assignments/:userId', async (req, res) => {
     try {
+        const { data: memberships, error: membershipError } = await withRetry(() => supabase
+            .from('class_members')
+            .select('class_id')
+            .eq('user_id', req.params.userId)
+        );
+
+        if (membershipError) return res.status(500).json({ error: membershipError.message });
+
+        const classIds = (memberships || []).map((membership: any) => membership.class_id);
+        if (classIds.length === 0) return res.json([]);
+
+        const [{ data: classes, error: classesError }, { data: assignments, error: assignmentsError }] = await Promise.all([
+            withRetry(() => supabase
+                .from('classes')
+                .select('id, name')
+                .in('id', classIds)
+            ),
+            withRetry(() => supabase
+                .from('assignments')
+                .select('*')
+                .in('class_id', classIds)
+                .order('due_date', { ascending: true, nullsFirst: false })
+                .order('created_at', { ascending: false })
+            ),
+        ]);
+
+        if (classesError) return res.status(500).json({ error: classesError.message });
+        if (assignmentsError) return res.status(500).json({ error: assignmentsError.message });
+
+        const classNames = new Map((classes || []).map((classObj: any) => [classObj.id, classObj.name]));
+        const enrichedAssignments = (assignments || []).map((assignment: any) => ({
+            ...assignment,
+            class_name: classNames.get(assignment.class_id) || 'Class',
+        }));
+
+        res.json(enrichedAssignments);
+    } catch (err: any) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.get('/api/teacher/progress/:classId', async (req, res) => {
+    const teacher = requireTeacherSession(req, res);
+    if (!teacher) return;
+
+    try {
+        const classObj = await requireOwnedClass(req.params.classId, teacher.userId, res);
+        if (!classObj) return;
+
         // Get class members
         const { data: members, error: membersError } = await withRetry(() => supabase
             .from('class_members')
             .select('user_id, users ( id, name, xp, level, avatar, avatar_color )')
-            .eq('class_id', req.params.classId)
+            .eq('class_id', classObj.id)
         );
 
         if (membersError) return res.status(500).json({ error: membersError.message });
@@ -638,8 +822,8 @@ app.get('/api/teacher/progress/:classId', async (req, res) => {
         // Build summary per student
         const summary = members.map((m: any) => {
             const studentProgress = (progressData || []).filter((p: any) => p.user_id === m.user_id);
-            const totalCorrect = studentProgress.reduce((sum: number, p: any) => sum + (p.correct_answers || 0), 0);
-            const totalQuestions = studentProgress.reduce((sum: number, p: any) => sum + (p.total_questions || 0), 0);
+            const totalCorrect = studentProgress.reduce((sum: number, p: any) => sum + getProgressCorrectCount(p), 0);
+            const totalQuestions = studentProgress.reduce((sum: number, p: any) => sum + getProgressTotalCount(p), 0);
             const sessionsCount = studentProgress.length;
 
             return {
@@ -658,17 +842,124 @@ app.get('/api/teacher/progress/:classId', async (req, res) => {
 });
 
 app.get('/api/teacher/progress/:classId/:userId', async (req, res) => {
+    const teacher = requireTeacherSession(req, res);
+    if (!teacher) return;
+
     try {
+        const classObj = await requireOwnedClass(req.params.classId, teacher.userId, res);
+        if (!classObj) return;
+
+        const { data: member, error: memberError } = await withRetry(() => supabase
+            .from('class_members')
+            .select('user_id')
+            .eq('class_id', classObj.id)
+            .eq('user_id', req.params.userId)
+            .maybeSingle()
+        );
+
+        if (memberError) return res.status(500).json({ error: memberError.message });
+        if (!member) return res.status(404).json({ error: 'Student is not in this class' });
+
         const { data, error } = await withRetry(() => supabase
             .from('progress')
             .select('*')
             .eq('user_id', req.params.userId)
-            .order('created_at', { ascending: false })
+            .order('completed_at', { ascending: false })
             .limit(20)
         );
 
         if (error) return res.status(500).json({ error: error.message });
+        res.json((data || []).map(normalizeProgressRecord));
+    } catch (err: any) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// ─── Shop & Inventory ───────────────────────────────
+
+app.get('/api/shop/items', async (_req, res) => {
+    try {
+        const { data, error } = await withRetry(() => supabase
+            .from('shop_items')
+            .select('*')
+            .order('price', { ascending: true })
+        );
+
+        if (error) return res.status(500).json({ error: error.message });
         res.json(data);
+    } catch (err: any) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.post('/api/shop/buy', async (req, res) => {
+    const { userId, itemId } = req.body;
+    if (!userId || !itemId) return res.status(400).json({ error: 'userId and itemId are required' });
+
+    try {
+        // 1. Get user stars and item price
+        const { data: user } = await withRetry(() => supabase.from('users').select('stars').eq('id', userId).single());
+        const { data: item } = await withRetry(() => supabase.from('shop_items').select('price').eq('id', itemId).single());
+
+        if (!user || !item) return res.status(404).json({ error: 'User or Item not found' });
+        if (user.stars < item.price) return res.status(400).json({ error: 'Not enough stars' });
+
+        // 2. Perform transaction (Update stars and add to inventory)
+        const newStars = user.stars - item.price;
+        
+        await withRetry(() => supabase.from('users').update({ stars: newStars }).eq('id', userId));
+        
+        const { error: invError } = await withRetry(() => supabase
+            .from('user_inventory')
+            .upsert([{ 
+                user_id: userId, 
+                item_id: itemId, 
+                quantity: 1 // For now just 1, could be quantity + 1 in future
+            }], { onConflict: 'user_id,item_id' })
+        );
+
+        if (invError) throw invError;
+
+        res.json({ success: true, stars: newStars });
+    } catch (err: any) {
+        console.error('❌ Purchase error:', err.message);
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.get('/api/shop/inventory/:userId', async (req, res) => {
+    try {
+        const { data, error } = await withRetry(() => supabase
+            .from('user_inventory')
+            .select(`
+                *,
+                item:shop_items (*)
+            `)
+            .eq('user_id', req.params.userId)
+        );
+
+        if (error) return res.status(500).json({ error: error.message });
+        res.json(data);
+    } catch (err: any) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.post('/api/shop/inventory/equip', async (req, res) => {
+    const { userId, userItemId, isEquipped } = req.body;
+    
+    try {
+        // If equipping accessories, unequip others in same category? 
+        // For simplicity now, just update the specific item
+        const { error } = await withRetry(() => supabase
+            .from('user_inventory')
+            .update({ is_equipped: isEquipped })
+            .eq('id', userItemId)
+            .eq('user_id', userId)
+        );
+
+        if (error) return res.status(500).json({ error: error.message });
+        res.json({ success: true });
     } catch (err: any) {
         res.status(500).json({ error: err.message });
     }
@@ -680,3 +971,10 @@ app.listen(PORT, () => {
     console.log(`🚀 Math Buddy API running at http://localhost:${PORT}`);
     console.log('☁️ Connected to Supabase');
 });
+
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log('?? Local dev server running');
+    });
+}
+export default app;

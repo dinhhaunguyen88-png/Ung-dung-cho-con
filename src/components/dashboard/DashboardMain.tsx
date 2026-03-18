@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import {
@@ -10,26 +10,69 @@ import {
     Gamepad2,
     Star,
     Users,
+    ClipboardList,
+    Clock3,
 } from 'lucide-react';
 import { PetAvatar } from '../pet/PetAvatar';
 import { PET_INFO } from '../../types/pet';
 import type { PetConfig } from '../../types/pet';
+import { getStudentAssignments, type StudentAssignmentData } from '../../services/api';
 
 export function DashboardMain({
     pet,
+    userId,
     onFeed,
     onPlay,
     onStartQuest,
+    onStartAssignment,
     onJoinClass,
 }: {
     pet: PetConfig;
+    userId?: string;
     onFeed: () => void;
     onPlay: () => void;
     onStartQuest: (subject: string) => void;
+    onStartAssignment: (assignment: StudentAssignmentData) => void;
     onJoinClass: () => void;
 }) {
     const { t, i18n } = useTranslation();
     const isVi = i18n.language === 'vi';
+    const [assignments, setAssignments] = useState<StudentAssignmentData[]>([]);
+    const [assignmentsLoading, setAssignmentsLoading] = useState(false);
+
+    useEffect(() => {
+        if (!userId) {
+            setAssignments([]);
+            return;
+        }
+
+        let cancelled = false;
+
+        const loadAssignments = async () => {
+            setAssignmentsLoading(true);
+            try {
+                const data = await getStudentAssignments(userId);
+                if (!cancelled) {
+                    setAssignments(data);
+                }
+            } catch (err) {
+                console.error('Failed to fetch student assignments:', err);
+                if (!cancelled) {
+                    setAssignments([]);
+                }
+            } finally {
+                if (!cancelled) {
+                    setAssignmentsLoading(false);
+                }
+            }
+        };
+
+        loadAssignments();
+
+        return () => {
+            cancelled = true;
+        };
+    }, [userId]);
 
     return (
         <section className="flex flex-1 flex-col gap-6">
@@ -111,6 +154,78 @@ export function DashboardMain({
                 </div>
             </motion.div>
 
+            {(assignmentsLoading || assignments.length > 0) && (
+                <section className="rounded-3xl border border-white/60 bg-white/80 p-6 shadow-lg backdrop-blur-sm">
+                    <div className="mb-4 flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                            <div className="rounded-2xl bg-primary/10 p-3 text-primary">
+                                <ClipboardList size={24} />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-black text-slate-900">{t('assignments.title')}</h3>
+                                <p className="text-sm text-slate-500">
+                                    {assignmentsLoading
+                                        ? t('assignments.loading')
+                                        : `${assignments.length} ${t('assignments.available')}`}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {assignmentsLoading ? (
+                        <div className="grid gap-4 md:grid-cols-2">
+                            {[0, 1].map((i) => (
+                                <div key={i} className="h-32 animate-pulse rounded-2xl bg-slate-100" />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                            {assignments.slice(0, 3).map((assignment) => (
+                                <motion.div
+                                    key={assignment.id}
+                                    whileHover={{ y: -4 }}
+                                    className="rounded-2xl border border-slate-100 bg-slate-50 p-5 shadow-sm"
+                                >
+                                    <div className="mb-3 flex items-start justify-between gap-3">
+                                        <div>
+                                            <p className="text-xs font-black uppercase tracking-wider text-primary">
+                                                {assignment.class_name}
+                                            </p>
+                                            <h4 className="mt-1 text-lg font-black text-slate-900">{assignment.title}</h4>
+                                        </div>
+                                        <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-500 shadow-sm">
+                                            {t(`assignments.${assignment.subject}`)}
+                                        </span>
+                                    </div>
+
+                                    <div className="space-y-2 text-sm text-slate-500">
+                                        <p>
+                                            {assignment.topic || t('assignments.noTopic')}
+                                        </p>
+                                        <div className="flex items-center gap-2">
+                                            <Clock3 size={14} />
+                                            <span>
+                                                {assignment.due_date
+                                                    ? t('assignments.due', { date: new Date(assignment.due_date).toLocaleDateString() })
+                                                    : t('assignments.noDue')}
+                                            </span>
+                                        </div>
+                                        <p>{t('assignments.questions', { count: assignment.question_count })}</p>
+                                    </div>
+
+                                    <button
+                                        onClick={() => onStartAssignment(assignment)}
+                                        className="mt-4 rounded-xl bg-primary px-4 py-2.5 text-sm font-black text-white shadow-lg shadow-primary/20 transition-all hover:brightness-110 active:scale-95"
+                                    >
+                                        {t('assignments.startAssignment')}
+                                    </button>
+                                </motion.div>
+                            ))}
+                        </div>
+                    )}
+                </section>
+            )}
+
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <ActivityCard
                     icon={<BookOpen size={32} />}
@@ -137,19 +252,19 @@ export function DashboardMain({
                     onClick={() => onStartQuest('math')}
                 />
                 <ActivityCard
-                    icon={<Languages size={32} />}
-                    title={t('dashboard.activity.englishPractice')}
-                    subtitle={t('dashboard.activity.vocabGrammar')}
+                    icon={<BrainCircuit size={32} />}
+                    title={t('dashboard.activity.sciencePractice')}
+                    subtitle={t('dashboard.activity.scienceTopics')}
                     action={t('dashboard.activity.startTraining')}
-                    color="bg-teal-100 text-teal-600 shadow-teal-100"
-                    onClick={() => onStartQuest('english')}
+                    color="bg-orange-100 text-orange-600 shadow-orange-100"
+                    onClick={() => onStartQuest('science')}
                 />
                 <ActivityCard
                     icon={<Users size={32} />}
                     title={t('joinClass.title')}
                     subtitle={t('joinClass.subtitle')}
                     action={t('joinClass.submit')}
-                    color="bg-orange-100 text-orange-600 shadow-orange-100"
+                    color="bg-slate-100 text-slate-600 shadow-slate-100"
                     onClick={onJoinClass}
                 />
             </div>

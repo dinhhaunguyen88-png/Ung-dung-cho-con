@@ -10,12 +10,13 @@ interface AssignmentCreatorProps {
     onBack: () => void;
 }
 
-const SUBJECTS = ['math', 'vietnamese', 'english'];
+const SUBJECTS = ['math', 'vietnamese', 'english', 'science'];
 
 export function AssignmentCreator({ classId, onCreated, onBack }: AssignmentCreatorProps) {
     const { t } = useTranslation();
     const [title, setTitle] = useState('');
     const [subject, setSubject] = useState('math');
+    const [topic, setTopic] = useState('');
     const [questionCount, setQuestionCount] = useState(5);
     const [dueDate, setDueDate] = useState('');
     const [error, setError] = useState('');
@@ -32,6 +33,7 @@ export function AssignmentCreator({ classId, onCreated, onBack }: AssignmentCrea
                 classId,
                 title,
                 subject,
+                topic: topic || undefined,
                 questionCount,
                 dueDate: dueDate || undefined,
             });
@@ -76,7 +78,7 @@ export function AssignmentCreator({ classId, onCreated, onBack }: AssignmentCrea
                     />
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                         <label className="mb-1.5 block text-sm font-bold text-slate-600 uppercase tracking-wider">
                             {t('assignments.subject')}
@@ -94,6 +96,21 @@ export function AssignmentCreator({ classId, onCreated, onBack }: AssignmentCrea
                         </select>
                     </div>
 
+                    <div>
+                        <label className="mb-1.5 block text-sm font-bold text-slate-600 uppercase tracking-wider">
+                            {t('assignments.topic')}
+                        </label>
+                        <input
+                            type="text"
+                            value={topic}
+                            onChange={(e) => setTopic(e.target.value)}
+                            placeholder={t('assignments.topicPlaceholder')}
+                            className="w-full rounded-xl border-2 border-slate-100 bg-slate-50 p-3 transition-all focus:border-primary focus:bg-white focus:outline-none"
+                        />
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                         <label className="mb-1.5 block text-sm font-bold text-slate-600 uppercase tracking-wider">
                             {t('assignments.questionCount')}

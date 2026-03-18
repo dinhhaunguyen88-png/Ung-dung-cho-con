@@ -44,7 +44,9 @@
       "vietnamesePractice": "Luyện Tiếng Việt",
       "readingWriting": "Đọc, viết & Từ vựng",
       "englishPractice": "Luyện Tiếng Anh",
-      "vocabGrammar": "Từ vựng & Ngữ pháp"
+      "vocabGrammar": "Từ vựng & Ngữ pháp",
+      "sciencePractice": "Luyện Tự nhiên & Xã hội",
+      "scienceTopics": "Gia đình, Trường học & Tự nhiên"
     },
     "quest": {
       "dailyQuest": "Nhiệm vụ hàng ngày",
@@ -72,7 +74,8 @@
     "skip": "Bỏ qua",
     "nextQuestion": "Câu tiếp theo",
     "tryAgain": "Thử lại! {{a}} + {{b}} = {{answer}}",
-    "errorFetch": "Lỗi khi lấy câu hỏi. Con thử nhấn nút 'Thử lại' nhé!"
+    "errorFetch": "Lỗi khi lấy câu hỏi. Con thử nhấn nút 'Thử lại' nhé!",
+    "noQuestions": "Chưa có câu hỏi phù hợp cho bài này."
   },
   "petRoom": {
     "title": "Phòng thay đồ Pet",
@@ -220,13 +223,19 @@
     "math": "Toán",
     "vietnamese": "Tiếng Việt",
     "english": "Tiếng Anh",
+    "science": "Tự nhiên & Xã hội",
     "questionCount": "Số câu hỏi",
+    "topic": "Chủ đề",
+    "topicPlaceholder": "Chủ đề trọng tâm (không bắt buộc)",
     "dueDate": "Hạn nộp",
     "noAssignments": "Chưa có bài tập nào.",
+    "loading": "Đang tải bài tập...",
+    "available": "bài tập sẵn sàng",
     "newBadge": "Mới!",
     "questions": "{{count}} câu",
     "due": "Hạn: {{date}}",
     "noDue": "Không có hạn",
+    "noTopic": "Luyện tập tổng hợp",
     "startAssignment": "Bắt đầu làm bài"
   },
   "progress": {

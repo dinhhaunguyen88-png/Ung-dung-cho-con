@@ -18,10 +18,12 @@ export function Header({
     currentScreen,
     setCurrentScreen,
     stars,
+    onOpenShop,
 }: {
     currentScreen: Screen;
     setCurrentScreen: (s: Screen) => void;
     stars: number;
+    onOpenShop?: () => void;
 }) {
     const { t } = useTranslation();
 
@@ -83,7 +85,10 @@ export function Header({
                 >
                     {i18n.language === 'vi' ? '🇻🇳 VI' : '🇬🇧 EN'}
                 </button>
-                <div className="flex items-center rounded-full border border-yellow-200 bg-yellow-400/20 px-3 py-1.5 shadow-sm backdrop-blur-sm">
+                <div 
+                    onClick={onOpenShop}
+                    className="flex cursor-pointer items-center rounded-full border border-yellow-200 bg-yellow-400/20 px-3 py-1.5 shadow-sm transition-all hover:scale-105 active:scale-95 backdrop-blur-sm"
+                >
                     <Star size={18} className="mr-1 fill-yellow-500 text-yellow-600 animate-pulse" />
                     <span className="text-sm font-black text-yellow-700">{stars.toLocaleString()}</span>
                 </div>

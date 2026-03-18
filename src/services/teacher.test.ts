@@ -15,6 +15,7 @@ function mockResponse(data: unknown, status = 200) {
 
 beforeEach(() => {
     mockFetch.mockReset();
+    localStorage.clear();
 });
 
 describe('Teacher Advanced Auth Flow', () => {
@@ -53,7 +54,7 @@ describe('Teacher Advanced Auth Flow', () => {
 
     describe('Success Scenarios', () => {
         it('should return teacher role on successful login', async () => {
-            mockResponse({ user: { id: 't1', role: 'teacher', email: 't@e.com' } });
+            mockResponse({ user: { id: 't1', role: 'teacher', email: 't@e.com' }, token: 'token-123' });
             const res = await teacherLogin('t@e.com', 'pass');
             expect(res.user.role).toBe('teacher');
         });

@@ -14,39 +14,59 @@ import {
     Edit3,
 } from 'lucide-react';
 import { PetAvatar } from './PetAvatar';
-import {
-    PET_COLORS,
-    PET_ACCESSORIES,
-    PET_INFO,
-    getPetEvolutionStage,
-} from '../../types/pet';
+import { PET_COLORS, PET_ACCESSORIES, PET_INFO, getPetEvolutionStage } from '../../types/pet';
 import type { PetConfig, PetType } from '../../types/pet';
+import { getUserInventory, type UserItem } from '../../services/api';
+import { useEffect } from 'react';
 
 type Tab = 'customize' | 'accessories' | 'food';
 
 interface PetRoomProps {
     onBack: () => void;
     pet: PetConfig;
+    userId: string;
     onSetType: (type: PetType) => void;
     onSetColor: (color: string) => void;
     onSetName: (name: string) => void;
     onToggleAccessory: (id: string) => void;
+    onVisitShop?: () => void;
 }
 
 export function PetRoom({
     onBack,
     pet,
+    userId,
     onSetType,
     onSetColor,
     onSetName,
     onToggleAccessory,
+    onVisitShop,
 }: PetRoomProps) {
     const { t, i18n } = useTranslation();
     const [activeTab, setActiveTab] = useState<Tab>('customize');
     const [isEditingName, setIsEditingName] = useState(false);
     const [nameInput, setNameInput] = useState(pet.name);
+    const [inventory, setInventory] = useState<UserItem[]>([]);
+    const [isLoadingInventory, setIsLoadingInventory] = useState(false);
+
     const isVi = i18n.language === 'vi';
     const stage = getPetEvolutionStage(pet.level);
+
+    useEffect(() => {
+        const fetchInventory = async () => {
+            if (!userId) return;
+            setIsLoadingInventory(true);
+            try {
+                const data = await getUserInventory(userId);
+                setInventory(data);
+            } catch (err) {
+                console.error('Failed to fetch inventory:', err);
+            } finally {
+                setIsLoadingInventory(false);
+            }
+        };
+        fetchInventory();
+    }, [userId]);
 
     const handleNameSave = () => {
         if (nameInput.trim()) {
@@ -276,6 +296,7 @@ export function PetRoom({
                                             {PET_ACCESSORIES.map((acc) => {
                                                 const isUnlocked = pet.xp >= acc.requiredXp;
                                                 const isEquipped = pet.equippedAccessories.includes(acc.id);
+
                                                 return (
                                                     <button
                                                         key={acc.id}
@@ -320,44 +341,53 @@ export function PetRoom({
                                         exit={{ opacity: 0, x: -20 }}
                                     >
                                         <h4 className="mb-3 text-sm font-black uppercase tracking-widest text-slate-400">
-                                            {t('petRoom.foodSnacks', { count: 3 })}
+                                            {isVi ? 'Kho đồ' : 'Inventory'} ({inventory.length})
                                         </h4>
-                                        <div className="grid grid-cols-3 gap-3">
-                                            {[
-                                                { emoji: '🍎', name: isVi ? 'Táo phép thuật' : 'Magic Apple', count: 5 },
-                                                { emoji: '🍪', name: isVi ? 'Bánh quy' : 'Cookie', count: 2 },
-                                                { emoji: '🥛', name: isVi ? 'Sữa tươi' : 'Fresh Milk', count: 8 },
-                                            ].map((food) => (
-                                                <div
-                                                    key={food.emoji}
-                                                    className="flex cursor-pointer flex-col items-center gap-1 rounded-xl border-2 border-transparent bg-yellow-50 p-4 transition-all hover:border-yellow-400 hover:shadow-sm"
+                                        {isLoadingInventory ? (
+                                             <div className="flex h-32 items-center justify-center">
+                                                 <Sparkles className="animate-spin text-primary" />
+                                             </div>
+                                        ) : inventory.length === 0 ? (
+                                            <div className="flex flex-col items-center justify-center gap-3 py-10 text-center">
+                                                <ShoppingBag size={48} className="text-slate-200" />
+                                                <p className="text-sm font-medium text-slate-400">
+                                                    {isVi ? 'Bạn chưa có món đồ nào.' : 'You have no items yet.'}
+                                                </p>
+                                                <button 
+                                                    onClick={onVisitShop}
+                                                    className="text-xs font-bold text-primary hover:underline"
                                                 >
-                                                    <span className="text-3xl">{food.emoji}</span>
-                                                    <span className="text-[10px] font-bold">{food.name}</span>
-                                                    <span className="rounded bg-slate-900 px-1.5 py-0.5 text-[10px] font-black text-yellow-400">
-                                                        x{food.count}
-                                                    </span>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <h4 className="mb-3 mt-8 text-sm font-black uppercase tracking-widest text-slate-400">
-                                            {isVi ? 'Đồ chơi' : 'Toys'} (2)
-                                        </h4>
-                                        <div className="grid grid-cols-3 gap-3">
-                                            {[
-                                                { emoji: '⚽', name: isVi ? 'Bóng' : 'Ball' },
-                                                { emoji: '🧸', name: isVi ? 'Gấu bông' : 'Teddy Bear' },
-                                            ].map((toy) => (
-                                                <div
-                                                    key={toy.emoji}
-                                                    className="flex cursor-pointer flex-col items-center gap-1 rounded-xl border-2 border-transparent bg-blue-50 p-4 transition-all hover:border-blue-400 hover:shadow-sm"
-                                                >
-                                                    <span className="text-3xl">{toy.emoji}</span>
-                                                    <span className="text-[10px] font-bold">{toy.name}</span>
-                                                </div>
-                                            ))}
-                                        </div>
+                                                    {isVi ? 'Ghé cửa hàng ngay!' : 'Visit shop now!'}
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <div className="grid grid-cols-2 gap-3">
+                                                {inventory.map((item) => (
+                                                    <div
+                                                        key={item.id}
+                                                        className="flex flex-col items-center gap-2 rounded-xl border-2 border-slate-100 bg-slate-50 p-4 transition-all hover:border-primary/20 hover:shadow-sm"
+                                                    >
+                                                        <span className="text-3xl">{item.item?.image_url}</span>
+                                                        <span className="text-[10px] font-bold text-center">
+                                                            {item.item?.name}
+                                                        </span>
+                                                        <span className="rounded bg-slate-900 px-1.5 py-0.5 text-[10px] font-black text-yellow-400">
+                                                            x{item.quantity}
+                                                        </span>
+                                                        {item.item?.category === 'accessory' && (
+                                                            <button 
+                                                                onClick={() => onToggleAccessory(item.item_id)}
+                                                                className={`mt-1 text-[9px] font-black uppercase tracking-tighter ${
+                                                                    pet.equippedAccessories.includes(item.item_id) ? 'text-green-500' : 'text-primary'
+                                                                }`}
+                                                            >
+                                                                {pet.equippedAccessories.includes(item.item_id) ? (isVi ? 'Đang mặc' : 'Equipped') : (isVi ? 'Mặc' : 'Equip')}
+                                                            </button>
+                                                        )}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
                                     </motion.div>
                                 )}
                             </AnimatePresence>
@@ -365,7 +395,10 @@ export function PetRoom({
 
                         {/* Bottom CTA */}
                         <div className="border-t border-slate-100 bg-slate-50 p-4">
-                            <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 font-bold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary/90">
+                            <button 
+                                onClick={onVisitShop}
+                                className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 font-bold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary/90"
+                            >
                                 <ShoppingBag size={20} /> {t('petRoom.visitPetShop')}
                             </button>
                         </div>

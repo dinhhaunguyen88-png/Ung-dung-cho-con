@@ -6,7 +6,7 @@ import { getTeacherClasses, createClass, ClassData } from '../../services/api';
 
 interface TeacherDashboardProps {
     teacherId: string;
-    onViewClass: (classId: string) => void;
+    onViewClass: (classId: string, className: string) => void;
 }
 
 export function TeacherDashboard({ teacherId, onViewClass }: TeacherDashboardProps) {
@@ -38,7 +38,7 @@ export function TeacherDashboard({ teacherId, onViewClass }: TeacherDashboardPro
 
         setError('');
         try {
-            const newClass = await createClass(newClassName, teacherId);
+            const newClass = await createClass(newClassName);
             setClasses([newClass, ...classes]);
             setNewClassName('');
             setIsCreating(false);
@@ -154,7 +154,7 @@ export function TeacherDashboard({ teacherId, onViewClass }: TeacherDashboardPro
                             <p className="mb-6 text-sm text-slate-500">Created {new Date(cls.created_at).toLocaleDateString()}</p>
 
                             <button
-                                onClick={() => onViewClass(cls.id)}
+                                onClick={() => onViewClass(cls.id, cls.name)}
                                 className="flex w-full items-center justify-between rounded-2xl bg-slate-50 p-4 transition-all hover:bg-primary group-hover:text-white"
                             >
                                 <span className="font-bold">{t('teacherDashboard.viewMembers')}</span>

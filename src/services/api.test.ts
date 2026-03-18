@@ -17,6 +17,7 @@ import {
     removeClassMember,
     createAssignment,
     getClassAssignments,
+    getStudentAssignments,
     getClassProgress,
     getStudentProgress,
     ApiError,
@@ -42,6 +43,7 @@ function mockNetworkError() {
 
 beforeEach(() => {
     mockFetch.mockReset();
+    localStorage.clear();
 });
 
 // ─── createUser ──────────────────────────────────────
@@ -174,7 +176,7 @@ describe('getQuestions', () => {
 
         await getQuestions();
 
-        expect(mockFetch).toHaveBeenCalledWith('/api/questions?subject=math&limit=5', {
+        expect(mockFetch).toHaveBeenCalledWith('/api/questions?subject=math&limit=15', {
             headers: { 'Content-Type': 'application/json' },
         });
     });
@@ -185,6 +187,16 @@ describe('getQuestions', () => {
         await getQuestions('vietnamese', 10);
 
         expect(mockFetch).toHaveBeenCalledWith('/api/questions?subject=vietnamese&limit=10', {
+            headers: { 'Content-Type': 'application/json' },
+        });
+    });
+
+    it('should pass optional topic filter', async () => {
+        mockResponse([]);
+
+        await getQuestions('math', 12, 'addition');
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/questions?subject=math&limit=12&topic=addition', {
             headers: { 'Content-Type': 'application/json' },
         });
     });
@@ -209,7 +221,7 @@ describe('getLeaderboard', () => {
 // ─── Teacher Auth ────────────────────────────────────
 
 describe('Teacher Auth', () => {
-    const mockTeacher = { user: { id: 't1', name: 'Teacher', email: 't@e.com', role: 'teacher' } };
+    const mockTeacher = { user: { id: 't1', name: 'Teacher', email: 't@e.com', role: 'teacher' }, token: 'token-123' };
 
     it('teacherRegister should POST to /api/auth/teacher/register', async () => {
         mockResponse(mockTeacher);
@@ -243,12 +255,12 @@ describe('Classes', () => {
         const mockClass = { id: 'c1', name: 'Math 101', teacher_id: 't1', join_code: 'MX123' };
         mockResponse(mockClass);
 
-        const result = await createClass('Math 101', 't1');
+        const result = await createClass('Math 101');
 
         expect(mockFetch).toHaveBeenCalledWith('/api/classes', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: 'Math 101', teacherId: 't1' }),
+            body: JSON.stringify({ name: 'Math 101' }),
         });
         expect(result).toEqual(mockClass);
     });
@@ -257,6 +269,24 @@ describe('Classes', () => {
         mockResponse([]);
         await getTeacherClasses('t1');
         expect(mockFetch).toHaveBeenCalledWith('/api/classes/t1', expect.any(Object));
+    });
+
+    it('teacher requests should include bearer token from stored session', async () => {
+        localStorage.setItem('math-buddy-user', JSON.stringify({
+            id: 't1',
+            role: 'teacher',
+            auth_token: 'token-123',
+        }));
+        mockResponse([]);
+
+        await getTeacherClasses('t1');
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/classes/t1', {
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer token-123',
+            },
+        });
     });
 
     it('joinClass should POST to /api/classes/join', async () => {
@@ -307,6 +337,12 @@ describe('Assignments', () => {
         mockResponse([]);
         await getClassAssignments('c1');
         expect(mockFetch).toHaveBeenCalledWith('/api/assignments/c1', expect.any(Object));
+    });
+
+    it('getStudentAssignments should GET list for one student', async () => {
+        mockResponse([]);
+        await getStudentAssignments('u1');
+        expect(mockFetch).toHaveBeenCalledWith('/api/student/assignments/u1', expect.any(Object));
     });
 
     it('getClassProgress should GET class progress summary', async () => {
