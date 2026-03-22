@@ -48,3 +48,10 @@ View your app in AI Studio: https://ai.studio/apps/ca091769-5342-4023-ab9c-110c8
   `AUTH_SECRET`
 - Validate local config with `npm run env:check`
 - Set the same keys in Vercel Environment Variables before deploy
+
+## Deploy To Vercel
+
+- Import the GitHub repository on Vercel
+- Use branch `main`
+- Set the environment variables from `.env.example`
+- Full deployment checklist: [docs/deploy/vercel.md](/d:/ung dung - Copy/ung dung/Dinh-Hau-Nguyen/docs/deploy/vercel.md)
