@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ReactNode } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
     Home,
@@ -10,6 +10,8 @@ import {
     Star,
     School,
     Trophy,
+    Moon,
+    Sun,
 } from 'lucide-react';
 import type { Screen } from '../../types';
 import i18n from '../../i18n';
@@ -26,6 +28,14 @@ export function Header({
     onOpenShop?: () => void;
 }) {
     const { t } = useTranslation();
+    const [isDark, setIsDark] = useState(() => {
+        return localStorage.getItem('math-buddy-dark') === 'true';
+    });
+
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark', isDark);
+        localStorage.setItem('math-buddy-dark', String(isDark));
+    }, [isDark]);
 
     const toggleLang = () => {
         const newLang = i18n.language === 'vi' ? 'en' : 'vi';
@@ -85,12 +95,26 @@ export function Header({
                 >
                     {i18n.language === 'vi' ? '🇻🇳 VI' : '🇬🇧 EN'}
                 </button>
+                <button
+                    onClick={() => setIsDark(!isDark)}
+                    className="flex items-center rounded-full border border-slate-200 bg-white/50 p-2 text-slate-600 shadow-sm transition-all hover:bg-slate-100 active:scale-95 dark:border-slate-600 dark:bg-slate-700 dark:text-yellow-400"
+                    title={isDark ? 'Light mode' : 'Dark mode'}
+                >
+                    {isDark ? <Sun size={16} /> : <Moon size={16} />}
+                </button>
                 <div 
                     onClick={onOpenShop}
                     className="flex cursor-pointer items-center rounded-full border border-yellow-200 bg-yellow-400/20 px-3 py-1.5 shadow-sm transition-all hover:scale-105 active:scale-95 backdrop-blur-sm"
                 >
                     <Star size={18} className="mr-1 fill-yellow-500 text-yellow-600 animate-pulse" />
-                    <span className="text-sm font-black text-yellow-700">{stars.toLocaleString()}</span>
+                    <motion.span
+                        key={stars}
+                        initial={{ scale: 1.5, color: '#f59e0b' }}
+                        animate={{ scale: 1, color: '#a16207' }}
+                        className="text-sm font-black text-yellow-700"
+                    >
+                        {stars.toLocaleString()}
+                    </motion.span>
                 </div>
                 <motion.button
                     whileHover={{ rotate: 90 }}

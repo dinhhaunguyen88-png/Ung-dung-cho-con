@@ -9,6 +9,8 @@ import { motion } from 'motion/react';
 import { SpeakerButton } from '../ui/SpeakerButton';
 import { useSpeech } from '../../hooks/useSpeech';
 import { getQuestions, saveProgress } from '../../services/api';
+import { useSound } from '../../hooks/useSound';
+import { ResultScreen } from './ResultScreen';
 
 export function LearningQuest({
     subject = 'math',
@@ -35,8 +37,14 @@ export function LearningQuest({
     const [isLoading, setIsLoading] = useState(true);
     const [isFinishing, setIsFinishing] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [answerState, setAnswerState] = useState<'idle' | 'correct' | 'wrong'>('idle');
+    const [streak, setStreak] = useState(0);
+    const [showCombo, setShowCombo] = useState(false);
+    const [wrongAnswers, setWrongAnswers] = useState<any[]>([]);
+    const [showResult, setShowResult] = useState(false);
 
     const { speak } = useSpeech({ lang: i18n.language === 'vi' ? 'vi-VN' : 'en-US' });
+    const { playCorrect, playWrong, playCombo, playComplete } = useSound();
 
     const fetchQuestions = async () => {
         setIsLoading(true);
@@ -80,8 +88,29 @@ export function LearningQuest({
 
     if (isLoading) {
         return (
-            <div className="flex h-64 items-center justify-center">
-                <div className="h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+            <div className="flex flex-col items-center gap-8 p-6">
+                {/* Skeleton: progress bar */}
+                <div className="w-full rounded-xl bg-white p-6 shadow-sm">
+                    <div className="mb-3 flex justify-between">
+                        <div className="h-5 w-32 animate-pulse rounded-lg bg-slate-200" />
+                        <div className="h-5 w-16 animate-pulse rounded-lg bg-slate-200" />
+                    </div>
+                    <div className="h-4 w-full animate-pulse rounded-full bg-slate-100" />
+                </div>
+                {/* Skeleton: question */}
+                <div className="w-full rounded-3xl border-8 border-blue-50 bg-white p-12 md:p-20">
+                    <div className="mx-auto mb-4 h-6 w-24 animate-pulse rounded-lg bg-slate-200" />
+                    <div className="mx-auto h-16 w-48 animate-pulse rounded-2xl bg-slate-100" />
+                </div>
+                {/* Skeleton: choices */}
+                <div className="grid w-full grid-cols-2 gap-6 md:grid-cols-4">
+                    {[0, 1, 2, 3].map((i) => (
+                        <div key={i} className="flex flex-col items-center">
+                            <div className="h-24 w-24 animate-pulse rounded-full bg-slate-200 md:h-32 md:w-32 lg:h-44 lg:w-44" />
+                            <div className="mt-4 h-8 w-12 animate-pulse rounded-full bg-slate-100" />
+                        </div>
+                    ))}
+                </div>
             </div>
         );
     }
@@ -116,44 +145,70 @@ export function LearningQuest({
     }
 
     const handleNext = async () => {
+        if (answerState !== 'idle') return; // Prevent double-tap
         // Use loose equality to handle string vs number IDs (e.g. "1" == 1)
         const isCorrect = selected == currentQuestion.correct_answer_id;
 
         if (isCorrect) {
             setCorrectCount((c) => c + 1);
-            const msg = i18n.language === 'vi' ? 'Đúng rồi! Giỏi lắm!' : 'Correct! Great job!';
-            speak(msg);
+            setAnswerState('correct');
+            const newStreak = streak + 1;
+            setStreak(newStreak);
+            if (newStreak >= 3) {
+                setShowCombo(true);
+                playCombo();
+            } else {
+                playCorrect();
+            }
+            const comboMsg = newStreak >= 5
+                ? (i18n.language === 'vi' ? `SIÊU COMBO ${newStreak}! Xuất sắc!` : `SUPER COMBO ${newStreak}! Amazing!`)
+                : newStreak >= 3
+                    ? (i18n.language === 'vi' ? `Combo ${newStreak}! Giỏi lắm!` : `Combo ${newStreak}! Great job!`)
+                    : (i18n.language === 'vi' ? 'Đúng rồi! Giỏi lắm!' : 'Correct! Great job!');
+            speak(comboMsg);
         } else {
+            setAnswerState('wrong');
+            setStreak(0);
+            setShowCombo(false);
+            playWrong();
             const correctAnswer = currentQuestion.choices.find((c: any) => c.id == currentQuestion.correct_answer_id);
+            setWrongAnswers((prev) => [...prev, {
+                question: localizedContent.questionText,
+                userAnswer: currentQuestion.choices.find((c: any) => c.id == selected)?.value,
+                correctAnswer: correctAnswer?.value,
+            }]);
             const msg = i18n.language === 'vi'
                 ? `Chưa đúng rồi! Đáp án là ${correctAnswer?.value || ''} cơ.`
                 : `Not quite! The answer is ${correctAnswer?.value || ''}.`;
             speak(msg);
-            // No alert() here as it blocks the thread/UI
         }
 
-        if (currentIndex < questions.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-            setSelected(null);
-        } else {
-            setIsFinishing(true);
-            // Save progress to backend using API service
-            const finalCorrect = isCorrect ? correctCount + 1 : correctCount;
-            if (userId) {
-                try {
-                    await saveProgress(
-                        userId,
-                        subject,
-                        topic || questions[0]?.topic || 'general',
-                        finalCorrect,
-                        questions.length,
-                    );
-                } catch (err) {
-                    console.error('Failed to save progress:', err);
+        // Delay 1.5s to show visual feedback, then advance
+        setTimeout(async () => {
+            if (currentIndex < questions.length - 1) {
+                setCurrentIndex(currentIndex + 1);
+                setSelected(null);
+                setAnswerState('idle');
+            } else {
+                setIsFinishing(true);
+                const finalCorrect = isCorrect ? correctCount + 1 : correctCount;
+                if (userId) {
+                    try {
+                        await saveProgress(
+                            userId,
+                            subject,
+                            topic || questions[0]?.topic || 'general',
+                            finalCorrect,
+                            questions.length,
+                        );
+                    } catch (err) {
+                        console.error('Failed to save progress:', err);
+                    }
                 }
+                playComplete();
+                setShowResult(true);
             }
-            onComplete();
-        }
+        }, 1500);
     };
 
     const choiceColors = [
@@ -162,6 +217,35 @@ export function LearningQuest({
         { color: 'bg-yellow-200', shadow: 'shadow-[0_10px_0_0_#e6e6a7]' },
         { color: 'bg-blue-300', shadow: 'shadow-[0_10px_0_0_#a8cbe6]' },
     ];
+
+    const getChoiceFeedbackClass = (choiceId: number) => {
+        if (answerState === 'idle') return '';
+        const isThisCorrect = choiceId == currentQuestion.correct_answer_id;
+        const isThisSelected = choiceId == selected;
+        if (isThisCorrect) return 'ring-4 ring-emerald-400 !bg-emerald-400 scale-110';
+        if (isThisSelected && !isThisCorrect) return 'ring-4 ring-red-400 !bg-red-400 animate-shake opacity-70';
+        return 'opacity-40';
+    };
+
+    // Show result screen after quest completion
+    if (showResult) {
+        return (
+            <ResultScreen
+                correctCount={correctCount}
+                totalQuestions={questions.length}
+                wrongAnswers={wrongAnswers}
+                streak={streak}
+                onRetry={() => {
+                    setShowResult(false);
+                    setWrongAnswers([]);
+                    setStreak(0);
+                    setShowCombo(false);
+                    fetchQuestions();
+                }}
+                onHome={onComplete}
+            />
+        );
+    }
 
     return (
         <div className="flex flex-col items-center">
@@ -227,35 +311,66 @@ export function LearningQuest({
                     </p>
                 </div>
 
-                <div className="grid w-full grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+                {/* Combo indicator */}
+                {showCombo && answerState === 'idle' && (
+                    <motion.div
+                        initial={{ scale: 0, y: 20 }}
+                        animate={{ scale: 1, y: 0 }}
+                        className="absolute -top-4 right-4 z-20 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-5 py-2 text-lg font-black text-white shadow-lg"
+                    >
+                        🔥 {streak >= 5 ? 'SUPER ' : ''}Combo x{streak}!
+                    </motion.div>
+                )}
+
+                <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
                     {currentQuestion.choices.map((choice: any, index: number) => {
                         const val = String(choice.value);
                         const isLong = val.length > 3;
                         const fontSize = isLong
-                            ? (val.length > 15 ? 'text-lg md:text-xl' : 'text-xl md:text-2xl')
-                            : 'text-4xl md:text-5xl';
+                            ? (val.length > 15 ? 'text-base md:text-lg lg:text-xl' : 'text-lg md:text-xl lg:text-2xl')
+                            : 'text-2xl md:text-4xl lg:text-5xl';
 
                         return (
                             <button
                                 key={choice.id}
-                                onClick={() => setSelected(choice.id)}
-                                className={`group relative flex flex-col items-center transition-all hover:scale-105 active:scale-95 ${selected === choice.id ? 'scale-110' : ''
-                                    }`}
+                                onClick={() => answerState === 'idle' && setSelected(choice.id)}
+                                disabled={answerState !== 'idle'}
+                                className={`group relative flex flex-col items-center transition-all duration-300 ${answerState === 'idle' ? 'hover:scale-105 active:scale-95' : ''} ${selected === choice.id && answerState === 'idle' ? 'scale-110' : ''}`}
                             >
                                 <div
-                                    className={`relative flex h-32 w-32 items-center justify-center rounded-full border-4 border-white p-4 text-center md:h-44 md:w-44 ${choiceColors[index % 4].color} ${choiceColors[index % 4].shadow}`}
+                                    className={`relative flex h-24 w-24 items-center justify-center rounded-full border-4 border-white p-3 text-center transition-all duration-300 md:h-32 md:w-32 md:p-4 lg:h-44 lg:w-44 ${choiceColors[index % 4].color} ${choiceColors[index % 4].shadow} ${getChoiceFeedbackClass(choice.id)}`}
                                 >
                                     <span className={`${fontSize} font-black leading-tight text-white drop-shadow-md break-words line-clamp-3`}>
                                         {choice.value}
                                     </span>
+                                    {/* Correct checkmark overlay */}
+                                    {answerState !== 'idle' && choice.id == currentQuestion.correct_answer_id && (
+                                        <motion.div
+                                            initial={{ scale: 0 }}
+                                            animate={{ scale: 1 }}
+                                            className="absolute -right-1 -top-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 text-white shadow-lg md:h-10 md:w-10"
+                                        >
+                                            ✓
+                                        </motion.div>
+                                    )}
+                                    {/* Wrong X overlay */}
+                                    {answerState === 'wrong' && choice.id == selected && (
+                                        <motion.div
+                                            initial={{ scale: 0 }}
+                                            animate={{ scale: 1 }}
+                                            className="absolute -right-1 -top-1 flex h-8 w-8 items-center justify-center rounded-full bg-red-500 text-white shadow-lg md:h-10 md:w-10"
+                                        >
+                                            ✗
+                                        </motion.div>
+                                    )}
                                 </div>
                                 <div
-                                    className={`mt-4 rounded-full border-2 bg-white px-6 py-2 shadow-sm transition-colors ${selected === choice.id
+                                    className={`mt-3 rounded-full border-2 bg-white px-4 py-1.5 shadow-sm transition-colors md:mt-4 md:px-6 md:py-2 ${selected === choice.id && answerState === 'idle'
                                         ? 'border-primary bg-primary/10'
                                         : `border-slate-200`
                                         }`}
                                 >
-                                    <span className={`text-xl font-extrabold ${selected === choice.id ? 'text-primary' : 'text-slate-400'}`}>
+                                    <span className={`text-lg font-extrabold md:text-xl ${selected === choice.id && answerState === 'idle' ? 'text-primary' : 'text-slate-400'}`}>
                                         {choice.label}
                                     </span>
                                 </div>
@@ -265,18 +380,38 @@ export function LearningQuest({
                 </div>
             </div>
 
-            <footer className="mt-16 flex w-full items-center justify-between rounded-2xl bg-white p-4 shadow-inner">
+            {/* Correct/Wrong feedback banner */}
+            {answerState !== 'idle' && (
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`mt-6 flex w-full items-center justify-center gap-3 rounded-2xl p-4 text-lg font-black shadow-lg ${
+                        answerState === 'correct'
+                            ? 'bg-emerald-100 text-emerald-700'
+                            : 'bg-red-100 text-red-700'
+                    }`}
+                >
+                    {answerState === 'correct' ? (
+                        <>{streak >= 3 ? `🔥 ${i18n.language === 'vi' ? `Combo ${streak}! Tuyệt vời!` : `Combo ${streak}! Amazing!`}` : (i18n.language === 'vi' ? '✅ Đúng rồi! Giỏi lắm!' : '✅ Correct! Great job!')}</>
+                    ) : (
+                        <>{i18n.language === 'vi' ? '❌ Chưa đúng! Xem đáp án bên trên nhé.' : '❌ Not quite! See the correct answer above.'}</>
+                    )}
+                </motion.div>
+            )}
+
+            <footer className="mt-8 flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-inner md:mt-16 md:p-4">
                 <button
                     onClick={onBack}
-                    className="flex items-center gap-2 font-bold text-slate-500 transition-colors hover:text-primary"
+                    disabled={answerState !== 'idle'}
+                    className="flex items-center gap-2 text-sm font-bold text-slate-500 transition-colors hover:text-primary md:text-base"
                 >
-                    <ArrowLeft size={20} /> {t('learning.quitLesson')}
+                    <ArrowLeft size={18} /> {t('learning.quitLesson')}
                 </button>
                 <div className="flex gap-4">
                     <button
                         onClick={handleNext}
-                        disabled={selected === null || isFinishing}
-                        className="flex items-center gap-2 rounded-full bg-primary px-10 py-3 font-bold text-white shadow-lg shadow-primary/30 transition-all hover:brightness-110 disabled:opacity-50"
+                        disabled={selected === null || isFinishing || answerState !== 'idle'}
+                        className="flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/30 transition-all hover:brightness-110 disabled:opacity-50 md:px-10 md:py-3 md:text-base"
                     >
                         {isFinishing ? (
                             <>

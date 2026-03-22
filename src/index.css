@@ -95,3 +95,34 @@
 .animate-extra-bounce {
   animation: extra-bounce 2s infinite;
 }
+
+/* Shake animation for wrong answers */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Dark Mode */
+.dark {
+  --color-background-light: #0f172a;
+  --glass-white: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(51, 65, 85, 0.4);
+  color-scheme: dark;
+}
+
+.dark body {
+  @apply bg-slate-900 text-slate-100;
+}
+
+.dark .glass-card {
+  @apply bg-slate-800/70 border-slate-700/40;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 hover:bg-slate-500;
+}

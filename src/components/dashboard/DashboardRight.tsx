@@ -6,12 +6,15 @@ import {
     CheckCircle2,
     Lightbulb,
 } from 'lucide-react';
+import { DailyStreak } from './DailyStreak';
 
 export function DashboardRight() {
     const { t } = useTranslation();
 
     return (
         <aside className="flex w-full shrink-0 flex-col gap-6 lg:w-80">
+            {/* Daily Streak Calendar */}
+            <DailyStreak />
             <motion.div
                 whileHover={{ y: -5 }}
                 className="overflow-hidden rounded-2xl glass-card transition-all"
