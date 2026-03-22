@@ -16,14 +16,27 @@ Create a student profile and starter pet.
 Fetch one user profile.
 - **Response:** `User`
 
+### PUT `/api/users/:id`
+Update one user profile.
+- **Body:** `{ "name": string }`
+- **Response:** `User`
+
 ---
 
 ## Learning
+
+### GET `/api/system/status`
+Fetch backend configuration status without exposing secrets.
+- **Response:** `{ "summary": { "ready": boolean, "hasWarnings": boolean }, "supabase": { "configured": boolean, "accessMode": "service_role" | "anon" | "missing", "error": string | null, "warning": string | null, "missingVars": string[] }, "auth": { "secure": boolean, "mode": "env" | "fallback", "warning": string | null, "missingVars": string[] } }`
 
 ### GET `/api/questions`
 Fetch question sets for a subject.
 - **Query params:** `subject`, `limit`, `topic`
 - **Response:** `Question[]`
+
+### GET `/api/questions/counts`
+Fetch question-bank counts per subject.
+- **Response:** `{ "total": number, "bySubject": { "math": number, "vietnamese": number, "science": number, "english": number } }`
 
 ### POST `/api/progress`
 Save one learning session and award XP/stars.
@@ -35,8 +48,10 @@ Fetch up to 20 recent learning sessions.
 - **Response item:** `{ "id": string | number, "user_id": string, "subject": string, "topic": string, "correct": number, "total": number, "completed_at": string | null }`
 
 ### GET `/api/leaderboard`
-Fetch the global leaderboard ordered by XP.
-- **Response:** `User[]`
+Fetch the global leaderboard.
+- **Query params:** `metric=xp|correct`
+- **Default metric:** `xp`
+- **Response:** `User[] & { totalCorrect, totalQuestions, sessionsCount, accuracy, rankMetric }`
 
 ---
 

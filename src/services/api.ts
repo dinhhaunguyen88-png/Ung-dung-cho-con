@@ -63,10 +63,45 @@ export interface QuestionData {
     correct_answer_id: number | string;
 }
 
+export interface QuestionCounts {
+    total: number;
+    bySubject: {
+        math: number;
+        vietnamese: number;
+        science: number;
+        english: number;
+    };
+}
+
+export interface ServerStatus {
+    summary: {
+        ready: boolean;
+        hasWarnings: boolean;
+    };
+    supabase: {
+        configured: boolean;
+        accessMode: 'service_role' | 'anon' | 'missing';
+        error: string | null;
+        warning: string | null;
+        missingVars: string[];
+    };
+    auth: {
+        secure: boolean;
+        mode: 'env' | 'fallback';
+        warning: string | null;
+        missingVars: string[];
+    };
+}
+
 export interface LeaderboardEntry extends UserData {
     pet_type?: string;
     pet_name?: string;
     pet_color?: string;
+    totalCorrect?: number;
+    totalQuestions?: number;
+    sessionsCount?: number;
+    accuracy?: number;
+    rankMetric?: number;
 }
 
 // ─── Helper ──────────────────────────────────────────
@@ -86,22 +121,68 @@ function readStoredAuthToken(): string | null {
     }
 }
 
+const HEADER_NAME_MAP: Record<string, string> = {
+    'authorization': 'Authorization',
+    'content-type': 'Content-Type',
+};
+
+function canonicalHeaderName(name: string): string {
+    return HEADER_NAME_MAP[name.toLowerCase()] ?? name;
+}
+
+function normalizeHeaders(headers?: HeadersInit): Record<string, string> {
+    const normalized: Record<string, string> = {};
+
+    if (!headers) {
+        return normalized;
+    }
+
+    const assignHeader = (name: string, value: string) => {
+        normalized[canonicalHeaderName(name)] = value;
+    };
+
+    if (headers instanceof Headers) {
+        headers.forEach((value, name) => {
+            assignHeader(name, value);
+        });
+        return normalized;
+    }
+
+    if (Array.isArray(headers)) {
+        headers.forEach(([name, value]) => {
+            assignHeader(name, value);
+        });
+        return normalized;
+    }
+
+    Object.entries(headers).forEach(([name, value]) => {
+        if (value !== undefined) {
+            assignHeader(name, String(value));
+        }
+    });
+
+    return normalized;
+}
+
+function hasHeader(headers: Record<string, string>, name: string): boolean {
+    const target = name.toLowerCase();
+    return Object.keys(headers).some((headerName) => headerName.toLowerCase() === target);
+}
+
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
-    const headers = new Headers(options?.headers);
-    if (!headers.has('Content-Type')) {
-        headers.set('Content-Type', 'application/json');
+    const headers = normalizeHeaders(options?.headers);
+    if (!hasHeader(headers, 'Content-Type')) {
+        headers['Content-Type'] = 'application/json';
     }
 
     const authToken = readStoredAuthToken();
-    if (authToken && !headers.has('Authorization')) {
-        headers.set('Authorization', `Bearer ${authToken}`);
+    if (authToken && !hasHeader(headers, 'Authorization')) {
+        headers.Authorization = `Bearer ${authToken}`;
     }
-
-    const resolvedHeaders = Object.fromEntries(headers.entries());
 
     const response = await fetch(url, {
         ...options,
-        headers: resolvedHeaders,
+        headers,
     });
 
     if (!response.ok) {
@@ -134,6 +215,18 @@ export async function getUser(id: string): Promise<UserData> {
 }
 
 // ─── Pets ────────────────────────────────────────────
+
+export async function updateUser(
+    id: string,
+    userData: {
+        name: string;
+    },
+): Promise<UserData> {
+    return request<UserData>(`/api/users/${encodeURIComponent(id)}`, {
+        method: 'PUT',
+        body: JSON.stringify(userData),
+    });
+}
 
 export async function getPet(userId: string): Promise<PetData> {
     return request<PetData>(`/api/pets/${encodeURIComponent(userId)}`);
@@ -186,10 +279,27 @@ export async function getQuestions(
     return request<QuestionData[]>(`/api/questions?${params.toString()}`);
 }
 
+export async function getQuestionCounts(): Promise<QuestionCounts> {
+    return request<QuestionCounts>('/api/questions/counts');
+}
+
+export async function getServerStatus(): Promise<ServerStatus> {
+    return request<ServerStatus>('/api/system/status');
+}
+
 // ─── Leaderboard ─────────────────────────────────────
 
-export async function getLeaderboard(): Promise<LeaderboardEntry[]> {
-    return request<LeaderboardEntry[]>('/api/leaderboard');
+export async function getLeaderboard(metric?: 'xp' | 'correct'): Promise<LeaderboardEntry[]> {
+    const params = new URLSearchParams();
+    if (metric) {
+        params.set('metric', metric);
+    }
+
+    const url = params.size > 0
+        ? `/api/leaderboard?${params.toString()}`
+        : '/api/leaderboard';
+
+    return request<LeaderboardEntry[]>(url);
 }
 
 // ─── Teacher Auth ────────────────────────────────────

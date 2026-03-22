@@ -2,11 +2,14 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import {
     createUser,
     getUser,
+    updateUser,
     getPet,
     updatePet,
     saveProgress,
     getProgress,
     getQuestions,
+    getQuestionCounts,
+    getServerStatus,
     getLeaderboard,
     teacherRegister,
     teacherLogin,
@@ -104,6 +107,22 @@ describe('getUser', () => {
 });
 
 // ─── getPet ──────────────────────────────────────────
+
+describe('updateUser', () => {
+    it('should PUT /api/users/:id with correct body', async () => {
+        const mockUser = { id: 'abc', name: 'Minh Moi', avatar: 'cat', avatar_color: '#30e86e', xp: 100, level: 2 };
+        mockResponse(mockUser);
+
+        const result = await updateUser('abc', { name: 'Minh Moi' });
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/users/abc', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Minh Moi' }),
+        });
+        expect(result).toEqual(mockUser);
+    });
+});
 
 describe('getPet', () => {
     it('should GET /api/pets/:userId', async () => {
@@ -378,5 +397,61 @@ describe('error handling', () => {
         mockNetworkError();
 
         await expect(getLeaderboard()).rejects.toThrow('Failed to fetch');
+    });
+});
+
+describe('question counts api', () => {
+    it('should GET /api/questions/counts', async () => {
+        mockResponse({
+            total: 526,
+            bySubject: {
+                math: 221,
+                vietnamese: 85,
+                science: 120,
+                english: 100,
+            },
+        });
+
+        const result = await getQuestionCounts();
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/questions/counts', {
+            headers: { 'Content-Type': 'application/json' },
+        });
+        expect(result.total).toBe(526);
+        expect(result.bySubject.math).toBe(221);
+    });
+});
+
+describe('server status api', () => {
+    it('should GET /api/system/status', async () => {
+        mockResponse({
+            summary: {
+                ready: true,
+                hasWarnings: true,
+            },
+            supabase: {
+                configured: true,
+                accessMode: 'anon',
+                error: null,
+                warning: 'SUPABASE_SERVICE_ROLE_KEY is not set. Server is currently using the anon key.',
+                missingVars: ['SUPABASE_SERVICE_ROLE_KEY'],
+            },
+            auth: {
+                secure: false,
+                mode: 'fallback',
+                warning: 'AUTH_SECRET is not set. Server is using an insecure development fallback secret.',
+                missingVars: ['AUTH_SECRET'],
+            },
+        });
+
+        const result = await getServerStatus();
+
+        expect(mockFetch).toHaveBeenCalledWith('/api/system/status', {
+            headers: { 'Content-Type': 'application/json' },
+        });
+        expect(result.supabase.accessMode).toBe('anon');
+        expect(result.auth.secure).toBe(false);
+        expect(result.summary.hasWarnings).toBe(true);
+        expect(result.supabase.missingVars).toContain('SUPABASE_SERVICE_ROLE_KEY');
     });
 });

@@ -1,46 +1,146 @@
-import { motion } from 'motion/react';
-import { ReactNode, useState, useEffect } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-    Home,
     BookOpen,
     Dog,
-    Users,
+    Home,
+    LogOut,
+    Moon,
+    Save,
+    School,
     Settings,
     Star,
-    School,
     Trophy,
-    Moon,
     Sun,
+    UserRound,
+    X,
 } from 'lucide-react';
+import type { User } from '../../hooks/useUser';
 import type { Screen } from '../../types';
 import i18n from '../../i18n';
+import { PetAvatar } from '../pet/PetAvatar';
+import type { PetConfig, PetType } from '../../types/pet';
+
+function isPetType(value: unknown): value is PetType {
+    return value === 'dragon' || value === 'cat' || value === 'dog' || value === 'bunny';
+}
+
+function getProfilePetType(user?: User | null, pet?: PetConfig | null): PetType {
+    if (pet?.type && isPetType(pet.type)) {
+        return pet.type;
+    }
+
+    if (user?.avatar && isPetType(user.avatar)) {
+        return user.avatar;
+    }
+
+    return 'dragon';
+}
+
+function getProfilePetColor(user?: User | null, pet?: PetConfig | null): string {
+    return pet?.color || user?.avatar_color || '#30e86e';
+}
 
 export function Header({
     currentScreen,
     setCurrentScreen,
     stars,
     onOpenShop,
+    user,
+    pet,
+    onSaveSettings,
+    onLogout,
 }: {
     currentScreen: Screen;
     setCurrentScreen: (s: Screen) => void;
     stars: number;
     onOpenShop?: () => void;
+    user?: User | null;
+    pet?: PetConfig | null;
+    onSaveSettings?: (input: { name: string; petName: string }) => Promise<void>;
+    onLogout?: () => void;
 }) {
     const { t } = useTranslation();
+    const isVi = i18n.language === 'vi';
     const [isDark, setIsDark] = useState(() => {
         return localStorage.getItem('math-buddy-dark') === 'true';
     });
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+    const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+    const [displayName, setDisplayName] = useState(user?.name || '');
+    const [petName, setPetName] = useState(pet?.name || '');
+    const [saveMessage, setSaveMessage] = useState<string | null>(null);
+    const [saveError, setSaveError] = useState<string | null>(null);
+    const [isSaving, setIsSaving] = useState(false);
 
     useEffect(() => {
         document.documentElement.classList.toggle('dark', isDark);
         localStorage.setItem('math-buddy-dark', String(isDark));
     }, [isDark]);
 
+    useEffect(() => {
+        if (!isSettingsOpen) return;
+        setDisplayName(user?.name || '');
+        setPetName(pet?.name || '');
+        setSaveMessage(null);
+        setSaveError(null);
+    }, [isSettingsOpen, user?.name, pet?.name]);
+
+    useEffect(() => {
+        setIsProfileMenuOpen(false);
+    }, [currentScreen]);
+
     const toggleLang = () => {
         const newLang = i18n.language === 'vi' ? 'en' : 'vi';
         i18n.changeLanguage(newLang);
         localStorage.setItem('math-buddy-lang', newLang);
+    };
+
+    const profileType = useMemo(() => getProfilePetType(user, pet), [pet, user]);
+    const profileColor = useMemo(() => getProfilePetColor(user, pet), [pet, user]);
+    const profileName = user?.name || (isVi ? 'Hoc sinh' : 'Student');
+    const profilePetName = pet?.name || (isVi ? 'Pet cua ban' : 'Your pet');
+    const profileLevel = pet?.level || user?.level || 1;
+
+    const openSettings = () => {
+        setIsProfileMenuOpen(false);
+        setIsSettingsOpen(true);
+    };
+
+    const handleSaveSettings = async () => {
+        const nextName = displayName.trim();
+        const nextPetName = petName.trim();
+
+        if (!nextName) {
+            setSaveError(isVi ? 'Ten hoc sinh khong duoc de trong.' : 'Student name is required.');
+            setSaveMessage(null);
+            return;
+        }
+
+        if (!nextPetName) {
+            setSaveError(isVi ? 'Ten pet khong duoc de trong.' : 'Pet name is required.');
+            setSaveMessage(null);
+            return;
+        }
+
+        if (!onSaveSettings) {
+            setSaveError(isVi ? 'Tinh nang luu chua san sang.' : 'Saving is not available yet.');
+            setSaveMessage(null);
+            return;
+        }
+
+        try {
+            setIsSaving(true);
+            setSaveError(null);
+            await onSaveSettings({ name: nextName, petName: nextPetName });
+            setSaveMessage(isVi ? 'Da luu thay doi thanh cong.' : 'Changes saved successfully.');
+        } catch (error) {
+            setSaveError(error instanceof Error ? error.message : (isVi ? 'Khong the luu thay doi.' : 'Could not save changes.'));
+            setSaveMessage(null);
+        } finally {
+            setIsSaving(false);
+        }
     };
 
     return (

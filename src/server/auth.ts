@@ -10,13 +10,30 @@ export interface TeacherSession {
     exp: number;
 }
 
+export interface AuthConfigStatus {
+    secure: boolean;
+    mode: 'env' | 'fallback';
+    warning: string | null;
+}
+
 const SESSION_TTL_MS = 1000 * 60 * 60 * 24 * 7;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(__dirname, '..', '..', '.env') });
 const authSecret = process.env.AUTH_SECRET || 'dev-only-auth-secret-change-me';
+const authSecretMode: AuthConfigStatus['mode'] = process.env.AUTH_SECRET ? 'env' : 'fallback';
 
 if (!process.env.AUTH_SECRET) {
     console.warn('⚠️ AUTH_SECRET is not set. Using an insecure development fallback secret.');
+}
+
+export function getAuthConfigStatus(): AuthConfigStatus {
+    return {
+        secure: authSecretMode === 'env',
+        mode: authSecretMode,
+        warning: authSecretMode === 'fallback'
+            ? 'AUTH_SECRET is not set. Server is using an insecure development fallback secret.'
+            : null,
+    };
 }
 
 function sign(encodedPayload: string): string {

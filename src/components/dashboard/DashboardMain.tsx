@@ -16,7 +16,14 @@ import {
 import { PetAvatar } from '../pet/PetAvatar';
 import { PET_INFO } from '../../types/pet';
 import type { PetConfig } from '../../types/pet';
-import { getStudentAssignments, type StudentAssignmentData } from '../../services/api';
+import {
+    getServerStatus,
+    getQuestionCounts,
+    getStudentAssignments,
+    type QuestionCounts,
+    type ServerStatus,
+    type StudentAssignmentData,
+} from '../../services/api';
 
 export function DashboardMain({
     pet,
@@ -39,6 +46,8 @@ export function DashboardMain({
     const isVi = i18n.language === 'vi';
     const [assignments, setAssignments] = useState<StudentAssignmentData[]>([]);
     const [assignmentsLoading, setAssignmentsLoading] = useState(false);
+    const [questionCounts, setQuestionCounts] = useState<QuestionCounts | null>(null);
+    const [serverStatus, setServerStatus] = useState<ServerStatus | null>(null);
 
     useEffect(() => {
         if (!userId) {
@@ -73,6 +82,74 @@ export function DashboardMain({
             cancelled = true;
         };
     }, [userId]);
+
+    useEffect(() => {
+        let cancelled = false;
+
+        const loadQuestionCounts = async () => {
+            try {
+                const data = await getQuestionCounts();
+                if (!cancelled) {
+                    setQuestionCounts(data);
+                }
+            } catch (err) {
+                console.error('Failed to fetch question counts:', err);
+                if (!cancelled) {
+                    setQuestionCounts(null);
+                }
+            }
+        };
+
+        loadQuestionCounts();
+
+        return () => {
+            cancelled = true;
+        };
+    }, []);
+
+    useEffect(() => {
+        let cancelled = false;
+
+        const loadServerStatus = async () => {
+            try {
+                const data = await getServerStatus();
+                if (!cancelled) {
+                    setServerStatus(data);
+                }
+            } catch (err) {
+                console.error('Failed to fetch server status:', err);
+                if (!cancelled) {
+                    setServerStatus(null);
+                }
+            }
+        };
+
+        loadServerStatus();
+
+        return () => {
+            cancelled = true;
+        };
+    }, []);
+
+    const serverWarnings = [
+        serverStatus?.supabase.error,
+        serverStatus?.supabase.warning,
+        serverStatus?.auth.warning,
+    ].filter((message): message is string => Boolean(message));
+    const missingEnvVars = Array.from(new Set([
+        ...(serverStatus?.supabase.missingVars ?? []),
+        ...(serverStatus?.auth.missingVars ?? []),
+    ]));
+
+    const supabaseStatusLabel = !serverStatus
+        ? ''
+        : serverStatus.supabase.accessMode === 'service_role'
+            ? 'service role'
+            : serverStatus.supabase.accessMode === 'anon'
+                ? 'anon fallback'
+                : isVi
+                    ? 'thieu cau hinh'
+                    : 'missing config';
 
     return (
         <section className="flex flex-1 flex-col gap-6">
@@ -226,6 +303,94 @@ export function DashboardMain({
                 </section>
             )}
 
+            {serverWarnings.length > 0 && (
+                <section className="rounded-3xl border border-amber-200 bg-amber-50/90 p-6 shadow-lg backdrop-blur-sm">
+                    <div className="flex items-start gap-3">
+                        <div className="rounded-2xl bg-amber-100 p-3 text-amber-700">
+                            <Clock3 size={24} />
+                        </div>
+                        <div className="space-y-2">
+                            <div>
+                                <h3 className="text-xl font-black text-slate-900">
+                                    {isVi ? 'Trang thai backend' : 'Backend status'}
+                                </h3>
+                                <p className="text-sm text-slate-600">
+                                    {isVi
+                                        ? `Supabase dang chay o che do ${supabaseStatusLabel}`
+                                        : `Supabase is currently running in ${supabaseStatusLabel} mode`}
+                                </p>
+                            </div>
+
+                            <div className="space-y-2 text-sm text-slate-700">
+                                {serverWarnings.map((warning) => (
+                                    <p key={warning} className="rounded-2xl bg-white/70 px-4 py-3 shadow-sm">
+                                        {warning}
+                                    </p>
+                                ))}
+                                {missingEnvVars.length > 0 && (
+                                    <p className="rounded-2xl bg-white/70 px-4 py-3 font-mono text-xs shadow-sm">
+                                        Missing env: {missingEnvVars.join(', ')}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {questionCounts && (
+                <section className="rounded-3xl border border-white/60 bg-white/80 p-6 shadow-lg backdrop-blur-sm">
+                    <div className="mb-4 flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                            <div className="rounded-2xl bg-emerald-100 p-3 text-emerald-600">
+                                <BookOpen size={24} />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-black text-slate-900">
+                                    {isVi ? 'Ngan hang cau hoi' : 'Question Bank'}
+                                </h3>
+                                <p className="text-sm text-slate-500">
+                                    {isVi
+                                        ? `${questionCounts.total} cau hoi san sang`
+                                        : `${questionCounts.total} questions ready`}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                        <QuestionBankCard
+                            icon={<BookOpen size={22} />}
+                            label={t('assignments.math')}
+                            count={questionCounts.bySubject.math}
+                            accent="bg-emerald-100 text-emerald-600"
+                            countLabel={isVi ? 'cau hoi' : 'questions'}
+                        />
+                        <QuestionBankCard
+                            icon={<Languages size={22} />}
+                            label={t('assignments.vietnamese')}
+                            count={questionCounts.bySubject.vietnamese}
+                            accent="bg-violet-100 text-violet-600"
+                            countLabel={isVi ? 'cau hoi' : 'questions'}
+                        />
+                        <QuestionBankCard
+                            icon={<Languages size={22} />}
+                            label={t('assignments.english')}
+                            count={questionCounts.bySubject.english}
+                            accent="bg-sky-100 text-sky-600"
+                            countLabel={isVi ? 'cau hoi' : 'questions'}
+                        />
+                        <QuestionBankCard
+                            icon={<BrainCircuit size={22} />}
+                            label={t('assignments.science')}
+                            count={questionCounts.bySubject.science}
+                            accent="bg-orange-100 text-orange-600"
+                            countLabel={isVi ? 'cau hoi' : 'questions'}
+                        />
+                    </div>
+                </section>
+            )}
+
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <ActivityCard
                     icon={<BookOpen size={32} />}
@@ -269,6 +434,37 @@ export function DashboardMain({
                 />
             </div>
         </section>
+    );
+}
+
+function QuestionBankCard({
+    icon,
+    label,
+    count,
+    accent,
+    countLabel,
+}: {
+    icon: ReactNode;
+    label: string;
+    count: number;
+    accent: string;
+    countLabel: string;
+}) {
+    return (
+        <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5 shadow-sm">
+            <div className="mb-3 flex items-center justify-between gap-3">
+                <div className={`rounded-2xl p-3 ${accent}`}>
+                    {icon}
+                </div>
+                <span className="rounded-full bg-white px-3 py-1 text-xs font-black text-slate-500 shadow-sm">
+                    {count}
+                </span>
+            </div>
+            <p className="text-sm font-bold text-slate-900">{label}</p>
+            <p className="mt-1 text-xs text-slate-500">
+                {count} {countLabel}
+            </p>
+        </div>
     );
 }
 

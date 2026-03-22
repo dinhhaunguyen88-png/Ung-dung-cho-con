@@ -37,3 +37,14 @@ Dự án đã hoàn thành Phase 3 với:
 ---
 
 View your app in AI Studio: https://ai.studio/apps/ca091769-5342-4023-ab9c-110c8c7a4307
+
+## Environment Checklist
+
+- Copy `.env.example` to `.env`
+- Required keys:
+  `VITE_SUPABASE_URL`
+  `VITE_SUPABASE_ANON_KEY`
+  `SUPABASE_SERVICE_ROLE_KEY`
+  `AUTH_SECRET`
+- Validate local config with `npm run env:check`
+- Set the same keys in Vercel Environment Variables before deploy

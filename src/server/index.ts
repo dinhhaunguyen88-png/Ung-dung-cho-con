@@ -3,7 +3,12 @@ import { scrypt, randomBytes, timingSafeEqual } from 'node:crypto';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
-import { createTeacherSessionToken, type TeacherSession, verifyTeacherSessionToken } from './auth.js';
+import {
+    createTeacherSessionToken,
+    type TeacherSession,
+    verifyTeacherSessionToken,
+} from './auth.js';
+import { getSystemStatus } from './configStatus.js';
 import { getSupabaseAccessMode, getSupabaseConfigError, supabase } from './supabaseRuntimeClient.js';
 
 const scryptAsync = promisify(scrypt);
@@ -14,6 +19,7 @@ app.use(express.json());
 // Simple in-memory cache
 const questionCache: Record<string, { data: any[], timestamp: number }> = {};
 const CACHE_TTL = 1000 * 60 * 60; // 1 hour
+const QUESTION_SUBJECTS = ['math', 'vietnamese', 'science', 'english'] as const;
 
 // Helper for retrying Supabase calls
 // We use 'any' for the result to handle Supabase's Postgrest response objects easily
@@ -132,7 +138,17 @@ function normalizeProgressRecord(progress: any) {
     };
 }
 
+function buildStarterPetName(name: unknown): string {
+    if (typeof name !== 'string') return 'Sparky';
+    const trimmed = name.trim();
+    return trimmed || 'Sparky';
+}
+
 // ─── Users ───────────────────────────────────────────
+app.get('/api/system/status', (_req, res) => {
+    res.json(getSystemStatus());
+});
+
 app.post('/api/users', async (req, res) => {
     const { name, avatar, avatarColor } = req.body;
     if (!name) return res.status(400).json({ error: 'Name is required' });
@@ -164,7 +180,7 @@ app.post('/api/users', async (req, res) => {
             .insert([{
                 user_id: user.id,
                 type: avatar || 'dragon',
-                name: 'Sparky',
+                name: buildStarterPetName(name),
                 color: avatarColor || '#30e86e'
             }])
         );
@@ -216,8 +232,49 @@ app.get('/api/users/:id', async (req, res) => {
 });
 
 // ─── Leaderboard ─────────────────────────────────────
-app.get('/api/leaderboard', async (_req, res) => {
+app.put('/api/users/:id', async (req, res) => {
+    const rawName = req.body?.name;
+    if (typeof rawName !== 'string' || !rawName.trim()) {
+        return res.status(400).json({ error: 'Name is required' });
+    }
+
+    const configError = getSupabaseConfigError();
+    if (configError) {
+        return res.status(500).json({ error: configError });
+    }
+
+    const name = rawName.trim();
+
     try {
+        const { data: user, error } = await withRetry(() => supabase
+            .from('users')
+            .update({ name })
+            .eq('id', req.params.id)
+            .select('*')
+            .single()
+        );
+
+        if (error) {
+            return res.status(500).json({
+                error: buildSupabaseWriteError('student profile update', error),
+                details: error.message,
+            });
+        }
+
+        res.json(user);
+    } catch (err: any) {
+        const details = getErrorMessage(err);
+        res.status(500).json({
+            error: buildSupabaseWriteError('student profile update', err),
+            details,
+        });
+    }
+});
+
+app.get('/api/leaderboard', async (req, res) => {
+    try {
+        const metric = req.query.metric === 'correct' ? 'correct' : 'xp';
+
         const { data, error } = await withRetry(() => supabase
             .from('users')
             .select(`
@@ -230,13 +287,70 @@ app.get('/api/leaderboard', async (_req, res) => {
 
         if (error) return res.status(500).json({ error: error.message });
 
-        // Flatten result to match existing frontend expectations if needed
-        const formatted = data.map((u: any) => ({
+        const userIds = (data || []).map((user: any) => user.id);
+        const progressByUserId = new Map<string, {
+            totalCorrect: number;
+            totalQuestions: number;
+            sessionsCount: number;
+        }>();
+
+        if (userIds.length > 0) {
+            const { data: progressData, error: progressError } = await withRetry(() => supabase
+                .from('progress')
+                .select('user_id, correct, total, completed_at')
+                .in('user_id', userIds)
+            );
+
+            if (progressError) {
+                return res.status(500).json({ error: progressError.message });
+            }
+
+            for (const progress of progressData || []) {
+                const userId = String(progress.user_id);
+                const summary = progressByUserId.get(userId) ?? {
+                    totalCorrect: 0,
+                    totalQuestions: 0,
+                    sessionsCount: 0,
+                };
+
+                summary.totalCorrect += getProgressCorrectCount(progress);
+                summary.totalQuestions += getProgressTotalCount(progress);
+                summary.sessionsCount += 1;
+                progressByUserId.set(userId, summary);
+            }
+        }
+
+        const formatted = data.map((u: any) => {
+            const progressSummary = progressByUserId.get(String(u.id)) ?? {
+                totalCorrect: 0,
+                totalQuestions: 0,
+                sessionsCount: 0,
+            };
+
+            return {
             ...u,
             pet_type: u.pets?.[0]?.type,
             pet_name: u.pets?.[0]?.name,
-            pet_color: u.pets?.[0]?.color
-        }));
+            pet_color: u.pets?.[0]?.color,
+            totalCorrect: progressSummary.totalCorrect,
+            totalQuestions: progressSummary.totalQuestions,
+            sessionsCount: progressSummary.sessionsCount,
+            accuracy: progressSummary.totalQuestions > 0
+                ? Math.round((progressSummary.totalCorrect / progressSummary.totalQuestions) * 100)
+                : 0,
+            rankMetric: metric === 'correct' ? progressSummary.totalCorrect : Number(u.xp || 0),
+        };
+        });
+
+        formatted.sort((a, b) => {
+            const primary = Number(b.rankMetric || 0) - Number(a.rankMetric || 0);
+            if (primary !== 0) return primary;
+
+            const secondary = Number(b.xp || 0) - Number(a.xp || 0);
+            if (secondary !== 0) return secondary;
+
+            return String(a.name || '').localeCompare(String(b.name || ''));
+        });
 
         res.json(formatted);
     } catch (err: any) {
@@ -373,6 +487,32 @@ app.put('/api/pets/:userId', async (req, res) => {
 });
 
 // ─── Questions ──────────────────────────────────────
+app.get('/api/questions/counts', async (_req, res) => {
+    try {
+        const results = await Promise.all(
+            QUESTION_SUBJECTS.map(async (subject) => {
+                const { count, error } = await withRetry(() => supabase
+                    .from('questions')
+                    .select('*', { count: 'exact', head: true })
+                    .eq('subject', subject)
+                );
+
+                if (error) throw error;
+
+                return { subject, count: Number(count || 0) };
+            }),
+        );
+
+        const bySubject = Object.fromEntries(results.map(({ subject, count }) => [subject, count]));
+        const total = results.reduce((sum, item) => sum + item.count, 0);
+
+        res.json({ total, bySubject });
+    } catch (err: any) {
+        console.error('âŒ Question counts error:', err.message);
+        res.status(500).json({ error: err.message });
+    }
+});
+
 app.get('/api/questions', async (req, res) => {
     const { subject = 'math', limit = 15, topic } = req.query;
     const subjectStr = String(subject);
@@ -547,7 +687,7 @@ app.post('/api/auth/teacher/register', async (req, res) => {
             .insert([{
                 user_id: user.id,
                 type: 'dragon',
-                name: 'Sparky',
+                name: buildStarterPetName(name),
                 color: '#30a5e8',
             }])
         );

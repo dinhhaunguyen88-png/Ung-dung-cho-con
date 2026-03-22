@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { GraduationCap, LogOut } from 'lucide-react';
 
 import type { Screen } from './types';
-import { Header } from './components/layout/Header';
+import { HeaderInteractive } from './components/layout/HeaderInteractive';
 import { DashboardSidebar } from './components/dashboard/DashboardSidebar';
 import { DashboardMain } from './components/dashboard/DashboardMain';
 import { DashboardRight } from './components/dashboard/DashboardRight';
@@ -17,10 +17,10 @@ import { LearningQuest } from './components/learning/LearningQuest';
 import { PetRoom } from './components/pet/PetRoom';
 import { ParentReport } from './components/parent/ParentReport';
 import { CelebrationModal } from './components/ui/CelebrationModal';
-import { Leaderboard } from './components/leaderboard/Leaderboard';
+import { LeaderboardV2 } from './components/leaderboard/LeaderboardV2';
 import { usePet } from './hooks/usePet';
 import { useUser } from './hooks/useUser';
-import { getUser } from './services/api';
+import { getUser, updateUser as updateUserProfile } from './services/api';
 import { ProfileSetup } from './components/auth/ProfileSetup';
 import { TeacherLogin } from './components/auth/TeacherLogin';
 import { TeacherRegister } from './components/auth/TeacherRegister';
@@ -80,6 +80,40 @@ export default function App() {
     setCurrentScreen('dashboard');
   };
 
+  const handleSaveSettings = async ({
+    name,
+    petName,
+    petType,
+    petColor,
+  }: {
+    name: string;
+    petName: string;
+    petType: typeof pet.type;
+    petColor: string;
+  }) => {
+    if (!user) return;
+
+    const trimmedName = name.trim();
+    const trimmedPetName = petName.trim();
+
+    if (trimmedName && trimmedName !== user.name) {
+      const updatedUser = await updateUserProfile(user.id, { name: trimmedName });
+      login({ ...user, ...updatedUser });
+    }
+
+    if (trimmedPetName && trimmedPetName !== pet.name) {
+      setName(trimmedPetName);
+    }
+
+    if (petType !== pet.type) {
+      setType(petType);
+    }
+
+    if (petColor !== pet.color) {
+      setColor(petColor);
+    }
+  };
+
   const handleGoalComplete = async () => {
     setShowCelebration(true);
     setCurrentScreen('dashboard');
@@ -125,11 +159,15 @@ export default function App() {
     <div className="min-h-screen bg-background-light font-sans text-slate-900">
       {/* Only show student header for student screens */}
       {currentScreen !== 'teacher-login' && currentScreen !== 'teacher-register' && currentScreen !== 'teacher-dashboard' && currentScreen !== 'join-class' && (
-        <Header
+        <HeaderInteractive
           currentScreen={currentScreen}
           setCurrentScreen={setCurrentScreen}
           stars={user?.stars || 0}
           onOpenShop={() => setCurrentScreen('pet-shop')}
+          user={user}
+          pet={pet}
+          onSaveSettings={handleSaveSettings}
+          onLogout={handleLogout}
         />
       )}
 
@@ -240,7 +278,7 @@ export default function App() {
               exit={{ opacity: 0, y: -30 }}
               className="w-full"
             >
-              <Leaderboard />
+              <LeaderboardV2 />
             </motion.div>
           )}
 

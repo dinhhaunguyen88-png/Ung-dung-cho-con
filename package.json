@@ -12,8 +12,11 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "server": "tsx src/server/index.ts",
-    "seed": "tsx seed_all_v2.ts",
+    "env:check": "tsx src/server/check_env.ts",
+    "seed": "tsx src/server/seed_master.ts",
+    "seed:legacy": "tsx seed_all_v2.ts",
     "seed:science": "tsx src/server/seed_science_questions.ts",
+    "seed:verify": "tsx src/server/verify_db.ts",
     "gen:math": "tsx src/server/gen_math_questions.ts"
   },
   "dependencies": {
