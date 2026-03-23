@@ -30,6 +30,9 @@ Implemented in Phase 2:
 - **Robust Text-to-Speech (TTS):** 
     - Implemented a standard-compliant hook with a **Google Translate TTS fallback** to overcome missing system voices.
     - **Math Normalization:** Client-side processing that converts math symbols (+, -, x, =) into natural language words for educational accessibility.
+- **High-Fidelity Pet Rendering:**
+    - SVG pets are rendered via a dynamic **PetPalette** engine that generates multi-stop gradients and orbital glow effects based on the pet's primary color.
+    - Added orbital rings, dashed rotation indicators, and drop-shadow filters for a "premium" sci-fi aesthetic.
 
 ---
 

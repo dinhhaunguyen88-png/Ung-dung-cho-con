@@ -164,21 +164,21 @@ export function HeaderInteractive({
             <motion.header
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
-                className="sticky top-4 z-50 mx-auto mt-4 flex w-[95%] items-center justify-between rounded-2xl border border-white/40 bg-white/70 px-6 py-4 shadow-xl backdrop-blur-lg lg:px-10"
+                className="sticky top-3 z-50 mx-auto mt-3 flex w-[calc(100%-1.5rem)] max-w-[1600px] items-center justify-between rounded-[26px] border border-white/60 bg-white/82 px-4 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:w-[calc(100%-2rem)] lg:px-6"
             >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5">
                     <motion.div
                         whileHover={{ rotate: 15, scale: 1.1 }}
-                        className="rounded-xl bg-gradient-to-br from-primary to-emerald-500 p-2 text-white shadow-lg shadow-primary/30"
+                        className="rounded-2xl bg-gradient-to-br from-primary to-emerald-500 p-2 text-white shadow-lg shadow-primary/25"
                     >
-                        <School size={24} />
+                        <School size={22} />
                     </motion.div>
-                    <h2 className="bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-xl font-black tracking-tight text-transparent">
+                    <h2 className="bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-lg font-black tracking-tight text-transparent sm:text-xl">
                         {t('app.name')}
                     </h2>
                 </div>
 
-                <nav className="hidden flex-1 justify-center gap-4 md:flex">
+                <nav className="hidden flex-1 justify-center gap-2.5 md:flex">
                     <NavButton
                         active={currentScreen === 'dashboard'}
                         onClick={() => setCurrentScreen('dashboard')}
@@ -205,23 +205,23 @@ export function HeaderInteractive({
                     />
                 </nav>
 
-                <div className="relative flex items-center gap-4">
+                <div className="relative flex items-center gap-2.5">
                     <button
                         onClick={toggleLang}
-                        className="flex items-center rounded-full border border-primary/20 bg-white/50 px-3 py-1.5 text-sm font-bold text-primary shadow-sm transition-all hover:bg-primary/10 active:scale-95"
+                        className="flex items-center rounded-full border border-primary/20 bg-white/60 px-3 py-1.5 text-[13px] font-black text-primary shadow-sm transition-all hover:bg-primary/10 active:scale-95"
                     >
                         {i18n.language === 'vi' ? 'VN VI' : 'EN US'}
                     </button>
                     <button
                         onClick={() => setIsDark((value) => !value)}
-                        className="flex items-center rounded-full border border-slate-200 bg-white/50 p-2 text-slate-600 shadow-sm transition-all hover:bg-slate-100 active:scale-95 dark:border-slate-600 dark:bg-slate-700 dark:text-yellow-400"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/60 text-slate-600 shadow-sm transition-all hover:bg-slate-100 active:scale-95 dark:border-slate-600 dark:bg-slate-700 dark:text-yellow-400"
                         title={isDark ? 'Light mode' : 'Dark mode'}
                     >
                         {isDark ? <Sun size={16} /> : <Moon size={16} />}
                     </button>
                     <button
                         onClick={onOpenShop}
-                        className="flex items-center rounded-full border border-yellow-200 bg-yellow-400/20 px-3 py-1.5 shadow-sm transition-all hover:scale-105 active:scale-95 backdrop-blur-sm"
+                        className="flex items-center rounded-full border border-yellow-200 bg-yellow-400/20 px-3.5 py-1.5 shadow-sm transition-all hover:scale-105 active:scale-95 backdrop-blur-sm"
                     >
                         <Star size={18} className="mr-1 animate-pulse fill-yellow-500 text-yellow-600" />
                         <motion.span
@@ -236,26 +236,26 @@ export function HeaderInteractive({
                     <motion.button
                         whileHover={{ rotate: 90 }}
                         onClick={openSettings}
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 text-slate-600 transition-colors hover:bg-slate-200 hover:text-slate-900"
+                        className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100/60 text-slate-600 transition-colors hover:bg-slate-200 hover:text-slate-900"
                         title={isVi ? 'Cai dat' : 'Settings'}
                     >
-                        <Settings size={20} />
+                        <Settings size={18} />
                     </motion.button>
                     {user && (
                         <button
                             onClick={() => setIsProfileMenuOpen((open) => !open)}
-                            className="group flex items-center gap-3 rounded-2xl border border-primary/20 bg-white/80 px-2 py-1.5 text-left shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                            className="group flex items-center gap-2.5 rounded-[20px] border border-primary/20 bg-white/88 px-1.5 py-1 text-left shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
                         >
                             <div className="hidden min-w-0 sm:block">
                                 <p className="truncate text-sm font-black text-slate-900">{profileName}</p>
                                 <p className="truncate text-xs font-medium text-slate-500">{profilePetName}</p>
                             </div>
-                            <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border-2 border-primary/50 bg-white ring-2 ring-primary/15">
+                            <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-primary/40 bg-white ring-1 ring-primary/15">
                                 <PetAvatar
                                     type={profileType}
                                     color={profileColor}
                                     level={profileLevel}
-                                    size={38}
+                                    size={34}
                                 />
                             </div>
                         </button>
@@ -610,7 +610,7 @@ function NavButton({
     return (
         <button
             onClick={onClick}
-            className={`group relative flex items-center gap-2 rounded-xl px-4 py-2 font-bold transition-all ${
+            className={`group relative flex items-center gap-2 rounded-full px-3.5 py-2 text-[15px] font-bold transition-all ${
                 active
                     ? 'text-primary'
                     : 'text-slate-500 hover:text-slate-900'
@@ -619,7 +619,7 @@ function NavButton({
             {active && (
                 <motion.div
                     layoutId="nav-pill"
-                    className="absolute inset-0 rounded-xl bg-primary/10"
+                    className="absolute inset-0 rounded-full bg-primary/10"
                     transition={{ type: 'spring', bounce: 0.3, duration: 0.6 }}
                 />
             )}

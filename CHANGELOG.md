@@ -1,5 +1,19 @@
 # Changelog
 
+## [2026-03-23]
+### Added
+- **UI-UX Pro Max Integration**: Tích hợp hệ thống design intelligence chuyên sâu với 50+ styles và 99+ UX guidelines.
+- **High-Fidelity Pet Avatars**: Refactor toàn bộ hệ thống SVG Pet. Sử dụng gradient đa lớp, hiệu ứng đổ bóng và orbital rings (sci-fi style) giúp giao diện trông cao cấp hơn.
+- **Leaderboard Robustness**: Bổ sung xử lý lỗi Supabase và Network. Thêm giao diện "Empty State" và "Error State" chuyên nghiệp cho bảng xếp hạng.
+
+### Changed
+- Cập nhật `PetAvatar.tsx` với logic pha trộn màu (PetPalette) tự động tạo các tông màu light/dark từ mã màu người dùng chọn.
+- Xóa dữ liệu mẫu (fallback) trong Leaderboard để ưu tiên dữ liệu thực tế từ API.
+
+### Documentation
+- Cập nhật `system_overview.md` với chi tiết về hệ thống rendering Pet mới.
+- Cập nhật `.brain/brain.json` và `.brain/session.json`.
+
 ## [2026-03-22]
 ### Added
 - **Portable Runtime Integration**: Khởi chạy thành công ứng dụng bằng môi trường Node.js portable (v22.14.0) nằm trong `~/.node_portable`.

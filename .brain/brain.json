@@ -78,28 +78,32 @@
     { "rule": "Onboarding", "description": "Người dùng mới phải chọn Pet và màu sắc trước khi vào trang chủ." },
     { "rule": "Math Expansion", "description": "Dữ liệu toán lớp 2 được mở rộng lên 215 câu hỏi (v4)." }
   ],
-  "features": [
-    "Learning Quests (Interactive quiz)",
-    "Pet System (Dragon, Cat, Dog, Rabbit with levels/evolution)",
-    "Shop & Inventory (Accessories, Colors)",
-    "Teacher Dashboard (Class management, Progress tracking)",
-    "Leaderboard",
-    "Vietnamese TTS & Math Normalization"
-  ],
-  "knowledge_items": {
-    "patterns": [
-      "Layered Architecture (UI -> API -> Supabase)",
-      "Retry Pattern for Supabase connection",
-      "Seed Scripts for rapid data population",
-      "TTS Fallback (Web Speech API -> Google Translate TTS)",
-      "Vietnamese Math Normalization for natural speech",
-      "Portable Node.js environment setup using environment variables"
+    "features": [
+      "Learning Quests (Interactive quiz)",
+      "Pet System (Dragon, Cat, Dog, Rabbit with levels/evolution)",
+      "High-Fidelity SVG Rendering (Gradients, Glows, Orbits)",
+      "Shop & Inventory (Accessories, Colors)",
+      "Teacher Dashboard (Class management, Progress tracking)",
+      "Leaderboard (Real-time with Error Handling)",
+      "Vietnamese TTS & Math Normalization"
     ],
-    "gotchas": [
-      "Backend server (3001) must run alongside Frontend (3000).",
-      "Vite proxy resolves /api requests to port 3001.",
-      "Pet accessories parsing requires safe handling of JSON/strings.",
-      "Native Vietnamese voices (vi-VN) are often missing on OS level; requires fallback."
-    ]
-  }
+    "knowledge_items": {
+      "patterns": [
+        "Layered Architecture (UI -> API -> Supabase)",
+        "Retry Pattern for Supabase connection",
+        "UI-UX Pro Max Design Intelligence patterns",
+        "Dynamic Pet Holo-Palette rendering",
+        "Seed Scripts for rapid data population",
+        "TTS Fallback (Web Speech API -> Google Translate TTS)",
+        "Vietnamese Math Normalization for natural speech",
+        "Portable Node.js environment setup using environment variables"
+      ],
+      "gotchas": [
+        "Backend server (3001) must run alongside Frontend (3000).",
+        "Vite proxy resolves /api requests to port 3001.",
+        "Pet accessories parsing requires safe handling of JSON/strings.",
+        "Supabase connection failures can manifest as empty lists (needs error sniffing).",
+        "Native Vietnamese voices (vi-VN) are often missing on OS level; requires fallback."
+      ]
+    }
 }

@@ -171,7 +171,7 @@ export default function App() {
         />
       )}
 
-      <main className="mx-auto max-w-[1600px] p-6 lg:p-10">
+      <main className="mx-auto max-w-[1600px] px-4 pb-6 pt-3 sm:px-6 lg:px-10 lg:pb-10 lg:pt-4">
         <AnimatePresence mode="wait">
           {currentScreen === 'dashboard' && (
             <motion.div

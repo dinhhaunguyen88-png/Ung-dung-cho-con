@@ -144,67 +144,176 @@ function buildStarterPetName(name: unknown): string {
     return trimmed || 'Sparky';
 }
 
+function normalizeUserResponse(user: any) {
+    if (!user || typeof user !== 'object') return user;
+
+    return {
+        ...user,
+        xp: Number(user.xp || 0),
+        level: Number(user.level || 1),
+        stars: Number(user.stars || 0),
+    };
+}
+
 // ─── Users ───────────────────────────────────────────
 app.get('/api/system/status', (_req, res) => {
     res.json(getSystemStatus());
 });
 
 app.post('/api/users', async (req, res) => {
-    const { name, avatar, avatarColor } = req.body;
-    if (!name) return res.status(400).json({ error: 'Name is required' });
+    const rawName = req.body?.name;
+    if (typeof rawName !== 'string' || !rawName.trim()) {
+        return res.status(400).json({ error: 'Name is required' });
+    }
     const configError = getSupabaseConfigError();
     if (configError) {
         return res.status(500).json({ error: configError });
     }
 
+    const name = rawName.trim();
+    const avatar = typeof req.body?.avatar === 'string' && req.body.avatar.trim()
+        ? req.body.avatar.trim()
+        : 'dragon';
+    const avatarColor = typeof req.body?.avatarColor === 'string' && req.body.avatarColor.trim()
+        ? req.body.avatarColor.trim()
+        : '#30e86e';
+
     console.log('👤 Creating user on Supabase:', name);
 
     try {
-        const { data: user, error: userError } = await withRetry(() => supabase
+        const { data: existingUsers, error: lookupError } = await withRetry(() => supabase
             .from('users')
-            .insert([{ name, avatar: avatar || 'dragon', avatar_color: avatarColor || '#30e86e' }])
-            .select()
-            .single()
+            .select('id, name, avatar, avatar_color, xp, level, role')
+            .ilike('name', name)
+            .or('role.is.null,role.eq.student')
+            .order('xp', { ascending: false })
+            .limit(1)
         );
 
-        if (userError) {
+        if (lookupError) {
             return res.status(500).json({
-                error: buildSupabaseWriteError('student profile creation', userError),
-                details: userError.message,
+                error: getErrorMessage(lookupError),
+                details: getErrorMessage(lookupError),
             });
         }
 
-        // Also create a pet for the user
-        const { error: petError } = await withRetry(() => supabase
+        let user = existingUsers?.[0] ?? null;
+        let createdUserId: string | null = null;
+
+        if (user) {
+            if (user.avatar !== avatar || user.avatar_color !== avatarColor) {
+                const { data: updatedUser, error: userUpdateError } = await withRetry(() => supabase
+                    .from('users')
+                    .update({ avatar, avatar_color: avatarColor })
+                    .eq('id', user.id)
+                    .select('id, name, avatar, avatar_color, xp, level, role')
+                    .single()
+                );
+
+                if (userUpdateError) {
+                    return res.status(500).json({
+                        error: buildSupabaseWriteError('student profile update', userUpdateError),
+                        details: userUpdateError.message,
+                    });
+                }
+
+                user = updatedUser;
+            }
+        } else {
+            const { data: createdUser, error: userError } = await withRetry(() => supabase
+                .from('users')
+                .insert([{ name, avatar, avatar_color: avatarColor }])
+                .select('id, name, avatar, avatar_color, xp, level, role')
+                .single()
+            );
+
+            if (userError) {
+                return res.status(500).json({
+                    error: buildSupabaseWriteError('student profile creation', userError),
+                    details: userError.message,
+                });
+            }
+
+            user = createdUser;
+            createdUserId = createdUser.id;
+        }
+
+        const { data: pets, error: petLookupError } = await withRetry(() => supabase
             .from('pets')
-            .insert([{
-                user_id: user.id,
-                type: avatar || 'dragon',
-                name: buildStarterPetName(name),
-                color: avatarColor || '#30e86e'
-            }])
+            .select('id, type, name, color')
+            .eq('user_id', user.id)
+            .limit(1)
         );
+
+        const pet = pets?.[0] ?? null;
+        const petError = petLookupError;
 
         if (petError) console.error('❌ Error creating pet:', petError.message);
 
-        if (petError) {
-            try {
-                await withRetry(() => supabase
-                    .from('users')
-                    .delete()
-                    .eq('id', user.id)
-                );
-            } catch (cleanupError) {
-                console.error('Failed to rollback user after pet creation error:', getErrorMessage(cleanupError));
+        if (petLookupError) {
+            if (createdUserId) {
+                try {
+                    await withRetry(() => supabase
+                        .from('users')
+                        .delete()
+                        .eq('id', createdUserId)
+                    );
+                } catch (cleanupError) {
+                    console.error('Failed to rollback user after pet creation error:', getErrorMessage(cleanupError));
+                }
             }
 
             return res.status(500).json({
-                error: buildSupabaseWriteError('starter pet creation', petError),
-                details: petError.message,
+                error: getErrorMessage(petLookupError),
+                details: getErrorMessage(petLookupError),
             });
         }
 
-        res.json(user);
+        if (!pet) {
+            const { error: petCreateError } = await withRetry(() => supabase
+                .from('pets')
+                .insert([{
+                    user_id: user.id,
+                    type: avatar,
+                    name: buildStarterPetName(name),
+                    color: avatarColor,
+                }])
+            );
+
+            if (petCreateError) {
+                if (createdUserId) {
+                    try {
+                        await withRetry(() => supabase
+                            .from('users')
+                            .delete()
+                            .eq('id', createdUserId)
+                        );
+                    } catch (cleanupError) {
+                        console.error('Failed to rollback user after pet creation error:', getErrorMessage(cleanupError));
+                    }
+                }
+
+                return res.status(500).json({
+                    error: buildSupabaseWriteError('starter pet creation', petCreateError),
+                    details: petCreateError.message,
+                });
+            }
+        } else if (pet.type !== avatar || pet.color !== avatarColor) {
+            const { error: petUpdateError } = await withRetry(() => supabase
+                .from('pets')
+                .update({ type: avatar, color: avatarColor })
+                .eq('id', pet.id)
+            );
+
+            if (petUpdateError) {
+                return res.status(500).json({
+                    error: buildSupabaseWriteError('starter pet update', petUpdateError),
+                    details: petUpdateError.message,
+                });
+            }
+        }
+
+        res.json(normalizeUserResponse(user));
     } catch (err: any) {
         const details = getErrorMessage(err);
         console.error('❌ User creation error:', err.message);
@@ -225,7 +334,7 @@ app.get('/api/users/:id', async (req, res) => {
         );
 
         if (error) return res.status(404).json({ error: 'User not found' });
-        res.json(user);
+        res.json(normalizeUserResponse(user));
     } catch (err: any) {
         res.status(500).json({ error: err.message });
     }
@@ -261,7 +370,7 @@ app.put('/api/users/:id', async (req, res) => {
             });
         }
 
-        res.json(user);
+        res.json(normalizeUserResponse(user));
     } catch (err: any) {
         const details = getErrorMessage(err);
         res.status(500).json({
@@ -278,9 +387,10 @@ app.get('/api/leaderboard', async (req, res) => {
         const { data, error } = await withRetry(() => supabase
             .from('users')
             .select(`
-                id, name, avatar, avatar_color, xp, level, stars,
+                id, name, avatar, avatar_color, xp, level,
                 pets ( type, name, color )
             `)
+            .or('role.is.null,role.eq.student')
             .order('xp', { ascending: false })
             .limit(50)
         );
@@ -320,7 +430,7 @@ app.get('/api/leaderboard', async (req, res) => {
             }
         }
 
-        const formatted = data.map((u: any) => {
+        const formatted = (data || []).map((u: any) => {
             const progressSummary = progressByUserId.get(String(u.id)) ?? {
                 totalCorrect: 0,
                 totalQuestions: 0,
@@ -328,18 +438,18 @@ app.get('/api/leaderboard', async (req, res) => {
             };
 
             return {
-            ...u,
-            pet_type: u.pets?.[0]?.type,
-            pet_name: u.pets?.[0]?.name,
-            pet_color: u.pets?.[0]?.color,
-            totalCorrect: progressSummary.totalCorrect,
-            totalQuestions: progressSummary.totalQuestions,
-            sessionsCount: progressSummary.sessionsCount,
-            accuracy: progressSummary.totalQuestions > 0
-                ? Math.round((progressSummary.totalCorrect / progressSummary.totalQuestions) * 100)
-                : 0,
-            rankMetric: metric === 'correct' ? progressSummary.totalCorrect : Number(u.xp || 0),
-        };
+                ...normalizeUserResponse(u),
+                pet_type: u.pets?.[0]?.type,
+                pet_name: u.pets?.[0]?.name,
+                pet_color: u.pets?.[0]?.color,
+                totalCorrect: progressSummary.totalCorrect,
+                totalQuestions: progressSummary.totalQuestions,
+                sessionsCount: progressSummary.sessionsCount,
+                accuracy: progressSummary.totalQuestions > 0
+                    ? Math.round((progressSummary.totalCorrect / progressSummary.totalQuestions) * 100)
+                    : 0,
+                rankMetric: metric === 'correct' ? progressSummary.totalCorrect : Number(u.xp || 0),
+            };
         });
 
         formatted.sort((a, b) => {
@@ -352,7 +462,16 @@ app.get('/api/leaderboard', async (req, res) => {
             return String(a.name || '').localeCompare(String(b.name || ''));
         });
 
-        res.json(formatted);
+        const seenNames = new Set<string>();
+        const deduped = formatted.filter((entry) => {
+            const normalizedName = String(entry.name || '').trim().toLowerCase();
+            if (!normalizedName) return true;
+            if (seenNames.has(normalizedName)) return false;
+            seenNames.add(normalizedName);
+            return true;
+        });
+
+        res.json(deduped);
     } catch (err: any) {
         res.status(500).json({ error: err.message });
     }
@@ -389,28 +508,34 @@ app.post('/api/progress', async (req, res) => {
 
         if (xpGain > 0) {
             // Get current XP
-            const { data: currentUser } = await withRetry(() => supabase
+            const { data: currentUser, error: currentUserError } = await withRetry(() => supabase
                 .from('users')
-                .select('xp, stars')
+                .select('xp, level')
                 .eq('id', userId)
                 .single()
             );
 
+            if (currentUserError) {
+                return res.status(500).json({ error: currentUserError.message });
+            }
+
             if (currentUser) {
                 const newXp = (currentUser.xp || 0) + xpGain;
-                const starsGain = safeCorrect * 10;
-                const newStars = (currentUser.stars || 0) + starsGain;
                 const newLevel = Math.floor(newXp / 200) + 1;
 
-                const { data: updatedUser } = await withRetry(() => supabase
+                const { data: updatedUser, error: userUpdateError } = await withRetry(() => supabase
                     .from('users')
-                    .update({ xp: newXp, level: newLevel, stars: newStars })
+                    .update({ xp: newXp, level: newLevel })
                     .eq('id', userId)
                     .select()
                     .single()
                 );
 
-                user = updatedUser;
+                if (userUpdateError) {
+                    return res.status(500).json({ error: userUpdateError.message });
+                }
+
+                user = normalizeUserResponse(updatedUser);
 
                 // Also update pet
                 await withRetry(() => supabase
@@ -675,7 +800,7 @@ app.post('/api/auth/teacher/register', async (req, res) => {
                 avatar: 'dragon',
                 avatar_color: '#30a5e8',
             }])
-            .select('id, name, email, role, avatar, avatar_color, xp, level, stars')
+            .select('id, name, email, role, avatar, avatar_color, xp, level')
             .single()
         );
 
@@ -695,7 +820,7 @@ app.post('/api/auth/teacher/register', async (req, res) => {
         const token = createTeacherSessionToken({ userId: user.id, email: user.email });
 
         console.log(`👩‍🏫 Teacher registered: ${email}`);
-        res.json({ user, token });
+        res.json({ user: normalizeUserResponse(user), token });
     } catch (err: any) {
         console.error('❌ Teacher register error:', err.message);
         res.status(500).json({ error: err.message });
@@ -713,7 +838,7 @@ app.post('/api/auth/teacher/login', async (req, res) => {
         // Find teacher by email
         const { data: user, error } = await withRetry(() => supabase
             .from('users')
-            .select('id, name, email, role, avatar, avatar_color, xp, level, stars, password_hash')
+            .select('id, name, email, role, avatar, avatar_color, xp, level, password_hash')
             .eq('email', email)
             .eq('role', 'teacher')
             .maybeSingle()
@@ -737,7 +862,7 @@ app.post('/api/auth/teacher/login', async (req, res) => {
         // Return user without password_hash
         const { password_hash: _, ...safeUser } = user;
         console.log(`👩‍🏫 Teacher logged in: ${email}`);
-        res.json({ user: safeUser, token });
+        res.json({ user: normalizeUserResponse(safeUser), token });
     } catch (err: any) {
         console.error('❌ Teacher login error:', err.message);
         res.status(500).json({ error: err.message });

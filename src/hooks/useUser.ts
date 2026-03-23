@@ -9,7 +9,7 @@ export interface User {
     avatar_color: string;
     xp: number;
     level: number;
-    stars: number;
+    stars?: number;
     role?: 'student' | 'teacher';
     email?: string;
     auth_token?: string;
@@ -30,6 +30,10 @@ export function useUser() {
                 localStorage.removeItem(STORAGE_KEY);
                 return null;
             }
+            if (parsed.role !== 'teacher') {
+                localStorage.removeItem(STORAGE_KEY);
+                return null;
+            }
             return parsed;
         } catch {
             return null;
@@ -37,7 +41,11 @@ export function useUser() {
     });
 
     const login = useCallback((userData: User) => {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(userData));
+        if (userData.role === 'teacher' && typeof userData.auth_token === 'string') {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(userData));
+        } else {
+            localStorage.removeItem(STORAGE_KEY);
+        }
         setUser(userData);
     }, []);
 

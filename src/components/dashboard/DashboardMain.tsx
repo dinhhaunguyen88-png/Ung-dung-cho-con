@@ -150,53 +150,69 @@ export function DashboardMain({
                 : isVi
                     ? 'thieu cau hinh'
                     : 'missing config';
+    const heroPetSize = pet.type === 'dragon' ? 300 : 250;
+    const heroPetLabel = isVi ? PET_INFO[pet.type].nameVi : PET_INFO[pet.type].name;
 
     return (
         <section className="flex flex-1 flex-col gap-6">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="relative min-h-[500px] flex-1 overflow-hidden rounded-3xl border-4 border-white/50 bg-gradient-to-b from-blue-400/20 to-emerald-400/20 shadow-2xl backdrop-blur-sm"
+                className="relative min-h-[420px] flex-1 overflow-hidden rounded-[32px] border border-white/70 bg-[radial-gradient(circle_at_top,_rgba(219,234,254,0.95),_rgba(207,250,254,0.82)_34%,_rgba(209,250,229,0.9)_72%,_rgba(248,250,252,0.96)_100%)] shadow-[0_30px_70px_rgba(15,23,42,0.12)] backdrop-blur-sm lg:min-h-[440px]"
             >
-                {/* Dynamic Background Particles */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute left-10 top-10 h-32 w-32 rounded-full bg-white/20 blur-3xl animate-pulse" />
-                    <div className="absolute right-20 top-40 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
+                    <div className="absolute left-[-3rem] top-6 h-40 w-40 rounded-full bg-white/35 blur-3xl" />
+                    <div className="absolute left-1/2 top-[18%] h-56 w-56 -translate-x-1/2 rounded-full bg-emerald-300/20 blur-3xl" />
+                    <div className="absolute right-8 top-10 h-48 w-48 rounded-full bg-cyan-300/18 blur-3xl" />
                 </div>
 
-                {/* The Island */}
-                <div className="absolute inset-0 flex items-center justify-center island-float">
-                    <div className="relative">
+                <div className="absolute left-6 top-6 z-10 max-w-sm space-y-2 lg:left-8 lg:top-8">
+                    <span className="inline-flex rounded-full border border-white/70 bg-white/70 px-3 py-1 text-[11px] font-black uppercase tracking-[0.24em] text-emerald-700 shadow-sm">
+                        {isVi ? 'San khau pet' : 'Pet stage'}
+                    </span>
+                    <div>
+                        <h3 className="text-2xl font-black tracking-tight text-slate-900 lg:text-[2rem]">{pet.name}</h3>
+                        <p className="mt-2 max-w-xs text-sm leading-6 text-slate-600">
+                            {isVi
+                                ? `${heroPetLabel} cap ${pet.level} dang san sang hoc, choi va nhan thuong.`
+                                : `${heroPetLabel} level ${pet.level} is ready to learn, play, and earn rewards.`}
+                        </p>
+                    </div>
+                </div>
+
+                <div className="absolute inset-x-0 bottom-0 top-[92px] flex items-center justify-center island-float">
+                    <div className="relative flex flex-col items-center">
                         <motion.div
                             animate={{ scale: [1, 1.1, 1] }}
                             transition={{ duration: 4, repeat: Infinity }}
-                            className="h-32 w-80 translate-y-24 scale-x-125 rounded-full bg-emerald-600 opacity-20 blur-xl"
+                            className="h-36 w-72 translate-y-28 rounded-full bg-emerald-900/18 blur-2xl sm:w-80 lg:h-40 lg:w-[24rem]"
                         />
-                        <div className="relative flex h-32 w-80 items-end justify-center overflow-hidden rounded-full border-b-[12px] border-emerald-900 bg-gradient-to-b from-emerald-400 to-emerald-700 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                            <div className="absolute top-0 h-10 w-full bg-gradient-to-b from-white/30 to-transparent" />
-                            <div className="mb-4">
+                        <div className="relative flex h-36 w-72 items-end justify-center overflow-visible rounded-[999px] border border-white/55 bg-gradient-to-b from-emerald-300 via-emerald-500 to-emerald-700 shadow-[0_25px_60px_rgba(6,95,70,0.35)] sm:w-80 lg:h-40 lg:w-[24rem]">
+                            <div className="absolute inset-x-10 top-4 h-10 rounded-full bg-white/20 blur-xl" />
+                            <div className="absolute bottom-2 h-8 w-[80%] rounded-full bg-emerald-950/22 blur-lg" />
+                            <div className="-translate-y-10 sm:-translate-y-12">
                                 <PetAvatar
                                     type={pet.type}
                                     color={pet.color}
                                     level={pet.level}
-                                    size={180}
+                                    size={heroPetSize}
                                     accessories={pet.equippedAccessories}
+                                    className={pet.type === 'dragon' ? 'scale-[1.02]' : ''}
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Pet Status UI */}
-                <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between">
+                <div className="absolute bottom-6 left-4 right-4 z-10 flex items-end justify-between sm:left-6 sm:right-6 lg:left-8 lg:right-8">
                     <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="w-72 space-y-4 rounded-2xl glass-card p-5"
+                        className="w-[285px] space-y-4 rounded-[28px] border border-white/70 bg-white/58 p-5 shadow-[0_20px_45px_rgba(15,23,42,0.08)] backdrop-blur-xl"
                     >
                         <div className="flex items-center justify-between border-b border-slate-200/20 pb-2">
                             <h4 className="font-black text-slate-900">{pet.name}</h4>
                             <span className="rounded-lg bg-orange-400/20 px-2.5 py-1 text-[10px] font-black uppercase text-orange-700 ring-1 ring-orange-400/30">
-                                {isVi ? PET_INFO[pet.type].nameVi : PET_INFO[pet.type].name}
+                                {heroPetLabel}
                             </span>
                         </div>
                         <div className="space-y-4">
