@@ -1,5 +1,19 @@
 # Changelog
 
+## [2026-03-22]
+### Added
+- **Portable Runtime Integration**: Khởi chạy thành công ứng dụng bằng môi trường Node.js portable (v22.14.0) nằm trong `~/.node_portable`.
+- **Environment Auto-Setup**: Tự động cấu hình `$env:PATH` để nhận diện `node` và `npm` trong môi trường Windows.
+
+### Fixed
+- Khắc phục lỗi `npm` không nhận diện được lệnh `node` khi chạy script `tsx`.
+- Cập nhật cấu hình cổng Vite mặc định sang **3000** để đồng bộ với môi trường hiện tại.
+
+### Documentation
+- Cập nhật `.brain/brain.json` và `.brain/session.json` (Infinite Memory Keeper).
+- Cập nhật `walkthrough.md` với minh chứng hình ảnh thực tế.
+
+
 ## [2026-03-17]
 ### Added
 - **Vietnamese TTS Fallback**: Tích hợp Google Translate TTS API để đảm bảo giọng nói hoạt động mượt mà trên mọi thiết bị ngay cả khi không có sẵn gói ngôn ngữ hệ thống.

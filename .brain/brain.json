@@ -18,7 +18,7 @@
       "state": "React Hooks"
     },
     "backend": {
-      "runtime": "Node.js (tsx)",
+      "runtime": "Node.js v22.14.0 (Portable)",
       "framework": "Express",
       "database_client": "@supabase/supabase-js"
     },
@@ -92,10 +92,11 @@
       "Retry Pattern for Supabase connection",
       "Seed Scripts for rapid data population",
       "TTS Fallback (Web Speech API -> Google Translate TTS)",
-      "Vietnamese Math Normalization for natural speech"
+      "Vietnamese Math Normalization for natural speech",
+      "Portable Node.js environment setup using environment variables"
     ],
     "gotchas": [
-      "Backend server (3001) must run alongside Frontend (5173).",
+      "Backend server (3001) must run alongside Frontend (3000).",
       "Vite proxy resolves /api requests to port 3001.",
       "Pet accessories parsing requires safe handling of JSON/strings.",
       "Native Vietnamese voices (vi-VN) are often missing on OS level; requires fallback."
