@@ -1,0 +1,6022 @@
+{
+  "title": "500 English Questions - Grade 2",
+  "total": 500,
+  "categories": [
+    "Animals",
+    "Body Parts",
+    "Colors & Shapes",
+    "Daily Activities",
+    "Family",
+    "Food & Drinks",
+    "Grammar",
+    "Numbers & Math",
+    "Phonics & Spelling",
+    "Places & Transport",
+    "Reading Comprehension",
+    "School",
+    "Science & Nature",
+    "Weather & Seasons"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "category": "Animals",
+      "question": "What sound does a dog make?",
+      "answers": {
+        "A": "Woof",
+        "B": "Moo",
+        "C": "Meow",
+        "D": "Quack"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 2,
+      "category": "Animals",
+      "question": "What sound does a cat make?",
+      "answers": {
+        "A": "Woof",
+        "B": "Meow",
+        "C": "Moo",
+        "D": "Oink"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 3,
+      "category": "Animals",
+      "question": "What sound does a cow make?",
+      "answers": {
+        "A": "Moo",
+        "B": "Quack",
+        "C": "Baa",
+        "D": "Roar"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 4,
+      "category": "Animals",
+      "question": "What sound does a duck make?",
+      "answers": {
+        "A": "Bark",
+        "B": "Moo",
+        "C": "Quack",
+        "D": "Hiss"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 5,
+      "category": "Animals",
+      "question": "What sound does a lion make?",
+      "answers": {
+        "A": "Roar",
+        "B": "Tweet",
+        "C": "Hiss",
+        "D": "Squeak"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 6,
+      "category": "Animals",
+      "question": "Which animal has a long neck?",
+      "answers": {
+        "A": "Elephant",
+        "B": "Giraffe",
+        "C": "Hippo",
+        "D": "Bear"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 7,
+      "category": "Animals",
+      "question": "Which animal has a trunk?",
+      "answers": {
+        "A": "Lion",
+        "B": "Tiger",
+        "C": "Elephant",
+        "D": "Horse"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 8,
+      "category": "Animals",
+      "question": "Which animal lives in water?",
+      "answers": {
+        "A": "Dog",
+        "B": "Cat",
+        "C": "Fish",
+        "D": "Rabbit"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 9,
+      "category": "Animals",
+      "question": "Which animal can fly?",
+      "answers": {
+        "A": "Dog",
+        "B": "Cat",
+        "C": "Bird",
+        "D": "Fish"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 10,
+      "category": "Animals",
+      "question": "Which animal has stripes?",
+      "answers": {
+        "A": "Lion",
+        "B": "Tiger",
+        "C": "Elephant",
+        "D": "Bear"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 11,
+      "category": "Animals",
+      "question": "What do bees make?",
+      "answers": {
+        "A": "Milk",
+        "B": "Honey",
+        "C": "Juice",
+        "D": "Butter"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 12,
+      "category": "Animals",
+      "question": "Which animal is the king of the jungle?",
+      "answers": {
+        "A": "Tiger",
+        "B": "Bear",
+        "C": "Lion",
+        "D": "Wolf"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 13,
+      "category": "Animals",
+      "question": "Which animal hops?",
+      "answers": {
+        "A": "Rabbit",
+        "B": "Dog",
+        "C": "Fish",
+        "D": "Cat"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 14,
+      "category": "Animals",
+      "question": "Which animal has a shell?",
+      "answers": {
+        "A": "Dog",
+        "B": "Turtle",
+        "C": "Horse",
+        "D": "Cat"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 15,
+      "category": "Animals",
+      "question": "Which animal gives us milk?",
+      "answers": {
+        "A": "Dog",
+        "B": "Cat",
+        "C": "Cow",
+        "D": "Pig"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 16,
+      "category": "Animals",
+      "question": "Which animal says 'Baa'?",
+      "answers": {
+        "A": "Dog",
+        "B": "Cow",
+        "C": "Sheep",
+        "D": "Duck"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 17,
+      "category": "Animals",
+      "question": "Which animal has feathers?",
+      "answers": {
+        "A": "Dog",
+        "B": "Cat",
+        "C": "Bird",
+        "D": "Fish"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 18,
+      "category": "Animals",
+      "question": "Which animal is very big and grey?",
+      "answers": {
+        "A": "Cat",
+        "B": "Rabbit",
+        "C": "Elephant",
+        "D": "Fox"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 19,
+      "category": "Animals",
+      "question": "What color is a flamingo?",
+      "answers": {
+        "A": "Blue",
+        "B": "Green",
+        "C": "Pink",
+        "D": "Yellow"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 20,
+      "category": "Animals",
+      "question": "Which animal sleeps in winter?",
+      "answers": {
+        "A": "Dog",
+        "B": "Bear",
+        "C": "Cat",
+        "D": "Fish"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 21,
+      "category": "Animals",
+      "question": "Which animal has eight legs?",
+      "answers": {
+        "A": "Butterfly",
+        "B": "Spider",
+        "C": "Bee",
+        "D": "Ant"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 22,
+      "category": "Animals",
+      "question": "Which animal has a bushy tail?",
+      "answers": {
+        "A": "Squirrel",
+        "B": "Dog",
+        "C": "Fish",
+        "D": "Duck"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 23,
+      "category": "Animals",
+      "question": "What is a baby cat called?",
+      "answers": {
+        "A": "Puppy",
+        "B": "Kitten",
+        "C": "Cub",
+        "D": "Chick"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 24,
+      "category": "Animals",
+      "question": "What is a baby dog called?",
+      "answers": {
+        "A": "Kitten",
+        "B": "Cub",
+        "C": "Puppy",
+        "D": "Foal"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 25,
+      "category": "Animals",
+      "question": "What is a baby chicken called?",
+      "answers": {
+        "A": "Puppy",
+        "B": "Kitten",
+        "C": "Chick",
+        "D": "Cub"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 26,
+      "category": "Animals",
+      "question": "Which animal lives in a nest?",
+      "answers": {
+        "A": "Dog",
+        "B": "Fish",
+        "C": "Cat",
+        "D": "Bird"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 27,
+      "category": "Animals",
+      "question": "Which animal has a very long tongue?",
+      "answers": {
+        "A": "Dog",
+        "B": "Giraffe",
+        "C": "Cat",
+        "D": "Rabbit"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 28,
+      "category": "Animals",
+      "question": "What do pandas eat?",
+      "answers": {
+        "A": "Meat",
+        "B": "Bamboo",
+        "C": "Fish",
+        "D": "Grass"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 29,
+      "category": "Animals",
+      "question": "Which animal is black and white?",
+      "answers": {
+        "A": "Lion",
+        "B": "Zebra",
+        "C": "Bear",
+        "D": "Wolf"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 30,
+      "category": "Animals",
+      "question": "Which animal is the fastest on land?",
+      "answers": {
+        "A": "Lion",
+        "B": "Horse",
+        "C": "Cheetah",
+        "D": "Tiger"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 31,
+      "category": "Animals",
+      "question": "Which animal can swim and walk on land?",
+      "answers": {
+        "A": "Dog",
+        "B": "Cat",
+        "C": "Frog",
+        "D": "Bird"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 32,
+      "category": "Animals",
+      "question": "What is a group of fish called?",
+      "answers": {
+        "A": "Herd",
+        "B": "Flock",
+        "C": "School",
+        "D": "Pack"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 33,
+      "category": "Animals",
+      "question": "Which animal has spots?",
+      "answers": {
+        "A": "Tiger",
+        "B": "Leopard",
+        "C": "Lion",
+        "D": "Bear"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 34,
+      "category": "Animals",
+      "question": "Which animal can change color?",
+      "answers": {
+        "A": "Dog",
+        "B": "Chameleon",
+        "C": "Cat",
+        "D": "Fish"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 35,
+      "category": "Animals",
+      "question": "Which animal builds dams in rivers?",
+      "answers": {
+        "A": "Fish",
+        "B": "Duck",
+        "C": "Beaver",
+        "D": "Frog"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 36,
+      "category": "Animals",
+      "question": "What do frogs eat?",
+      "answers": {
+        "A": "Grass",
+        "B": "Insects",
+        "C": "Seeds",
+        "D": "Fish"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 37,
+      "category": "Animals",
+      "question": "Which is the largest animal on land?",
+      "answers": {
+        "A": "Hippo",
+        "B": "Giraffe",
+        "C": "Elephant",
+        "D": "Rhino"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 38,
+      "category": "Animals",
+      "question": "Which animal has a pouch?",
+      "answers": {
+        "A": "Dog",
+        "B": "Kangaroo",
+        "C": "Cat",
+        "D": "Bear"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 39,
+      "category": "Animals",
+      "question": "Which animal can talk like humans?",
+      "answers": {
+        "A": "Crow",
+        "B": "Parrot",
+        "C": "Eagle",
+        "D": "Owl"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 40,
+      "category": "Animals",
+      "question": "Which animal is known for being wise?",
+      "answers": {
+        "A": "Eagle",
+        "B": "Parrot",
+        "C": "Owl",
+        "D": "Crow"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 41,
+      "category": "Animals",
+      "question": "What do horses eat?",
+      "answers": {
+        "A": "Meat",
+        "B": "Fish",
+        "C": "Hay and grass",
+        "D": "Insects"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 42,
+      "category": "Animals",
+      "question": "Which animal has a very long nose?",
+      "answers": {
+        "A": "Giraffe",
+        "B": "Elephant",
+        "C": "Hippo",
+        "D": "Rhino"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 43,
+      "category": "Animals",
+      "question": "Which bird cannot fly?",
+      "answers": {
+        "A": "Eagle",
+        "B": "Pigeon",
+        "C": "Penguin",
+        "D": "Sparrow"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 44,
+      "category": "Animals",
+      "question": "Which animal has a hump?",
+      "answers": {
+        "A": "Horse",
+        "B": "Camel",
+        "C": "Donkey",
+        "D": "Cow"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 45,
+      "category": "Animals",
+      "question": "Which animal is known as man's best friend?",
+      "answers": {
+        "A": "Cat",
+        "B": "Dog",
+        "C": "Rabbit",
+        "D": "Horse"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 46,
+      "category": "Animals",
+      "question": "What is a baby cow called?",
+      "answers": {
+        "A": "Kitten",
+        "B": "Puppy",
+        "C": "Calf",
+        "D": "Foal"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 47,
+      "category": "Animals",
+      "question": "Which animal produces silk?",
+      "answers": {
+        "A": "Bee",
+        "B": "Ant",
+        "C": "Silkworm",
+        "D": "Spider"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 48,
+      "category": "Animals",
+      "question": "Which animal eats only plants?",
+      "answers": {
+        "A": "Lion",
+        "B": "Tiger",
+        "C": "Rabbit",
+        "D": "Wolf"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 49,
+      "category": "Animals",
+      "question": "What is a baby sheep called?",
+      "answers": {
+        "A": "Cub",
+        "B": "Kitten",
+        "C": "Lamb",
+        "D": "Calf"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 50,
+      "category": "Animals",
+      "question": "Which animal has the longest lifespan?",
+      "answers": {
+        "A": "Dog",
+        "B": "Cat",
+        "C": "Tortoise",
+        "D": "Elephant"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 51,
+      "category": "Colors & Shapes",
+      "question": "What color is the sun?",
+      "answers": {
+        "A": "Blue",
+        "B": "Yellow",
+        "C": "Green",
+        "D": "Red"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 52,
+      "category": "Colors & Shapes",
+      "question": "What color is grass?",
+      "answers": {
+        "A": "Blue",
+        "B": "Yellow",
+        "C": "Green",
+        "D": "Red"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 53,
+      "category": "Colors & Shapes",
+      "question": "What color is the sky?",
+      "answers": {
+        "A": "Blue",
+        "B": "Yellow",
+        "C": "Green",
+        "D": "Red"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 54,
+      "category": "Colors & Shapes",
+      "question": "What color is a banana?",
+      "answers": {
+        "A": "Red",
+        "B": "Blue",
+        "C": "Yellow",
+        "D": "Green"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 55,
+      "category": "Colors & Shapes",
+      "question": "What color is a tomato?",
+      "answers": {
+        "A": "Blue",
+        "B": "Red",
+        "C": "Green",
+        "D": "Yellow"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 56,
+      "category": "Colors & Shapes",
+      "question": "What color is snow?",
+      "answers": {
+        "A": "Blue",
+        "B": "White",
+        "C": "Yellow",
+        "D": "Grey"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 57,
+      "category": "Colors & Shapes",
+      "question": "What color is coal?",
+      "answers": {
+        "A": "White",
+        "B": "Grey",
+        "C": "Black",
+        "D": "Blue"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 58,
+      "category": "Colors & Shapes",
+      "question": "What color is a pumpkin?",
+      "answers": {
+        "A": "Red",
+        "B": "Blue",
+        "C": "Green",
+        "D": "Orange"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 59,
+      "category": "Colors & Shapes",
+      "question": "What color is a grape?",
+      "answers": {
+        "A": "Orange",
+        "B": "Yellow",
+        "C": "Purple",
+        "D": "Red"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 60,
+      "category": "Colors & Shapes",
+      "question": "What color is a strawberry?",
+      "answers": {
+        "A": "Blue",
+        "B": "Red",
+        "C": "Yellow",
+        "D": "Green"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 61,
+      "category": "Colors & Shapes",
+      "question": "How many sides does a triangle have?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 62,
+      "category": "Colors & Shapes",
+      "question": "How many sides does a square have?",
+      "answers": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "6"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 63,
+      "category": "Colors & Shapes",
+      "question": "How many sides does a circle have?",
+      "answers": {
+        "A": "1",
+        "B": "0",
+        "C": "2",
+        "D": "4"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 64,
+      "category": "Colors & Shapes",
+      "question": "How many sides does a rectangle have?",
+      "answers": {
+        "A": "3",
+        "B": "5",
+        "C": "4",
+        "D": "6"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 65,
+      "category": "Colors & Shapes",
+      "question": "Which shape has all equal sides?",
+      "answers": {
+        "A": "Rectangle",
+        "B": "Square",
+        "C": "Triangle",
+        "D": "Circle"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 66,
+      "category": "Colors & Shapes",
+      "question": "What shape is a pizza?",
+      "answers": {
+        "A": "Square",
+        "B": "Triangle",
+        "C": "Circle",
+        "D": "Rectangle"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 67,
+      "category": "Colors & Shapes",
+      "question": "What shape is a book?",
+      "answers": {
+        "A": "Circle",
+        "B": "Triangle",
+        "C": "Rectangle",
+        "D": "Pentagon"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 68,
+      "category": "Colors & Shapes",
+      "question": "What shape is a clock?",
+      "answers": {
+        "A": "Square",
+        "B": "Circle",
+        "C": "Triangle",
+        "D": "Rectangle"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 69,
+      "category": "Colors & Shapes",
+      "question": "What color is an orange?",
+      "answers": {
+        "A": "Red",
+        "B": "Yellow",
+        "C": "Orange",
+        "D": "Green"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 70,
+      "category": "Colors & Shapes",
+      "question": "What color is a lemon?",
+      "answers": {
+        "A": "Orange",
+        "B": "Yellow",
+        "C": "Green",
+        "D": "Red"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 71,
+      "category": "Colors & Shapes",
+      "question": "What color is a carrot?",
+      "answers": {
+        "A": "Blue",
+        "B": "Green",
+        "C": "Orange",
+        "D": "Red"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 72,
+      "category": "Colors & Shapes",
+      "question": "What color is the ocean?",
+      "answers": {
+        "A": "Green",
+        "B": "Blue",
+        "C": "Yellow",
+        "D": "Red"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 73,
+      "category": "Colors & Shapes",
+      "question": "What color is a rose?",
+      "answers": {
+        "A": "Blue",
+        "B": "Green",
+        "C": "Red",
+        "D": "Yellow"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 74,
+      "category": "Colors & Shapes",
+      "question": "What is the color of night?",
+      "answers": {
+        "A": "White",
+        "B": "Yellow",
+        "C": "Black",
+        "D": "Green"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 75,
+      "category": "Colors & Shapes",
+      "question": "What color are leaves in spring?",
+      "answers": {
+        "A": "Yellow",
+        "B": "Red",
+        "C": "Green",
+        "D": "Brown"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 76,
+      "category": "Colors & Shapes",
+      "question": "What color are leaves in autumn?",
+      "answers": {
+        "A": "Green",
+        "B": "Orange and red",
+        "C": "Blue",
+        "D": "Purple"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 77,
+      "category": "Colors & Shapes",
+      "question": "Which color is NOT in the rainbow?",
+      "answers": {
+        "A": "Red",
+        "B": "Pink",
+        "C": "Orange",
+        "D": "Yellow"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 78,
+      "category": "Colors & Shapes",
+      "question": "How many colors are in the rainbow?",
+      "answers": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 79,
+      "category": "Colors & Shapes",
+      "question": "What color is chocolate?",
+      "answers": {
+        "A": "White",
+        "B": "Yellow",
+        "C": "Brown",
+        "D": "Orange"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 80,
+      "category": "Colors & Shapes",
+      "question": "What color is the moon?",
+      "answers": {
+        "A": "Orange",
+        "B": "White or grey",
+        "C": "Blue",
+        "D": "Green"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 81,
+      "category": "Food & Drinks",
+      "question": "Which fruit is yellow and curved?",
+      "answers": {
+        "A": "Apple",
+        "B": "Orange",
+        "C": "Banana",
+        "D": "Grape"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 82,
+      "category": "Food & Drinks",
+      "question": "Which fruit is red and round?",
+      "answers": {
+        "A": "Banana",
+        "B": "Apple",
+        "C": "Mango",
+        "D": "Grape"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 83,
+      "category": "Food & Drinks",
+      "question": "Which vegetable is orange?",
+      "answers": {
+        "A": "Potato",
+        "B": "Tomato",
+        "C": "Carrot",
+        "D": "Onion"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 84,
+      "category": "Food & Drinks",
+      "question": "What drink comes from cows?",
+      "answers": {
+        "A": "Juice",
+        "B": "Water",
+        "C": "Milk",
+        "D": "Tea"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 85,
+      "category": "Food & Drinks",
+      "question": "What do bees make that is sweet?",
+      "answers": {
+        "A": "Jam",
+        "B": "Honey",
+        "C": "Sugar",
+        "D": "Butter"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 86,
+      "category": "Food & Drinks",
+      "question": "What is the main ingredient in bread?",
+      "answers": {
+        "A": "Rice",
+        "B": "Flour",
+        "C": "Corn",
+        "D": "Oats"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 87,
+      "category": "Food & Drinks",
+      "question": "Which food comes from hens?",
+      "answers": {
+        "A": "Milk",
+        "B": "Cheese",
+        "C": "Eggs",
+        "D": "Butter"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 88,
+      "category": "Food & Drinks",
+      "question": "What is spaghetti made from?",
+      "answers": {
+        "A": "Rice",
+        "B": "Potato",
+        "C": "Pasta",
+        "D": "Bread"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 89,
+      "category": "Food & Drinks",
+      "question": "Which of these is a vegetable?",
+      "answers": {
+        "A": "Apple",
+        "B": "Banana",
+        "C": "Carrot",
+        "D": "Mango"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 90,
+      "category": "Food & Drinks",
+      "question": "Which of these is a fruit?",
+      "answers": {
+        "A": "Carrot",
+        "B": "Onion",
+        "C": "Apple",
+        "D": "Potato"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 91,
+      "category": "Food & Drinks",
+      "question": "What flavor is lemon?",
+      "answers": {
+        "A": "Sweet",
+        "B": "Sour",
+        "C": "Salty",
+        "D": "Bitter"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 92,
+      "category": "Food & Drinks",
+      "question": "What flavor is sugar?",
+      "answers": {
+        "A": "Sour",
+        "B": "Salty",
+        "C": "Sweet",
+        "D": "Spicy"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 93,
+      "category": "Food & Drinks",
+      "question": "What do we put on salads?",
+      "answers": {
+        "A": "Jam",
+        "B": "Dressing",
+        "C": "Syrup",
+        "D": "Honey"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 94,
+      "category": "Food & Drinks",
+      "question": "Which food is made from milk?",
+      "answers": {
+        "A": "Bread",
+        "B": "Jam",
+        "C": "Cheese",
+        "D": "Pasta"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 95,
+      "category": "Food & Drinks",
+      "question": "What do we call morning meal?",
+      "answers": {
+        "A": "Dinner",
+        "B": "Lunch",
+        "C": "Breakfast",
+        "D": "Snack"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 96,
+      "category": "Food & Drinks",
+      "question": "What do we call midday meal?",
+      "answers": {
+        "A": "Breakfast",
+        "B": "Lunch",
+        "C": "Dinner",
+        "D": "Supper"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 97,
+      "category": "Food & Drinks",
+      "question": "What do we call evening meal?",
+      "answers": {
+        "A": "Breakfast",
+        "B": "Snack",
+        "C": "Lunch",
+        "D": "Dinner"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 98,
+      "category": "Food & Drinks",
+      "question": "Which fruit has seeds inside?",
+      "answers": {
+        "A": "All fruits",
+        "B": "Banana",
+        "C": "Mango",
+        "D": "Watermelon"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 99,
+      "category": "Food & Drinks",
+      "question": "What is the color of an unripe banana?",
+      "answers": {
+        "A": "Yellow",
+        "B": "Red",
+        "C": "Green",
+        "D": "Orange"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 100,
+      "category": "Food & Drinks",
+      "question": "Which food is crunchy?",
+      "answers": {
+        "A": "Banana",
+        "B": "Mango",
+        "C": "Chips",
+        "D": "Milk"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 101,
+      "category": "Food & Drinks",
+      "question": "What do we put in a sandwich?",
+      "answers": {
+        "A": "Filling",
+        "B": "Jam only",
+        "C": "Water",
+        "D": "Milk"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 102,
+      "category": "Food & Drinks",
+      "question": "What is orange juice made from?",
+      "answers": {
+        "A": "Apples",
+        "B": "Grapes",
+        "C": "Oranges",
+        "D": "Lemons"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 103,
+      "category": "Food & Drinks",
+      "question": "Which food is spicy?",
+      "answers": {
+        "A": "Ice cream",
+        "B": "Chili pepper",
+        "C": "Banana",
+        "D": "Milk"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 104,
+      "category": "Food & Drinks",
+      "question": "What is ice cream made from?",
+      "answers": {
+        "A": "Juice",
+        "B": "Milk and cream",
+        "C": "Water",
+        "D": "Tea"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 105,
+      "category": "Food & Drinks",
+      "question": "What do we eat soup with?",
+      "answers": {
+        "A": "Fork",
+        "B": "Spoon",
+        "C": "Chopsticks",
+        "D": "Hands"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 106,
+      "category": "Food & Drinks",
+      "question": "What is pizza topped with?",
+      "answers": {
+        "A": "Sauce and cheese",
+        "B": "Jam",
+        "C": "Butter",
+        "D": "Sugar"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 107,
+      "category": "Food & Drinks",
+      "question": "Which drink is hot?",
+      "answers": {
+        "A": "Juice",
+        "B": "Milk",
+        "C": "Tea",
+        "D": "Soda"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 108,
+      "category": "Food & Drinks",
+      "question": "Which food grows underground?",
+      "answers": {
+        "A": "Apple",
+        "B": "Banana",
+        "C": "Potato",
+        "D": "Mango"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 109,
+      "category": "Food & Drinks",
+      "question": "What is a salad mainly made of?",
+      "answers": {
+        "A": "Meat",
+        "B": "Vegetables",
+        "C": "Bread",
+        "D": "Fruit"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 110,
+      "category": "Food & Drinks",
+      "question": "Which of these is a dairy product?",
+      "answers": {
+        "A": "Juice",
+        "B": "Yogurt",
+        "C": "Bread",
+        "D": "Soda"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 111,
+      "category": "Food & Drinks",
+      "question": "What do we use to cut food?",
+      "answers": {
+        "A": "Spoon",
+        "B": "Fork",
+        "C": "Knife",
+        "D": "Plate"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 112,
+      "category": "Food & Drinks",
+      "question": "Which food is sweet and frozen?",
+      "answers": {
+        "A": "Pizza",
+        "B": "Soup",
+        "C": "Ice cream",
+        "D": "Bread"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 113,
+      "category": "Food & Drinks",
+      "question": "What is popcorn made from?",
+      "answers": {
+        "A": "Wheat",
+        "B": "Rice",
+        "C": "Corn",
+        "D": "Oats"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 114,
+      "category": "Food & Drinks",
+      "question": "Which meal do people eat last?",
+      "answers": {
+        "A": "Breakfast",
+        "B": "Lunch",
+        "C": "Dinner",
+        "D": "Snack"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 115,
+      "category": "Food & Drinks",
+      "question": "What flavor is vinegar?",
+      "answers": {
+        "A": "Sweet",
+        "B": "Sour",
+        "C": "Salty",
+        "D": "Spicy"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 116,
+      "category": "Food & Drinks",
+      "question": "Which fruit is purple?",
+      "answers": {
+        "A": "Banana",
+        "B": "Orange",
+        "C": "Grape",
+        "D": "Mango"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 117,
+      "category": "Food & Drinks",
+      "question": "What is butter made from?",
+      "answers": {
+        "A": "Juice",
+        "B": "Cream",
+        "C": "Water",
+        "D": "Flour"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 118,
+      "category": "Food & Drinks",
+      "question": "Which of these is a grain?",
+      "answers": {
+        "A": "Carrot",
+        "B": "Apple",
+        "C": "Rice",
+        "D": "Milk"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 119,
+      "category": "Food & Drinks",
+      "question": "What do we call a meal between lunch and dinner?",
+      "answers": {
+        "A": "Breakfast",
+        "B": "Brunch",
+        "C": "Snack",
+        "D": "Supper"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 120,
+      "category": "Food & Drinks",
+      "question": "Which fruit has a hard yellow skin?",
+      "answers": {
+        "A": "Apple",
+        "B": "Pineapple",
+        "C": "Grape",
+        "D": "Cherry"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 121,
+      "category": "Body Parts",
+      "question": "How many fingers do we have on both hands?",
+      "answers": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "12"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 122,
+      "category": "Body Parts",
+      "question": "Which body part do we use to smell?",
+      "answers": {
+        "A": "Eyes",
+        "B": "Ears",
+        "C": "Nose",
+        "D": "Mouth"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 123,
+      "category": "Body Parts",
+      "question": "Which body part do we use to hear?",
+      "answers": {
+        "A": "Eyes",
+        "B": "Ears",
+        "C": "Nose",
+        "D": "Mouth"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 124,
+      "category": "Body Parts",
+      "question": "Which body part do we use to see?",
+      "answers": {
+        "A": "Eyes",
+        "B": "Ears",
+        "C": "Nose",
+        "D": "Mouth"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 125,
+      "category": "Body Parts",
+      "question": "Which body part do we use to taste?",
+      "answers": {
+        "A": "Eyes",
+        "B": "Ears",
+        "C": "Nose",
+        "D": "Tongue"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 126,
+      "category": "Body Parts",
+      "question": "How many toes do we have?",
+      "answers": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "12"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 127,
+      "category": "Body Parts",
+      "question": "What do we use to breathe?",
+      "answers": {
+        "A": "Stomach",
+        "B": "Lungs",
+        "C": "Heart",
+        "D": "Brain"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 128,
+      "category": "Body Parts",
+      "question": "What do we use to think?",
+      "answers": {
+        "A": "Heart",
+        "B": "Stomach",
+        "C": "Brain",
+        "D": "Lungs"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 129,
+      "category": "Body Parts",
+      "question": "How many eyes do humans have?",
+      "answers": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 130,
+      "category": "Body Parts",
+      "question": "What connects our head to our body?",
+      "answers": {
+        "A": "Shoulder",
+        "B": "Neck",
+        "C": "Arm",
+        "D": "Back"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 131,
+      "category": "Body Parts",
+      "question": "What is at the end of our arm?",
+      "answers": {
+        "A": "Foot",
+        "B": "Hand",
+        "C": "Elbow",
+        "D": "Knee"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 132,
+      "category": "Body Parts",
+      "question": "What is at the end of our leg?",
+      "answers": {
+        "A": "Hand",
+        "B": "Elbow",
+        "C": "Foot",
+        "D": "Knee"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 133,
+      "category": "Body Parts",
+      "question": "Where is our elbow?",
+      "answers": {
+        "A": "Leg",
+        "B": "Arm",
+        "C": "Neck",
+        "D": "Back"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 134,
+      "category": "Body Parts",
+      "question": "Where is our knee?",
+      "answers": {
+        "A": "Arm",
+        "B": "Neck",
+        "C": "Leg",
+        "D": "Back"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 135,
+      "category": "Body Parts",
+      "question": "What covers our body?",
+      "answers": {
+        "A": "Hair",
+        "B": "Skin",
+        "C": "Nails",
+        "D": "Bone"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 136,
+      "category": "Body Parts",
+      "question": "How many ears do humans have?",
+      "answers": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 137,
+      "category": "Body Parts",
+      "question": "What do we use to walk?",
+      "answers": {
+        "A": "Arms",
+        "B": "Hands",
+        "C": "Legs",
+        "D": "Neck"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 138,
+      "category": "Body Parts",
+      "question": "What do we use to pick things up?",
+      "answers": {
+        "A": "Legs",
+        "B": "Hands",
+        "C": "Feet",
+        "D": "Neck"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 139,
+      "category": "Body Parts",
+      "question": "Which body part pumps blood?",
+      "answers": {
+        "A": "Lungs",
+        "B": "Brain",
+        "C": "Heart",
+        "D": "Stomach"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 140,
+      "category": "Body Parts",
+      "question": "Where is your belly button?",
+      "answers": {
+        "A": "Back",
+        "B": "Chest",
+        "C": "Stomach area",
+        "D": "Neck"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 141,
+      "category": "Body Parts",
+      "question": "What grows on top of our head?",
+      "answers": {
+        "A": "Nails",
+        "B": "Skin",
+        "C": "Hair",
+        "D": "Teeth"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 142,
+      "category": "Body Parts",
+      "question": "What do we use to chew food?",
+      "answers": {
+        "A": "Ears",
+        "B": "Eyes",
+        "C": "Nose",
+        "D": "Teeth"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 143,
+      "category": "Body Parts",
+      "question": "How many thumbs do we have?",
+      "answers": {
+        "A": "1",
+        "B": "2",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 144,
+      "category": "Body Parts",
+      "question": "What connects our arm to our body?",
+      "answers": {
+        "A": "Elbow",
+        "B": "Shoulder",
+        "C": "Wrist",
+        "D": "Knee"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 145,
+      "category": "Body Parts",
+      "question": "What connects our leg to our body?",
+      "answers": {
+        "A": "Knee",
+        "B": "Ankle",
+        "C": "Hip",
+        "D": "Wrist"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 146,
+      "category": "Body Parts",
+      "question": "Where is your forehead?",
+      "answers": {
+        "A": "Below your nose",
+        "B": "On your arm",
+        "C": "Above your eyes",
+        "D": "On your chin"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 147,
+      "category": "Body Parts",
+      "question": "What is your chin?",
+      "answers": {
+        "A": "Top of head",
+        "B": "Bottom of face",
+        "C": "Side of head",
+        "D": "Back of head"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 148,
+      "category": "Body Parts",
+      "question": "What do we use to clap?",
+      "answers": {
+        "A": "Feet",
+        "B": "Hands",
+        "C": "Legs",
+        "D": "Arms"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 149,
+      "category": "Body Parts",
+      "question": "How many lips do humans have?",
+      "answers": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 150,
+      "category": "Body Parts",
+      "question": "What is the longest bone in the body?",
+      "answers": {
+        "A": "Arm bone",
+        "B": "Finger bone",
+        "C": "Leg bone (femur)",
+        "D": "Neck bone"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 151,
+      "category": "Family",
+      "question": "What do we call our mother's mother?",
+      "answers": {
+        "A": "Aunt",
+        "B": "Sister",
+        "C": "Grandmother",
+        "D": "Cousin"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 152,
+      "category": "Family",
+      "question": "What do we call our father's father?",
+      "answers": {
+        "A": "Uncle",
+        "B": "Brother",
+        "C": "Grandfather",
+        "D": "Cousin"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 153,
+      "category": "Family",
+      "question": "What do we call a girl sibling?",
+      "answers": {
+        "A": "Brother",
+        "B": "Cousin",
+        "C": "Uncle",
+        "D": "Sister"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 154,
+      "category": "Family",
+      "question": "What do we call a boy sibling?",
+      "answers": {
+        "A": "Sister",
+        "B": "Brother",
+        "C": "Niece",
+        "D": "Cousin"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 155,
+      "category": "Family",
+      "question": "What do we call our father's brother?",
+      "answers": {
+        "A": "Cousin",
+        "B": "Uncle",
+        "C": "Brother",
+        "D": "Nephew"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 156,
+      "category": "Family",
+      "question": "What do we call our mother's sister?",
+      "answers": {
+        "A": "Uncle",
+        "B": "Niece",
+        "C": "Aunt",
+        "D": "Sister"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 157,
+      "category": "Family",
+      "question": "What is a female parent called?",
+      "answers": {
+        "A": "Father",
+        "B": "Uncle",
+        "C": "Mother",
+        "D": "Aunt"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 158,
+      "category": "Family",
+      "question": "What is a male parent called?",
+      "answers": {
+        "A": "Mother",
+        "B": "Aunt",
+        "C": "Uncle",
+        "D": "Father"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 159,
+      "category": "Family",
+      "question": "What do we call our uncle's children?",
+      "answers": {
+        "A": "Cousins",
+        "B": "Siblings",
+        "C": "Nephews",
+        "D": "Nieces"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 160,
+      "category": "Family",
+      "question": "What is the word for a family with parents and children?",
+      "answers": {
+        "A": "Extended family",
+        "B": "Nuclear family",
+        "C": "Single family",
+        "D": "Large family"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 161,
+      "category": "Family",
+      "question": "What do children call their parents' parents?",
+      "answers": {
+        "A": "Parents",
+        "B": "Grandparents",
+        "C": "Aunts and Uncles",
+        "D": "Cousins"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 162,
+      "category": "Family",
+      "question": "What is the male word for a sibling?",
+      "answers": {
+        "A": "Sister",
+        "B": "Niece",
+        "C": "Brother",
+        "D": "Aunt"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 163,
+      "category": "Family",
+      "question": "What is a word for your whole family?",
+      "answers": {
+        "A": "Friends",
+        "B": "Neighbors",
+        "C": "Relatives",
+        "D": "Classmates"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 164,
+      "category": "Family",
+      "question": "Who is older, a parent or a grandparent?",
+      "answers": {
+        "A": "Parent",
+        "B": "They're the same",
+        "C": "Grandparent",
+        "D": "Can't tell"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 165,
+      "category": "Family",
+      "question": "What do we call two parents and their children?",
+      "answers": {
+        "A": "A team",
+        "B": "A family",
+        "C": "A group",
+        "D": "A class"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 166,
+      "category": "Family",
+      "question": "What is a female sibling called?",
+      "answers": {
+        "A": "Brother",
+        "B": "Cousin",
+        "C": "Aunt",
+        "D": "Sister"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 167,
+      "category": "Family",
+      "question": "What is a baby in the family called?",
+      "answers": {
+        "A": "Toddler",
+        "B": "Infant",
+        "C": "Juvenile",
+        "D": "Elder"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 168,
+      "category": "Family",
+      "question": "What do we call our parent's sister?",
+      "answers": {
+        "A": "Grandmother",
+        "B": "Cousin",
+        "C": "Aunt",
+        "D": "Niece"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 169,
+      "category": "Family",
+      "question": "What do we call our parent's brother?",
+      "answers": {
+        "A": "Grandfather",
+        "B": "Cousin",
+        "C": "Nephew",
+        "D": "Uncle"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 170,
+      "category": "Family",
+      "question": "What word describes parents and children living together?",
+      "answers": {
+        "A": "School",
+        "B": "Workplace",
+        "C": "Household",
+        "D": "Neighborhood"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 171,
+      "category": "School",
+      "question": "What do you write with?",
+      "answers": {
+        "A": "Ruler",
+        "B": "Eraser",
+        "C": "Pencil",
+        "D": "Scissors"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 172,
+      "category": "School",
+      "question": "What do you use to erase mistakes?",
+      "answers": {
+        "A": "Pencil",
+        "B": "Pen",
+        "C": "Eraser",
+        "D": "Ruler"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 173,
+      "category": "School",
+      "question": "What do you use to measure?",
+      "answers": {
+        "A": "Pencil",
+        "B": "Ruler",
+        "C": "Eraser",
+        "D": "Scissors"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 174,
+      "category": "School",
+      "question": "What do you use to cut paper?",
+      "answers": {
+        "A": "Ruler",
+        "B": "Glue",
+        "C": "Scissors",
+        "D": "Pencil"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 175,
+      "category": "School",
+      "question": "What do you use to stick things?",
+      "answers": {
+        "A": "Scissors",
+        "B": "Glue",
+        "C": "Ruler",
+        "D": "Eraser"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 176,
+      "category": "School",
+      "question": "Where do you go to learn?",
+      "answers": {
+        "A": "Hospital",
+        "B": "School",
+        "C": "Market",
+        "D": "Bank"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 177,
+      "category": "School",
+      "question": "Who teaches you at school?",
+      "answers": {
+        "A": "Doctor",
+        "B": "Police",
+        "C": "Teacher",
+        "D": "Nurse"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 178,
+      "category": "School",
+      "question": "What do you carry books in?",
+      "answers": {
+        "A": "Bag / Backpack",
+        "B": "Box",
+        "C": "Pot",
+        "D": "Basket"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 179,
+      "category": "School",
+      "question": "What do you write on at school?",
+      "answers": {
+        "A": "Floor",
+        "B": "Table",
+        "C": "Blackboard",
+        "D": "Window"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 180,
+      "category": "School",
+      "question": "What do you sit on in class?",
+      "answers": {
+        "A": "Table",
+        "B": "Chair",
+        "C": "Floor",
+        "D": "Shelf"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 181,
+      "category": "School",
+      "question": "What do you sit at in class?",
+      "answers": {
+        "A": "Chair",
+        "B": "Desk",
+        "C": "Shelf",
+        "D": "Board"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 182,
+      "category": "School",
+      "question": "What do you read to learn?",
+      "answers": {
+        "A": "Newspaper",
+        "B": "Book",
+        "C": "Menu",
+        "D": "Sign"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 183,
+      "category": "School",
+      "question": "What subject uses numbers?",
+      "answers": {
+        "A": "Art",
+        "B": "Music",
+        "C": "Math",
+        "D": "PE"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 184,
+      "category": "School",
+      "question": "What subject teaches drawing?",
+      "answers": {
+        "A": "Math",
+        "B": "Science",
+        "C": "Art",
+        "D": "History"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 185,
+      "category": "School",
+      "question": "What subject do you sing in?",
+      "answers": {
+        "A": "Math",
+        "B": "Music",
+        "C": "PE",
+        "D": "Science"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 186,
+      "category": "School",
+      "question": "What subject teaches about nature?",
+      "answers": {
+        "A": "Art",
+        "B": "Math",
+        "C": "Music",
+        "D": "Science"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 187,
+      "category": "School",
+      "question": "What do you call the person who runs a school?",
+      "answers": {
+        "A": "Teacher",
+        "B": "Principal",
+        "C": "Librarian",
+        "D": "Janitor"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 188,
+      "category": "School",
+      "question": "Where are books kept at school?",
+      "answers": {
+        "A": "Gym",
+        "B": "Lab",
+        "C": "Library",
+        "D": "Cafeteria"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 189,
+      "category": "School",
+      "question": "What room do students eat in at school?",
+      "answers": {
+        "A": "Library",
+        "B": "Gym",
+        "C": "Lab",
+        "D": "Cafeteria"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 190,
+      "category": "School",
+      "question": "What do we call a picture of the world?",
+      "answers": {
+        "A": "Diagram",
+        "B": "Map",
+        "C": "Chart",
+        "D": "Graph"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 191,
+      "category": "School",
+      "question": "How many days are in a school week?",
+      "answers": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 192,
+      "category": "School",
+      "question": "What do you call your school friends?",
+      "answers": {
+        "A": "Relatives",
+        "B": "Classmates",
+        "C": "Teammates",
+        "D": "Colleagues"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 193,
+      "category": "School",
+      "question": "What subject teaches reading and writing?",
+      "answers": {
+        "A": "Math",
+        "B": "Music",
+        "C": "English",
+        "D": "PE"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 194,
+      "category": "School",
+      "question": "What do you use to color pictures?",
+      "answers": {
+        "A": "Pencil only",
+        "B": "Crayons or colored pencils",
+        "C": "Scissors",
+        "D": "Glue"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 195,
+      "category": "School",
+      "question": "What is a notebook used for?",
+      "answers": {
+        "A": "Eating",
+        "B": "Writing notes",
+        "C": "Cutting paper",
+        "D": "Measuring"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 196,
+      "category": "School",
+      "question": "What does a teacher use to write on the board?",
+      "answers": {
+        "A": "Pencil",
+        "B": "Chalk",
+        "C": "Crayon",
+        "D": "Marker only"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 197,
+      "category": "School",
+      "question": "What do you say when you don't understand?",
+      "answers": {
+        "A": "Thank you",
+        "B": "Sorry",
+        "C": "Can you repeat that?",
+        "D": "Goodbye"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 198,
+      "category": "School",
+      "question": "What time does school usually start?",
+      "answers": {
+        "A": "Late morning",
+        "B": "Afternoon",
+        "C": "Early morning",
+        "D": "Evening"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 199,
+      "category": "School",
+      "question": "What do you call students in the same grade?",
+      "answers": {
+        "A": "Family",
+        "B": "Classmates",
+        "C": "Teachers",
+        "D": "Principals"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 200,
+      "category": "School",
+      "question": "What do you do after finishing an exam?",
+      "answers": {
+        "A": "Play immediately",
+        "B": "Hand in your paper",
+        "C": "Keep writing",
+        "D": "Leave the room"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 201,
+      "category": "Grammar",
+      "question": "Which word means 'I and others'?",
+      "answers": {
+        "A": "He",
+        "B": "She",
+        "C": "We",
+        "D": "They"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 202,
+      "category": "Grammar",
+      "question": "Which word do we use for a boy?",
+      "answers": {
+        "A": "She",
+        "B": "Her",
+        "C": "He",
+        "D": "They"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 203,
+      "category": "Grammar",
+      "question": "Which word do we use for a girl?",
+      "answers": {
+        "A": "He",
+        "B": "His",
+        "C": "Him",
+        "D": "She"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 204,
+      "category": "Grammar",
+      "question": "Which word means more than one person?",
+      "answers": {
+        "A": "He",
+        "B": "She",
+        "C": "It",
+        "D": "They"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 205,
+      "category": "Grammar",
+      "question": "What is the plural of 'cat'?",
+      "answers": {
+        "A": "Cates",
+        "B": "Cats",
+        "C": "Caties",
+        "D": "Cat"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 206,
+      "category": "Grammar",
+      "question": "What is the plural of 'dog'?",
+      "answers": {
+        "A": "Dogen",
+        "B": "Doggy",
+        "C": "Dogs",
+        "D": "Doges"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 207,
+      "category": "Grammar",
+      "question": "What is the plural of 'child'?",
+      "answers": {
+        "A": "Childs",
+        "B": "Children",
+        "C": "Childes",
+        "D": "Childrens"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 208,
+      "category": "Grammar",
+      "question": "What is the plural of 'man'?",
+      "answers": {
+        "A": "Mans",
+        "B": "Manes",
+        "C": "Men",
+        "D": "Menes"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 209,
+      "category": "Grammar",
+      "question": "What is the plural of 'woman'?",
+      "answers": {
+        "A": "Womans",
+        "B": "Women",
+        "C": "Womes",
+        "D": "Womens"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 210,
+      "category": "Grammar",
+      "question": "What is the plural of 'foot'?",
+      "answers": {
+        "A": "Foots",
+        "B": "Feets",
+        "C": "Feet",
+        "D": "Foot"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 211,
+      "category": "Grammar",
+      "question": "What is the plural of 'tooth'?",
+      "answers": {
+        "A": "Tooths",
+        "B": "Teeth",
+        "C": "Toothes",
+        "D": "Teethes"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 212,
+      "category": "Grammar",
+      "question": "Which word comes before a vowel sound: 'a' or 'an'?",
+      "answers": {
+        "A": "a",
+        "B": "an",
+        "C": "the",
+        "D": "some"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 213,
+      "category": "Grammar",
+      "question": "Which is correct: '___ apple'?",
+      "answers": {
+        "A": "a apple",
+        "B": "an apple",
+        "C": "one apple",
+        "D": "some apple"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 214,
+      "category": "Grammar",
+      "question": "Which is correct: '___ book'?",
+      "answers": {
+        "A": "an book",
+        "B": "a book",
+        "C": "one book",
+        "D": "two book"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 215,
+      "category": "Grammar",
+      "question": "What is the opposite of 'big'?",
+      "answers": {
+        "A": "Tall",
+        "B": "Small",
+        "C": "Fast",
+        "D": "Heavy"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 216,
+      "category": "Grammar",
+      "question": "What is the opposite of 'hot'?",
+      "answers": {
+        "A": "Warm",
+        "B": "Cool",
+        "C": "Cold",
+        "D": "Mild"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 217,
+      "category": "Grammar",
+      "question": "What is the opposite of 'happy'?",
+      "answers": {
+        "A": "Sad",
+        "B": "Angry",
+        "C": "Tired",
+        "D": "Bored"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 218,
+      "category": "Grammar",
+      "question": "What is the opposite of 'tall'?",
+      "answers": {
+        "A": "Long",
+        "B": "Wide",
+        "C": "Short",
+        "D": "Fat"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 219,
+      "category": "Grammar",
+      "question": "What is the opposite of 'fast'?",
+      "answers": {
+        "A": "Quick",
+        "B": "Slow",
+        "C": "Late",
+        "D": "Heavy"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 220,
+      "category": "Grammar",
+      "question": "What is the opposite of 'open'?",
+      "answers": {
+        "A": "Lock",
+        "B": "Close",
+        "C": "Shut",
+        "D": "Close / Closed"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 221,
+      "category": "Grammar",
+      "question": "What is the opposite of 'night'?",
+      "answers": {
+        "A": "Evening",
+        "B": "Afternoon",
+        "C": "Day",
+        "D": "Morning"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 222,
+      "category": "Grammar",
+      "question": "What is the opposite of 'old' (for people)?",
+      "answers": {
+        "A": "New",
+        "B": "Young",
+        "C": "Fresh",
+        "D": "Recent"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 223,
+      "category": "Grammar",
+      "question": "What is the opposite of 'clean'?",
+      "answers": {
+        "A": "Messy",
+        "B": "Dirty",
+        "C": "Ugly",
+        "D": "Dark"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 224,
+      "category": "Grammar",
+      "question": "What is the opposite of 'hard'?",
+      "answers": {
+        "A": "Smooth",
+        "B": "Light",
+        "C": "Soft",
+        "D": "Gentle"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 225,
+      "category": "Grammar",
+      "question": "What is the opposite of 'full'?",
+      "answers": {
+        "A": "Half",
+        "B": "Empty",
+        "C": "Less",
+        "D": "Hollow"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 226,
+      "category": "Grammar",
+      "question": "Which word is a verb (action word)?",
+      "answers": {
+        "A": "Happy",
+        "B": "Big",
+        "C": "Run",
+        "D": "Beautiful"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 227,
+      "category": "Grammar",
+      "question": "Which word is an adjective (describing word)?",
+      "answers": {
+        "A": "Jump",
+        "B": "Swim",
+        "C": "Blue",
+        "D": "Eat"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 228,
+      "category": "Grammar",
+      "question": "Which word is a noun (name of a thing)?",
+      "answers": {
+        "A": "Quickly",
+        "B": "Beautiful",
+        "C": "Apple",
+        "D": "Happy"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 229,
+      "category": "Grammar",
+      "question": "What is the correct sentence?",
+      "answers": {
+        "A": "She are happy.",
+        "B": "She is happy.",
+        "C": "She am happy.",
+        "D": "She be happy."
+      },
+      "correct": "B"
+    },
+    {
+      "id": 230,
+      "category": "Grammar",
+      "question": "What is the correct sentence?",
+      "answers": {
+        "A": "They is cats.",
+        "B": "They am cats.",
+        "C": "They are cats.",
+        "D": "They be cats."
+      },
+      "correct": "C"
+    },
+    {
+      "id": 231,
+      "category": "Grammar",
+      "question": "What is the correct sentence?",
+      "answers": {
+        "A": "He have a dog.",
+        "B": "He has a dog.",
+        "C": "He had a dog now.",
+        "D": "He having a dog."
+      },
+      "correct": "B"
+    },
+    {
+      "id": 232,
+      "category": "Grammar",
+      "question": "Which is a question?",
+      "answers": {
+        "A": "I like cats.",
+        "B": "She runs fast.",
+        "C": "Do you like cats?",
+        "D": "They have a dog."
+      },
+      "correct": "C"
+    },
+    {
+      "id": 233,
+      "category": "Grammar",
+      "question": "Which sentence ends with a period?",
+      "answers": {
+        "A": "What is this",
+        "B": "Do you like cats",
+        "C": "I like cats.",
+        "D": "Come here"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 234,
+      "category": "Grammar",
+      "question": "Which sentence ends with a question mark?",
+      "answers": {
+        "A": "I like cats.",
+        "B": "What is this?",
+        "C": "Run fast!",
+        "D": "She is tall."
+      },
+      "correct": "B"
+    },
+    {
+      "id": 235,
+      "category": "Grammar",
+      "question": "Which word shows action: 'The dog ___ fast.'?",
+      "answers": {
+        "A": "big",
+        "B": "runs",
+        "C": "happy",
+        "D": "tall"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 236,
+      "category": "Grammar",
+      "question": "Which word is a color?",
+      "answers": {
+        "A": "Jump",
+        "B": "Run",
+        "C": "Blue",
+        "D": "Fast"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 237,
+      "category": "Grammar",
+      "question": "What is the correct: 'I ___ a student.'?",
+      "answers": {
+        "A": "is",
+        "B": "are",
+        "C": "am",
+        "D": "be"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 238,
+      "category": "Grammar",
+      "question": "What is the correct: 'You ___ my friend.'?",
+      "answers": {
+        "A": "is",
+        "B": "are",
+        "C": "am",
+        "D": "be"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 239,
+      "category": "Grammar",
+      "question": "What is the correct: 'He ___ tall.'?",
+      "answers": {
+        "A": "are",
+        "B": "am",
+        "C": "is",
+        "D": "be"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 240,
+      "category": "Grammar",
+      "question": "What is the correct: 'We ___ happy.'?",
+      "answers": {
+        "A": "is",
+        "B": "am",
+        "C": "be",
+        "D": "are"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 241,
+      "category": "Grammar",
+      "question": "What is the past tense of 'run'?",
+      "answers": {
+        "A": "Runned",
+        "B": "Running",
+        "C": "Ran",
+        "D": "Runs"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 242,
+      "category": "Grammar",
+      "question": "What is the past tense of 'eat'?",
+      "answers": {
+        "A": "Eated",
+        "B": "Eating",
+        "C": "Eats",
+        "D": "Ate"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 243,
+      "category": "Grammar",
+      "question": "What is the past tense of 'go'?",
+      "answers": {
+        "A": "Goed",
+        "B": "Going",
+        "C": "Goes",
+        "D": "Went"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 244,
+      "category": "Grammar",
+      "question": "What is the past tense of 'see'?",
+      "answers": {
+        "A": "Seed",
+        "B": "Seeing",
+        "C": "Saw",
+        "D": "Sees"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 245,
+      "category": "Grammar",
+      "question": "What is the past tense of 'have'?",
+      "answers": {
+        "A": "Haved",
+        "B": "Having",
+        "C": "Has",
+        "D": "Had"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 246,
+      "category": "Grammar",
+      "question": "What does 'big' mean?",
+      "answers": {
+        "A": "Small",
+        "B": "Large",
+        "C": "Short",
+        "D": "Fast"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 247,
+      "category": "Grammar",
+      "question": "What does 'happy' mean?",
+      "answers": {
+        "A": "Sad",
+        "B": "Angry",
+        "C": "Joyful",
+        "D": "Tired"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 248,
+      "category": "Grammar",
+      "question": "What does 'fast' mean?",
+      "answers": {
+        "A": "Slow",
+        "B": "Quick",
+        "C": "Quiet",
+        "D": "Tall"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 249,
+      "category": "Grammar",
+      "question": "Which sentence is correct?",
+      "answers": {
+        "A": "She don't like cats.",
+        "B": "She doesn't likes cats.",
+        "C": "She doesn't like cats.",
+        "D": "She not like cats."
+      },
+      "correct": "C"
+    },
+    {
+      "id": 250,
+      "category": "Grammar",
+      "question": "Which is the correct question?",
+      "answers": {
+        "A": "Do she have a cat?",
+        "B": "Does she has a cat?",
+        "C": "Does she have a cat?",
+        "D": "Have she a cat?"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 251,
+      "category": "Grammar",
+      "question": "What does 'beautiful' describe?",
+      "answers": {
+        "A": "An action",
+        "B": "Something lovely to look at",
+        "C": "A place",
+        "D": "A sound"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 252,
+      "category": "Grammar",
+      "question": "What type of word is 'quickly'?",
+      "answers": {
+        "A": "Noun",
+        "B": "Verb",
+        "C": "Adverb",
+        "D": "Adjective"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 253,
+      "category": "Grammar",
+      "question": "What type of word is 'dog'?",
+      "answers": {
+        "A": "Verb",
+        "B": "Adjective",
+        "C": "Adverb",
+        "D": "Noun"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 254,
+      "category": "Grammar",
+      "question": "Which word is a number?",
+      "answers": {
+        "A": "Red",
+        "B": "Three",
+        "C": "Run",
+        "D": "Big"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 255,
+      "category": "Grammar",
+      "question": "Which is correct?",
+      "answers": {
+        "A": "There are a apple.",
+        "B": "There is an apple.",
+        "C": "There is a apple.",
+        "D": "There are an apple."
+      },
+      "correct": "B"
+    },
+    {
+      "id": 256,
+      "category": "Grammar",
+      "question": "What is the correct plural: 'one box, two ___'?",
+      "answers": {
+        "A": "Boxs",
+        "B": "Boxes",
+        "C": "Boxies",
+        "D": "Boces"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 257,
+      "category": "Grammar",
+      "question": "What is the correct plural: 'one bus, two ___'?",
+      "answers": {
+        "A": "Buss",
+        "B": "Busies",
+        "C": "Buses",
+        "D": "Bus"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 258,
+      "category": "Grammar",
+      "question": "What is the correct plural: 'one city, two ___'?",
+      "answers": {
+        "A": "Citys",
+        "B": "Cities",
+        "C": "Cityes",
+        "D": "Citiss"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 259,
+      "category": "Grammar",
+      "question": "What punctuation ends a sentence?",
+      "answers": {
+        "A": "Comma",
+        "B": "Apostrophe",
+        "C": "Period",
+        "D": "Colon"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 260,
+      "category": "Grammar",
+      "question": "What punctuation is used in a question?",
+      "answers": {
+        "A": "Period",
+        "B": "Comma",
+        "C": "Exclamation mark",
+        "D": "Question mark"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 261,
+      "category": "Numbers & Math",
+      "question": "How much is 2 + 3?",
+      "answers": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 262,
+      "category": "Numbers & Math",
+      "question": "How much is 5 + 5?",
+      "answers": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 263,
+      "category": "Numbers & Math",
+      "question": "How much is 7 + 3?",
+      "answers": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 264,
+      "category": "Numbers & Math",
+      "question": "How much is 4 + 6?",
+      "answers": {
+        "A": "8",
+        "B": "9",
+        "C": "11",
+        "D": "10"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 265,
+      "category": "Numbers & Math",
+      "question": "How much is 8 + 2?",
+      "answers": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 266,
+      "category": "Numbers & Math",
+      "question": "How much is 10 - 3?",
+      "answers": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 267,
+      "category": "Numbers & Math",
+      "question": "How much is 9 - 4?",
+      "answers": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 268,
+      "category": "Numbers & Math",
+      "question": "How much is 8 - 5?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 269,
+      "category": "Numbers & Math",
+      "question": "How much is 10 - 7?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 270,
+      "category": "Numbers & Math",
+      "question": "How much is 6 - 2?",
+      "answers": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 271,
+      "category": "Numbers & Math",
+      "question": "How do you write twelve in numbers?",
+      "answers": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "21"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 272,
+      "category": "Numbers & Math",
+      "question": "How do you write fifteen in numbers?",
+      "answers": {
+        "A": "13",
+        "B": "14",
+        "C": "15",
+        "D": "50"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 273,
+      "category": "Numbers & Math",
+      "question": "How do you write twenty in numbers?",
+      "answers": {
+        "A": "12",
+        "B": "21",
+        "C": "20",
+        "D": "22"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 274,
+      "category": "Numbers & Math",
+      "question": "What number comes after 19?",
+      "answers": {
+        "A": "18",
+        "B": "21",
+        "C": "20",
+        "D": "22"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 275,
+      "category": "Numbers & Math",
+      "question": "What number comes before 10?",
+      "answers": {
+        "A": "8",
+        "B": "9",
+        "C": "11",
+        "D": "12"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 276,
+      "category": "Numbers & Math",
+      "question": "What is half of 10?",
+      "answers": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "8"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 277,
+      "category": "Numbers & Math",
+      "question": "What is double of 5?",
+      "answers": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "12"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 278,
+      "category": "Numbers & Math",
+      "question": "Which number is the biggest?",
+      "answers": {
+        "A": "15",
+        "B": "20",
+        "C": "18",
+        "D": "12"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 279,
+      "category": "Numbers & Math",
+      "question": "Which number is the smallest?",
+      "answers": {
+        "A": "20",
+        "B": "15",
+        "C": "8",
+        "D": "12"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 280,
+      "category": "Numbers & Math",
+      "question": "How many days are in a week?",
+      "answers": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 281,
+      "category": "Numbers & Math",
+      "question": "How many months are in a year?",
+      "answers": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "13"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 282,
+      "category": "Numbers & Math",
+      "question": "How many hours are in a day?",
+      "answers": {
+        "A": "12",
+        "B": "20",
+        "C": "24",
+        "D": "30"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 283,
+      "category": "Numbers & Math",
+      "question": "How many minutes are in an hour?",
+      "answers": {
+        "A": "30",
+        "B": "60",
+        "C": "90",
+        "D": "100"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 284,
+      "category": "Numbers & Math",
+      "question": "How many seconds are in a minute?",
+      "answers": {
+        "A": "30",
+        "B": "60",
+        "C": "90",
+        "D": "100"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 285,
+      "category": "Numbers & Math",
+      "question": "What number is between 5 and 7?",
+      "answers": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "9"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 286,
+      "category": "Numbers & Math",
+      "question": "What is 3 × 2?",
+      "answers": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 287,
+      "category": "Numbers & Math",
+      "question": "What is 2 × 4?",
+      "answers": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 288,
+      "category": "Numbers & Math",
+      "question": "What is 5 × 2?",
+      "answers": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "12"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 289,
+      "category": "Numbers & Math",
+      "question": "What is 10 ÷ 2?",
+      "answers": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 290,
+      "category": "Numbers & Math",
+      "question": "What is 6 ÷ 2?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 291,
+      "category": "Numbers & Math",
+      "question": "What is the number before 100?",
+      "answers": {
+        "A": "98",
+        "B": "99",
+        "C": "101",
+        "D": "90"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 292,
+      "category": "Numbers & Math",
+      "question": "What is 1 + 1 + 1?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 293,
+      "category": "Numbers & Math",
+      "question": "What does 'dozen' mean?",
+      "answers": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "13"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 294,
+      "category": "Numbers & Math",
+      "question": "Which number is even?",
+      "answers": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "8"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 295,
+      "category": "Numbers & Math",
+      "question": "Which number is odd?",
+      "answers": {
+        "A": "2",
+        "B": "4",
+        "C": "7",
+        "D": "8"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 296,
+      "category": "Numbers & Math",
+      "question": "What comes after one hundred?",
+      "answers": {
+        "A": "Ninety-nine",
+        "B": "One hundred one",
+        "C": "Two hundred",
+        "D": "One thousand"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 297,
+      "category": "Numbers & Math",
+      "question": "What is 15 + 5?",
+      "answers": {
+        "A": "18",
+        "B": "19",
+        "C": "20",
+        "D": "21"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 298,
+      "category": "Numbers & Math",
+      "question": "What is 20 - 10?",
+      "answers": {
+        "A": "5",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 299,
+      "category": "Numbers & Math",
+      "question": "Which is correct: 5 ___ 3 = 8?",
+      "answers": {
+        "A": "-",
+        "B": "×",
+        "C": "+",
+        "D": "÷"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 300,
+      "category": "Numbers & Math",
+      "question": "Which is correct: 10 ___ 2 = 5?",
+      "answers": {
+        "A": "+",
+        "B": "-",
+        "C": "×",
+        "D": "÷"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 301,
+      "category": "Weather & Seasons",
+      "question": "How many seasons are there?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 302,
+      "category": "Weather & Seasons",
+      "question": "Which season is the hottest?",
+      "answers": {
+        "A": "Spring",
+        "B": "Summer",
+        "C": "Autumn",
+        "D": "Winter"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 303,
+      "category": "Weather & Seasons",
+      "question": "Which season is the coldest?",
+      "answers": {
+        "A": "Spring",
+        "B": "Summer",
+        "C": "Autumn",
+        "D": "Winter"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 304,
+      "category": "Weather & Seasons",
+      "question": "When do leaves fall from trees?",
+      "answers": {
+        "A": "Spring",
+        "B": "Summer",
+        "C": "Autumn",
+        "D": "Winter"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 305,
+      "category": "Weather & Seasons",
+      "question": "When do flowers bloom?",
+      "answers": {
+        "A": "Winter",
+        "B": "Autumn",
+        "C": "Spring",
+        "D": "Summer"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 306,
+      "category": "Weather & Seasons",
+      "question": "What falls from the sky in winter?",
+      "answers": {
+        "A": "Rain",
+        "B": "Snow",
+        "C": "Hail",
+        "D": "All of these"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 307,
+      "category": "Weather & Seasons",
+      "question": "What do we use when it rains?",
+      "answers": {
+        "A": "Fan",
+        "B": "Sunglasses",
+        "C": "Umbrella",
+        "D": "Scarf"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 308,
+      "category": "Weather & Seasons",
+      "question": "What does the sun give us?",
+      "answers": {
+        "A": "Rain",
+        "B": "Snow",
+        "C": "Heat and light",
+        "D": "Wind"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 309,
+      "category": "Weather & Seasons",
+      "question": "What is it called when water falls from clouds?",
+      "answers": {
+        "A": "Wind",
+        "B": "Snow",
+        "C": "Rain",
+        "D": "Fog"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 310,
+      "category": "Weather & Seasons",
+      "question": "Which weather is sunny?",
+      "answers": {
+        "A": "Rainy",
+        "B": "Cloudy",
+        "C": "Foggy",
+        "D": "Clear and bright"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 311,
+      "category": "Weather & Seasons",
+      "question": "What do we wear in winter?",
+      "answers": {
+        "A": "T-shirt",
+        "B": "Coat and scarf",
+        "C": "Swimsuit",
+        "D": "Shorts"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 312,
+      "category": "Weather & Seasons",
+      "question": "What do we wear in summer?",
+      "answers": {
+        "A": "Heavy coat",
+        "B": "Boots",
+        "C": "T-shirt and shorts",
+        "D": "Thick sweater"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 313,
+      "category": "Weather & Seasons",
+      "question": "What is a weather condition with no sun?",
+      "answers": {
+        "A": "Sunny",
+        "B": "Cloudy",
+        "C": "Hot",
+        "D": "Bright"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 314,
+      "category": "Weather & Seasons",
+      "question": "When is it safe to go to the beach?",
+      "answers": {
+        "A": "Winter",
+        "B": "Rainy season",
+        "C": "Summer",
+        "D": "Stormy weather"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 315,
+      "category": "Weather & Seasons",
+      "question": "What comes after lightning?",
+      "answers": {
+        "A": "Rain",
+        "B": "Thunder",
+        "C": "Snow",
+        "D": "Wind"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 316,
+      "category": "Weather & Seasons",
+      "question": "What is fog?",
+      "answers": {
+        "A": "Low cloud near ground",
+        "B": "Heavy rain",
+        "C": "Strong wind",
+        "D": "Hot weather"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 317,
+      "category": "Weather & Seasons",
+      "question": "What instrument measures temperature?",
+      "answers": {
+        "A": "Ruler",
+        "B": "Thermometer",
+        "C": "Scale",
+        "D": "Clock"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 318,
+      "category": "Weather & Seasons",
+      "question": "What is a tornado?",
+      "answers": {
+        "A": "A type of rain",
+        "B": "A spinning windstorm",
+        "C": "A type of snow",
+        "D": "A calm day"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 319,
+      "category": "Weather & Seasons",
+      "question": "What month does summer usually start in (Northern Hemisphere)?",
+      "answers": {
+        "A": "March",
+        "B": "April",
+        "C": "June",
+        "D": "September"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 320,
+      "category": "Weather & Seasons",
+      "question": "What is 'windy' weather?",
+      "answers": {
+        "A": "Hot and sunny",
+        "B": "Cold and snowy",
+        "C": "With strong wind",
+        "D": "Foggy and cloudy"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 321,
+      "category": "Weather & Seasons",
+      "question": "What does 'temperature' measure?",
+      "answers": {
+        "A": "Wind speed",
+        "B": "Rainfall amount",
+        "C": "How hot or cold something is",
+        "D": "Cloud amount"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 322,
+      "category": "Weather & Seasons",
+      "question": "What is a weather forecast?",
+      "answers": {
+        "A": "A type of weather",
+        "B": "A prediction of future weather",
+        "C": "A weather instrument",
+        "D": "A season"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 323,
+      "category": "Weather & Seasons",
+      "question": "What is a rainbow caused by?",
+      "answers": {
+        "A": "Snow",
+        "B": "Wind",
+        "C": "Fog",
+        "D": "Sun and rain together"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 324,
+      "category": "Weather & Seasons",
+      "question": "How many colors are in a rainbow?",
+      "answers": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 325,
+      "category": "Weather & Seasons",
+      "question": "What season comes after summer?",
+      "answers": {
+        "A": "Spring",
+        "B": "Winter",
+        "C": "Autumn",
+        "D": "nan"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 326,
+      "category": "Daily Activities",
+      "question": "What do you do first in the morning?",
+      "answers": {
+        "A": "Have lunch",
+        "B": "Go to sleep",
+        "C": "Wake up",
+        "D": "Do homework"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 327,
+      "category": "Daily Activities",
+      "question": "What do you do before going to bed?",
+      "answers": {
+        "A": "Have breakfast",
+        "B": "Brush your teeth",
+        "C": "Play outside",
+        "D": "Go to school"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 328,
+      "category": "Daily Activities",
+      "question": "What do you do three times a day for your teeth?",
+      "answers": {
+        "A": "Comb hair",
+        "B": "Brush teeth",
+        "C": "Wash hands",
+        "D": "Exercise"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 329,
+      "category": "Daily Activities",
+      "question": "When do you eat breakfast?",
+      "answers": {
+        "A": "At night",
+        "B": "In the afternoon",
+        "C": "In the morning",
+        "D": "After dinner"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 330,
+      "category": "Daily Activities",
+      "question": "When do you eat dinner?",
+      "answers": {
+        "A": "Morning",
+        "B": "Afternoon",
+        "C": "Evening",
+        "D": "Midnight"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 331,
+      "category": "Daily Activities",
+      "question": "What do you do when you feel sleepy?",
+      "answers": {
+        "A": "Eat",
+        "B": "Exercise",
+        "C": "Sleep",
+        "D": "Study"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 332,
+      "category": "Daily Activities",
+      "question": "What do you say when you greet someone in the morning?",
+      "answers": {
+        "A": "Good night",
+        "B": "Good afternoon",
+        "C": "Good evening",
+        "D": "Good morning"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 333,
+      "category": "Daily Activities",
+      "question": "What do you say when you meet someone?",
+      "answers": {
+        "A": "Goodbye",
+        "B": "Hello",
+        "C": "Thank you",
+        "D": "Sorry"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 334,
+      "category": "Daily Activities",
+      "question": "What do you say when you leave?",
+      "answers": {
+        "A": "Hello",
+        "B": "How are you?",
+        "C": "Goodbye",
+        "D": "Please"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 335,
+      "category": "Daily Activities",
+      "question": "What do you say to show gratitude?",
+      "answers": {
+        "A": "Sorry",
+        "B": "Please",
+        "C": "Thank you",
+        "D": "Hello"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 336,
+      "category": "Daily Activities",
+      "question": "What do you say when you make a mistake?",
+      "answers": {
+        "A": "Thank you",
+        "B": "Please",
+        "C": "Sorry",
+        "D": "Hello"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 337,
+      "category": "Daily Activities",
+      "question": "When is midnight?",
+      "answers": {
+        "A": "12 noon",
+        "B": "12 at night",
+        "C": "6 in evening",
+        "D": "Early morning"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 338,
+      "category": "Daily Activities",
+      "question": "What comes after Tuesday?",
+      "answers": {
+        "A": "Monday",
+        "B": "Wednesday",
+        "C": "Thursday",
+        "D": "Friday"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 339,
+      "category": "Daily Activities",
+      "question": "What comes after Wednesday?",
+      "answers": {
+        "A": "Tuesday",
+        "B": "Thursday",
+        "C": "Friday",
+        "D": "Monday"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 340,
+      "category": "Daily Activities",
+      "question": "What is the first day of the week (Sunday calendar)?",
+      "answers": {
+        "A": "Monday",
+        "B": "Friday",
+        "C": "Sunday",
+        "D": "Saturday"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 341,
+      "category": "Daily Activities",
+      "question": "What is the last day of the school week?",
+      "answers": {
+        "A": "Thursday",
+        "B": "Sunday",
+        "C": "Saturday",
+        "D": "Friday"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 342,
+      "category": "Daily Activities",
+      "question": "What are Saturday and Sunday called?",
+      "answers": {
+        "A": "Weekdays",
+        "B": "School days",
+        "C": "Weekend",
+        "D": "Workdays"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 343,
+      "category": "Daily Activities",
+      "question": "How many days are in a week?",
+      "answers": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 344,
+      "category": "Daily Activities",
+      "question": "What do you do in PE class?",
+      "answers": {
+        "A": "Read books",
+        "B": "Exercise and play sports",
+        "C": "Draw pictures",
+        "D": "Sing songs"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 345,
+      "category": "Daily Activities",
+      "question": "What time do most schools start?",
+      "answers": {
+        "A": "5am",
+        "B": "7-8am",
+        "C": "10am",
+        "D": "12pm"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 346,
+      "category": "Daily Activities",
+      "question": "What does a calendar show?",
+      "answers": {
+        "A": "Weather",
+        "B": "Time of day",
+        "C": "Days, months, and years",
+        "D": "Temperature"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 347,
+      "category": "Daily Activities",
+      "question": "What is your schedule?",
+      "answers": {
+        "A": "A type of sport",
+        "B": "A plan showing times and activities",
+        "C": "A type of food",
+        "D": "A weather report"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 348,
+      "category": "Daily Activities",
+      "question": "How many months have 31 days?",
+      "answers": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 349,
+      "category": "Daily Activities",
+      "question": "Which month is the last of the year?",
+      "answers": {
+        "A": "November",
+        "B": "October",
+        "C": "December",
+        "D": "January"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 350,
+      "category": "Daily Activities",
+      "question": "Which month is the first of the year?",
+      "answers": {
+        "A": "February",
+        "B": "January",
+        "C": "March",
+        "D": "December"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 351,
+      "category": "Daily Activities",
+      "question": "What is the day after today called?",
+      "answers": {
+        "A": "Yesterday",
+        "B": "Today",
+        "C": "Tomorrow",
+        "D": "Later"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 352,
+      "category": "Daily Activities",
+      "question": "What is the day before today called?",
+      "answers": {
+        "A": "Tomorrow",
+        "B": "Yesterday",
+        "C": "Later",
+        "D": "Soon"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 353,
+      "category": "Daily Activities",
+      "question": "What do you do on a school holiday?",
+      "answers": {
+        "A": "Go to class",
+        "B": "Study all day",
+        "C": "Rest and play",
+        "D": "Take exams"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 354,
+      "category": "Daily Activities",
+      "question": "What is an alarm clock used for?",
+      "answers": {
+        "A": "Telling stories",
+        "B": "Cooking food",
+        "C": "Waking you up",
+        "D": "Measuring temperature"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 355,
+      "category": "Daily Activities",
+      "question": "What do you put on after a shower?",
+      "answers": {
+        "A": "Pajamas",
+        "B": "Clothes",
+        "C": "Swimsuit",
+        "D": "Nothing"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 356,
+      "category": "Places & Transport",
+      "question": "Where do sick people go?",
+      "answers": {
+        "A": "School",
+        "B": "Hospital",
+        "C": "Market",
+        "D": "Library"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 357,
+      "category": "Places & Transport",
+      "question": "Where do you buy things?",
+      "answers": {
+        "A": "Hospital",
+        "B": "School",
+        "C": "Market / Shop",
+        "D": "Library"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 358,
+      "category": "Places & Transport",
+      "question": "Where do you borrow books?",
+      "answers": {
+        "A": "Market",
+        "B": "Hospital",
+        "C": "Library",
+        "D": "School only"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 359,
+      "category": "Places & Transport",
+      "question": "Where do planes land and take off?",
+      "answers": {
+        "A": "Station",
+        "B": "Port",
+        "C": "Airport",
+        "D": "Bus stop"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 360,
+      "category": "Places & Transport",
+      "question": "Where do trains stop?",
+      "answers": {
+        "A": "Airport",
+        "B": "Station",
+        "C": "Port",
+        "D": "Bus stop"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 361,
+      "category": "Places & Transport",
+      "question": "Where do ships dock?",
+      "answers": {
+        "A": "Airport",
+        "B": "Station",
+        "C": "Port / Harbor",
+        "D": "Bus stop"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 362,
+      "category": "Places & Transport",
+      "question": "What vehicle has two wheels?",
+      "answers": {
+        "A": "Car",
+        "B": "Truck",
+        "C": "Bicycle",
+        "D": "Bus"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 363,
+      "category": "Places & Transport",
+      "question": "What vehicle has four wheels and many seats?",
+      "answers": {
+        "A": "Bicycle",
+        "B": "Motorbike",
+        "C": "Car",
+        "D": "Bus"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 364,
+      "category": "Places & Transport",
+      "question": "What vehicle travels in water?",
+      "answers": {
+        "A": "Airplane",
+        "B": "Car",
+        "C": "Train",
+        "D": "Ship"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 365,
+      "category": "Places & Transport",
+      "question": "What vehicle travels in the sky?",
+      "answers": {
+        "A": "Car",
+        "B": "Bicycle",
+        "C": "Airplane",
+        "D": "Boat"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 366,
+      "category": "Places & Transport",
+      "question": "What vehicle travels on rails?",
+      "answers": {
+        "A": "Car",
+        "B": "Train",
+        "C": "Bicycle",
+        "D": "Truck"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 367,
+      "category": "Places & Transport",
+      "question": "What do we call a person who drives a car?",
+      "answers": {
+        "A": "Pilot",
+        "B": "Captain",
+        "C": "Driver",
+        "D": "Conductor"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 368,
+      "category": "Places & Transport",
+      "question": "What do we call a person who flies a plane?",
+      "answers": {
+        "A": "Driver",
+        "B": "Sailor",
+        "C": "Pilot",
+        "D": "Captain"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 369,
+      "category": "Places & Transport",
+      "question": "Where do you go to pray?",
+      "answers": {
+        "A": "Hospital",
+        "B": "Market",
+        "C": "Temple / Church",
+        "D": "Library"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 370,
+      "category": "Places & Transport",
+      "question": "Where do firefighters work?",
+      "answers": {
+        "A": "Hospital",
+        "B": "Fire station",
+        "C": "Police station",
+        "D": "Market"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 371,
+      "category": "Places & Transport",
+      "question": "Where do police officers work?",
+      "answers": {
+        "A": "Hospital",
+        "B": "Fire station",
+        "C": "Police station",
+        "D": "Market"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 372,
+      "category": "Places & Transport",
+      "question": "What do you call the place where you live?",
+      "answers": {
+        "A": "Office",
+        "B": "School",
+        "C": "Home",
+        "D": "Hospital"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 373,
+      "category": "Places & Transport",
+      "question": "What is a road with many lanes called?",
+      "answers": {
+        "A": "Street",
+        "B": "Path",
+        "C": "Highway",
+        "D": "Alley"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 374,
+      "category": "Places & Transport",
+      "question": "What signal tells drivers to stop?",
+      "answers": {
+        "A": "Green light",
+        "B": "Yellow light",
+        "C": "Red light",
+        "D": "White light"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 375,
+      "category": "Places & Transport",
+      "question": "What signal tells drivers to go?",
+      "answers": {
+        "A": "Red light",
+        "B": "Yellow light",
+        "C": "Green light",
+        "D": "Blue light"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 376,
+      "category": "Places & Transport",
+      "question": "What do you call a place where children play?",
+      "answers": {
+        "A": "Library",
+        "B": "Playground",
+        "C": "Hospital",
+        "D": "Office"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 377,
+      "category": "Places & Transport",
+      "question": "What is a zoo?",
+      "answers": {
+        "A": "A place to buy things",
+        "B": "A school for animals",
+        "C": "A place where animals are kept",
+        "D": "A hospital"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 378,
+      "category": "Places & Transport",
+      "question": "Where do farmers work?",
+      "answers": {
+        "A": "Office",
+        "B": "Factory",
+        "C": "Farm",
+        "D": "Hospital"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 379,
+      "category": "Places & Transport",
+      "question": "What is a skyscraper?",
+      "answers": {
+        "A": "A type of vehicle",
+        "B": "A very tall building",
+        "C": "A type of road",
+        "D": "A small house"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 380,
+      "category": "Places & Transport",
+      "question": "Where do students learn?",
+      "answers": {
+        "A": "Hospital",
+        "B": "Market",
+        "C": "School",
+        "D": "Factory"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 381,
+      "category": "Places & Transport",
+      "question": "What vehicle do most children take to school?",
+      "answers": {
+        "A": "Airplane",
+        "B": "Ship",
+        "C": "School bus",
+        "D": "Helicopter"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 382,
+      "category": "Places & Transport",
+      "question": "What is a pedestrian?",
+      "answers": {
+        "A": "A person who drives",
+        "B": "A person who walks",
+        "C": "A person who flies",
+        "D": "A type of road"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 383,
+      "category": "Places & Transport",
+      "question": "What is a crosswalk?",
+      "answers": {
+        "A": "A car park",
+        "B": "A marked area for crossing the road",
+        "C": "A type of road",
+        "D": "A bridge"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 384,
+      "category": "Places & Transport",
+      "question": "Where do people swim laps?",
+      "answers": {
+        "A": "Pond",
+        "B": "Lake",
+        "C": "Ocean",
+        "D": "Swimming pool"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 385,
+      "category": "Places & Transport",
+      "question": "What do we call a person's permanent address?",
+      "answers": {
+        "A": "Workplace",
+        "B": "School",
+        "C": "Home address",
+        "D": "Hotel"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 386,
+      "category": "Reading Comprehension",
+      "question": "'The cat is on the mat.' Where is the cat?",
+      "answers": {
+        "A": "Under the mat",
+        "B": "Beside the mat",
+        "C": "On the mat",
+        "D": "Behind the mat"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 387,
+      "category": "Reading Comprehension",
+      "question": "'Tom has a red ball.' What color is the ball?",
+      "answers": {
+        "A": "Blue",
+        "B": "Green",
+        "C": "Yellow",
+        "D": "Red"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 388,
+      "category": "Reading Comprehension",
+      "question": "'Sara eats an apple every day.' What does Sara eat?",
+      "answers": {
+        "A": "A banana",
+        "B": "An orange",
+        "C": "An apple",
+        "D": "A mango"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 389,
+      "category": "Reading Comprehension",
+      "question": "'It is raining outside.' What is the weather?",
+      "answers": {
+        "A": "Sunny",
+        "B": "Cloudy",
+        "C": "Rainy",
+        "D": "Snowy"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 390,
+      "category": "Reading Comprehension",
+      "question": "'Ben is 7 years old.' How old is Ben?",
+      "answers": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 391,
+      "category": "Reading Comprehension",
+      "question": "'The dog is big and brown.' What color is the dog?",
+      "answers": {
+        "A": "Black",
+        "B": "White",
+        "C": "Brown",
+        "D": "Grey"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 392,
+      "category": "Reading Comprehension",
+      "question": "'My mother is a doctor.' What is mother's job?",
+      "answers": {
+        "A": "Teacher",
+        "B": "Nurse",
+        "C": "Doctor",
+        "D": "Chef"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 393,
+      "category": "Reading Comprehension",
+      "question": "'We go to school by bus.' How do they go to school?",
+      "answers": {
+        "A": "By car",
+        "B": "By bike",
+        "C": "By bus",
+        "D": "On foot"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 394,
+      "category": "Reading Comprehension",
+      "question": "'The flower is pink and yellow.' How many colors are mentioned?",
+      "answers": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 395,
+      "category": "Reading Comprehension",
+      "question": "'Lily has two cats and one dog.' How many pets does Lily have?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 396,
+      "category": "Reading Comprehension",
+      "question": "'Peter wakes up at 7 o'clock.' When does Peter wake up?",
+      "answers": {
+        "A": "6 o'clock",
+        "B": "7 o'clock",
+        "C": "8 o'clock",
+        "D": "9 o'clock"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 397,
+      "category": "Reading Comprehension",
+      "question": "'The bird sings in the tree.' Where does the bird sing?",
+      "answers": {
+        "A": "In the cage",
+        "B": "On the ground",
+        "C": "In the tree",
+        "D": "In the house"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 398,
+      "category": "Reading Comprehension",
+      "question": "'My dad is tall and strong.' What describes dad?",
+      "answers": {
+        "A": "Short and weak",
+        "B": "Tall and strong",
+        "C": "Tall and thin",
+        "D": "Short and strong"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 399,
+      "category": "Reading Comprehension",
+      "question": "'Sam drinks milk every morning.' What does Sam drink?",
+      "answers": {
+        "A": "Juice",
+        "B": "Water",
+        "C": "Milk",
+        "D": "Tea"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 400,
+      "category": "Reading Comprehension",
+      "question": "'There are five fish in the tank.' How many fish are there?",
+      "answers": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 401,
+      "category": "Reading Comprehension",
+      "question": "'Anna wears a blue dress today.' What color is Anna's dress?",
+      "answers": {
+        "A": "Red",
+        "B": "Blue",
+        "C": "Green",
+        "D": "Yellow"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 402,
+      "category": "Reading Comprehension",
+      "question": "'The baby is sleeping in the crib.' What is the baby doing?",
+      "answers": {
+        "A": "Playing",
+        "B": "Eating",
+        "C": "Sleeping",
+        "D": "Crying"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 403,
+      "category": "Reading Comprehension",
+      "question": "'Jake and his friends play football.' What sport do they play?",
+      "answers": {
+        "A": "Basketball",
+        "B": "Tennis",
+        "C": "Football",
+        "D": "Volleyball"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 404,
+      "category": "Reading Comprehension",
+      "question": "'Mom bakes a chocolate cake.' What does mom bake?",
+      "answers": {
+        "A": "A bread",
+        "B": "A pie",
+        "C": "A cookie",
+        "D": "A chocolate cake"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 405,
+      "category": "Reading Comprehension",
+      "question": "'The sun sets in the west.' Where does the sun set?",
+      "answers": {
+        "A": "East",
+        "B": "North",
+        "C": "South",
+        "D": "West"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 406,
+      "category": "Reading Comprehension",
+      "question": "'She is very CHEERFUL today.' What does cheerful mean?",
+      "answers": {
+        "A": "Sad",
+        "B": "Angry",
+        "C": "Happy",
+        "D": "Tired"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 407,
+      "category": "Reading Comprehension",
+      "question": "'The baby CRIED all night.' What did the baby do?",
+      "answers": {
+        "A": "Laughed",
+        "B": "Slept",
+        "C": "Cried",
+        "D": "Played"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 408,
+      "category": "Reading Comprehension",
+      "question": "'He RUNS to school every day.' What does he do?",
+      "answers": {
+        "A": "Walk",
+        "B": "Run",
+        "C": "Ride",
+        "D": "Skip"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 409,
+      "category": "Reading Comprehension",
+      "question": "'The ENORMOUS elephant sat down.' What does enormous mean?",
+      "answers": {
+        "A": "Very small",
+        "B": "Very fast",
+        "C": "Very heavy",
+        "D": "Very big"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 410,
+      "category": "Reading Comprehension",
+      "question": "'She WHISPERED a secret.' What does whispered mean?",
+      "answers": {
+        "A": "Spoke very loudly",
+        "B": "Spoke very softly",
+        "C": "Shouted",
+        "D": "Sang"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 411,
+      "category": "Reading Comprehension",
+      "question": "'The cake was DELICIOUS.' What does delicious mean?",
+      "answers": {
+        "A": "Very ugly",
+        "B": "Very hot",
+        "C": "Very tasty",
+        "D": "Very cold"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 412,
+      "category": "Reading Comprehension",
+      "question": "'He was FURIOUS when he lost.' What does furious mean?",
+      "answers": {
+        "A": "Very happy",
+        "B": "Very sad",
+        "C": "Very tired",
+        "D": "Very angry"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 413,
+      "category": "Reading Comprehension",
+      "question": "'The room was FILTHY.' What does filthy mean?",
+      "answers": {
+        "A": "Very clean",
+        "B": "Very bright",
+        "C": "Very dirty",
+        "D": "Very big"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 414,
+      "category": "Reading Comprehension",
+      "question": "'She was EXHAUSTED after the race.' What does exhausted mean?",
+      "answers": {
+        "A": "Very excited",
+        "B": "Very tired",
+        "C": "Very happy",
+        "D": "Very hungry"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 415,
+      "category": "Reading Comprehension",
+      "question": "'The boy was BRAVE.' What does brave mean?",
+      "answers": {
+        "A": "Scared",
+        "B": "Funny",
+        "C": "Courageous",
+        "D": "Clever"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 416,
+      "category": "Reading Comprehension",
+      "question": "Which is NOT a complete sentence?",
+      "answers": {
+        "A": "I like cats.",
+        "B": "She runs fast.",
+        "C": "The big dog.",
+        "D": "We eat lunch."
+      },
+      "correct": "C"
+    },
+    {
+      "id": 417,
+      "category": "Reading Comprehension",
+      "question": "Which sentence starts correctly?",
+      "answers": {
+        "A": "the dog runs.",
+        "B": "The dog runs.",
+        "C": "the Dog runs.",
+        "D": "the dog Runs."
+      },
+      "correct": "B"
+    },
+    {
+      "id": 418,
+      "category": "Reading Comprehension",
+      "question": "Which sentence has correct punctuation?",
+      "answers": {
+        "A": "I am happy",
+        "B": "I am happy?",
+        "C": "I am happy.",
+        "D": "i am happy."
+      },
+      "correct": "C"
+    },
+    {
+      "id": 419,
+      "category": "Reading Comprehension",
+      "question": "Which question is correct?",
+      "answers": {
+        "A": "where is my book?",
+        "B": "Where is my book?",
+        "C": "where Is my Book?",
+        "D": "Where Is My Book?"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 420,
+      "category": "Reading Comprehension",
+      "question": "Which word fits: 'She ___ to school.'?",
+      "answers": {
+        "A": "walk",
+        "B": "walks",
+        "C": "walking",
+        "D": "walked"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 421,
+      "category": "Reading Comprehension",
+      "question": "Which word fits: 'They ___ lunch.'?",
+      "answers": {
+        "A": "eat",
+        "B": "eats",
+        "C": "ate",
+        "D": "eaten"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 422,
+      "category": "Reading Comprehension",
+      "question": "Which word fits: 'I ___ a book.'?",
+      "answers": {
+        "A": "reads",
+        "B": "read",
+        "C": "reading",
+        "D": "readed"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 423,
+      "category": "Reading Comprehension",
+      "question": "Which word fits: 'He ___ football.'?",
+      "answers": {
+        "A": "play",
+        "B": "plays",
+        "C": "played",
+        "D": "playing"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 424,
+      "category": "Reading Comprehension",
+      "question": "Which word fits: 'The cat ___ on the table.'?",
+      "answers": {
+        "A": "sit",
+        "B": "sits",
+        "C": "sitting",
+        "D": "sat"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 425,
+      "category": "Reading Comprehension",
+      "question": "Which word fits: 'We ___ in the park.'?",
+      "answers": {
+        "A": "plays",
+        "B": "play",
+        "C": "playing",
+        "D": "played"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 426,
+      "category": "Reading Comprehension",
+      "question": "'Mary has a little lamb. Its fleece is white as snow.' What color is the lamb's fleece?",
+      "answers": {
+        "A": "Black",
+        "B": "Brown",
+        "C": "White",
+        "D": "Grey"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 427,
+      "category": "Reading Comprehension",
+      "question": "'Jack and Jill went up the hill to fetch a pail of water.' What did they go to fetch?",
+      "answers": {
+        "A": "A bucket of milk",
+        "B": "A pail of juice",
+        "C": "A pail of water",
+        "D": "A basket of food"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 428,
+      "category": "Reading Comprehension",
+      "question": "'Humpty Dumpty sat on a wall.' What did Humpty Dumpty sit on?",
+      "answers": {
+        "A": "A chair",
+        "B": "A fence",
+        "C": "A wall",
+        "D": "A rock"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 429,
+      "category": "Reading Comprehension",
+      "question": "'Old MacDonald had a farm. On his farm he had a cow.' What animal did Old MacDonald have?",
+      "answers": {
+        "A": "A sheep",
+        "B": "A pig",
+        "C": "A horse",
+        "D": "A cow"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 430,
+      "category": "Reading Comprehension",
+      "question": "'Little Miss Muffet sat on a tuffet, eating her curds and whey.' What was Miss Muffet doing?",
+      "answers": {
+        "A": "Sleeping",
+        "B": "Playing",
+        "C": "Eating",
+        "D": "Running"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 431,
+      "category": "Reading Comprehension",
+      "question": "Tom wears a coat and scarf. What is the weather probably like?",
+      "answers": {
+        "A": "Hot",
+        "B": "Rainy",
+        "C": "Cold",
+        "D": "Sunny"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 432,
+      "category": "Reading Comprehension",
+      "question": "Sue has a candle because the lights went out. What happened?",
+      "answers": {
+        "A": "She is having a party",
+        "B": "The power went out",
+        "C": "She is decorating",
+        "D": "She is cooking"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 433,
+      "category": "Reading Comprehension",
+      "question": "The boy yawns and rubs his eyes. He is probably ___.",
+      "answers": {
+        "A": "Hungry",
+        "B": "Angry",
+        "C": "Sleepy",
+        "D": "Excited"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 434,
+      "category": "Reading Comprehension",
+      "question": "Anna smiles and jumps up and down. She is probably ___.",
+      "answers": {
+        "A": "Sad",
+        "B": "Angry",
+        "C": "Scared",
+        "D": "Happy"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 435,
+      "category": "Reading Comprehension",
+      "question": "The children run to get umbrellas. What is the weather?",
+      "answers": {
+        "A": "Sunny",
+        "B": "Windy",
+        "C": "Rainy",
+        "D": "Snowy"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 436,
+      "category": "Reading Comprehension",
+      "question": "There is cake and balloons. What event is happening?",
+      "answers": {
+        "A": "Graduation",
+        "B": "Birthday party",
+        "C": "Wedding",
+        "D": "Funeral"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 437,
+      "category": "Reading Comprehension",
+      "question": "The teacher says 'Open your books.' What should students do?",
+      "answers": {
+        "A": "Stand up",
+        "B": "Close books",
+        "C": "Open their books",
+        "D": "Start writing"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 438,
+      "category": "Reading Comprehension",
+      "question": "'First I wash my hands, then I eat.' When does she eat?",
+      "answers": {
+        "A": "Before washing",
+        "B": "After washing hands",
+        "C": "At the same time",
+        "D": "Not mentioned"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 439,
+      "category": "Reading Comprehension",
+      "question": "The cat is by the fish bowl. The cat licks its lips. What might happen?",
+      "answers": {
+        "A": "The cat will sleep",
+        "B": "The cat will drink water",
+        "C": "The cat wants to eat the fish",
+        "D": "The cat will play"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 440,
+      "category": "Reading Comprehension",
+      "question": "Dad puts on his coat and picks up his keys. He is going to ___.",
+      "answers": {
+        "A": "Sleep",
+        "B": "Cook",
+        "C": "Go outside",
+        "D": "Watch TV"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 441,
+      "category": "Reading Comprehension",
+      "question": "'She is as busy as a bee.' This means she is very ___.",
+      "answers": {
+        "A": "Sweet",
+        "B": "Small",
+        "C": "Hardworking",
+        "D": "Quiet"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 442,
+      "category": "Reading Comprehension",
+      "question": "The ice cream melted in the sun. What caused this?",
+      "answers": {
+        "A": "Cold weather",
+        "B": "Rain",
+        "C": "Heat from the sun",
+        "D": "Wind"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 443,
+      "category": "Reading Comprehension",
+      "question": "'The early bird catches the worm.' This means if you ___.",
+      "answers": {
+        "A": "Wake up late you get more food",
+        "B": "Wake up early you have an advantage",
+        "C": "Birds like worms",
+        "D": "Go to bed early"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 444,
+      "category": "Reading Comprehension",
+      "question": "'It's raining cats and dogs.' What does this expression mean?",
+      "answers": {
+        "A": "Animals are falling from sky",
+        "B": "It's raining very heavily",
+        "C": "Cats and dogs are playing",
+        "D": "It's raining lightly"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 445,
+      "category": "Reading Comprehension",
+      "question": "A girl is sitting alone and crying. She is probably ___.",
+      "answers": {
+        "A": "Happy",
+        "B": "Excited",
+        "C": "Upset or sad",
+        "D": "Hungry"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 446,
+      "category": "Phonics & Spelling",
+      "question": "Which word starts with the letter 'B'?",
+      "answers": {
+        "A": "Apple",
+        "B": "Cat",
+        "C": "Ball",
+        "D": "Dog"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 447,
+      "category": "Phonics & Spelling",
+      "question": "Which word starts with the letter 'C'?",
+      "answers": {
+        "A": "Bag",
+        "B": "Cat",
+        "C": "Egg",
+        "D": "Dog"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 448,
+      "category": "Phonics & Spelling",
+      "question": "Which word ends with '-at'?",
+      "answers": {
+        "A": "Dog",
+        "B": "Cat",
+        "C": "Hen",
+        "D": "Fox"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 449,
+      "category": "Phonics & Spelling",
+      "question": "Which word rhymes with 'cat'?",
+      "answers": {
+        "A": "Dog",
+        "B": "Car",
+        "C": "Hat",
+        "D": "Pen"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 450,
+      "category": "Phonics & Spelling",
+      "question": "Which word rhymes with 'dog'?",
+      "answers": {
+        "A": "Fog",
+        "B": "Cat",
+        "C": "Hen",
+        "D": "Ball"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 451,
+      "category": "Phonics & Spelling",
+      "question": "Which word rhymes with 'sun'?",
+      "answers": {
+        "A": "Moon",
+        "B": "Star",
+        "C": "Run",
+        "D": "Sky"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 452,
+      "category": "Phonics & Spelling",
+      "question": "Which word rhymes with 'hop'?",
+      "answers": {
+        "A": "Help",
+        "B": "Hope",
+        "C": "Shop",
+        "D": "Hat"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 453,
+      "category": "Phonics & Spelling",
+      "question": "Which word rhymes with 'fish'?",
+      "answers": {
+        "A": "Dish",
+        "B": "Book",
+        "C": "Tree",
+        "D": "Bird"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 454,
+      "category": "Phonics & Spelling",
+      "question": "Which word rhymes with 'cake'?",
+      "answers": {
+        "A": "Take",
+        "B": "Cook",
+        "C": "Bird",
+        "D": "Ball"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 455,
+      "category": "Phonics & Spelling",
+      "question": "Which word rhymes with 'night'?",
+      "answers": {
+        "A": "Day",
+        "B": "Star",
+        "C": "Light",
+        "D": "Moon"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 456,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling of the color?",
+      "answers": {
+        "A": "Bloo",
+        "B": "Blou",
+        "C": "Blue",
+        "D": "Bluw"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 457,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling?",
+      "answers": {
+        "A": "Grene",
+        "B": "Green",
+        "C": "Grean",
+        "D": "Gren"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 458,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling?",
+      "answers": {
+        "A": "Yello",
+        "B": "Yellw",
+        "C": "Yelow",
+        "D": "Yellow"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 459,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling?",
+      "answers": {
+        "A": "Redd",
+        "B": "Red",
+        "C": "Rad",
+        "D": "Rede"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 460,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling?",
+      "answers": {
+        "A": "Oraneg",
+        "B": "Orenge",
+        "C": "Orange",
+        "D": "Oring"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 461,
+      "category": "Phonics & Spelling",
+      "question": "Which letter comes after 'D' in the alphabet?",
+      "answers": {
+        "A": "C",
+        "B": "E",
+        "C": "F",
+        "D": "B"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 462,
+      "category": "Phonics & Spelling",
+      "question": "Which letter comes before 'G' in the alphabet?",
+      "answers": {
+        "A": "F",
+        "B": "H",
+        "C": "I",
+        "D": "E"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 463,
+      "category": "Phonics & Spelling",
+      "question": "How many vowels are in the word 'apple'?",
+      "answers": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 464,
+      "category": "Phonics & Spelling",
+      "question": "What are the vowels in English?",
+      "answers": {
+        "A": "a, b, c, d, e",
+        "B": "a, e, i, o, u",
+        "C": "b, c, d, f, g",
+        "D": "a, e, i, o, y"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 465,
+      "category": "Phonics & Spelling",
+      "question": "Which word has a silent letter?",
+      "answers": {
+        "A": "Cat",
+        "B": "Dog",
+        "C": "Knee",
+        "D": "Run"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 466,
+      "category": "Phonics & Spelling",
+      "question": "What sound does 'ph' make?",
+      "answers": {
+        "A": "P sound",
+        "B": "H sound",
+        "C": "F sound",
+        "D": "B sound"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 467,
+      "category": "Phonics & Spelling",
+      "question": "What does 'ch' sound like in 'chair'?",
+      "answers": {
+        "A": "K",
+        "B": "Sh",
+        "C": "Ch",
+        "D": "S"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 468,
+      "category": "Phonics & Spelling",
+      "question": "What does 'sh' sound like in 'ship'?",
+      "answers": {
+        "A": "S",
+        "B": "H",
+        "C": "Sh",
+        "D": "Ch"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 469,
+      "category": "Phonics & Spelling",
+      "question": "Which word has the long 'A' sound?",
+      "answers": {
+        "A": "Cat",
+        "B": "Apple",
+        "C": "Cake",
+        "D": "Ant"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 470,
+      "category": "Phonics & Spelling",
+      "question": "Which word has the short 'I' sound?",
+      "answers": {
+        "A": "Ice",
+        "B": "Bite",
+        "C": "Sit",
+        "D": "Pine"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 471,
+      "category": "Phonics & Spelling",
+      "question": "How many syllables are in 'elephant'?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 472,
+      "category": "Phonics & Spelling",
+      "question": "How many syllables are in 'butterfly'?",
+      "answers": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 473,
+      "category": "Phonics & Spelling",
+      "question": "How many syllables are in 'cat'?",
+      "answers": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 474,
+      "category": "Phonics & Spelling",
+      "question": "Which word has double letters?",
+      "answers": {
+        "A": "Cat",
+        "B": "Dog",
+        "C": "Ball",
+        "D": "Fish"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 475,
+      "category": "Phonics & Spelling",
+      "question": "Which word is correctly capitalized at the start?",
+      "answers": {
+        "A": "apple",
+        "B": "Apple",
+        "C": "APPLE",
+        "D": "aPPLE"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 476,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling of the number ten?",
+      "answers": {
+        "A": "Tne",
+        "B": "Tin",
+        "C": "Ten",
+        "D": "Tan"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 477,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling?",
+      "answers": {
+        "A": "Frend",
+        "B": "Frind",
+        "C": "Freind",
+        "D": "Friend"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 478,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling?",
+      "answers": {
+        "A": "Scool",
+        "B": "School",
+        "C": "Schol",
+        "D": "Skool"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 479,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling?",
+      "answers": {
+        "A": "Haus",
+        "B": "Hows",
+        "C": "House",
+        "D": "Howse"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 480,
+      "category": "Phonics & Spelling",
+      "question": "What is the correct spelling?",
+      "answers": {
+        "A": "Tabel",
+        "B": "Table",
+        "C": "Tabell",
+        "D": "Tabble"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 481,
+      "category": "Science & Nature",
+      "question": "What do plants need to grow?",
+      "answers": {
+        "A": "Only water",
+        "B": "Only sunlight",
+        "C": "Sunlight, water, and air",
+        "D": "Only soil"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 482,
+      "category": "Science & Nature",
+      "question": "What do we breathe to survive?",
+      "answers": {
+        "A": "Carbon dioxide",
+        "B": "Oxygen",
+        "C": "Nitrogen",
+        "D": "Steam"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 483,
+      "category": "Science & Nature",
+      "question": "What is the center of our solar system?",
+      "answers": {
+        "A": "Earth",
+        "B": "Moon",
+        "C": "Mars",
+        "D": "Sun"
+      },
+      "correct": "D"
+    },
+    {
+      "id": 484,
+      "category": "Science & Nature",
+      "question": "How many planets are in our solar system?",
+      "answers": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 485,
+      "category": "Science & Nature",
+      "question": "What is the closest planet to Earth?",
+      "answers": {
+        "A": "Mars",
+        "B": "Venus",
+        "C": "Jupiter",
+        "D": "Mercury"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 486,
+      "category": "Science & Nature",
+      "question": "What is the largest planet?",
+      "answers": {
+        "A": "Saturn",
+        "B": "Earth",
+        "C": "Jupiter",
+        "D": "Neptune"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 487,
+      "category": "Science & Nature",
+      "question": "What is the biggest star closest to Earth?",
+      "answers": {
+        "A": "Moon",
+        "B": "Mars",
+        "C": "Sun",
+        "D": "Venus"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 488,
+      "category": "Science & Nature",
+      "question": "What is the natural satellite of Earth?",
+      "answers": {
+        "A": "Sun",
+        "B": "Mars",
+        "C": "Moon",
+        "D": "Venus"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 489,
+      "category": "Science & Nature",
+      "question": "What do we call water that falls from the sky?",
+      "answers": {
+        "A": "Fog",
+        "B": "Dew",
+        "C": "Rain",
+        "D": "Mist"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 490,
+      "category": "Science & Nature",
+      "question": "What state of water is ice?",
+      "answers": {
+        "A": "Liquid",
+        "B": "Gas",
+        "C": "Solid",
+        "D": "Plasma"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 491,
+      "category": "Science & Nature",
+      "question": "What state of water is steam?",
+      "answers": {
+        "A": "Liquid",
+        "B": "Gas",
+        "C": "Solid",
+        "D": "Plasma"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 492,
+      "category": "Science & Nature",
+      "question": "What is the boiling point of water?",
+      "answers": {
+        "A": "50°C",
+        "B": "80°C",
+        "C": "100°C",
+        "D": "120°C"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 493,
+      "category": "Science & Nature",
+      "question": "What is the freezing point of water?",
+      "answers": {
+        "A": "0°C",
+        "B": "10°C",
+        "C": "-10°C",
+        "D": "5°C"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 494,
+      "category": "Science & Nature",
+      "question": "What do we call scientists who study plants?",
+      "answers": {
+        "A": "Biologists",
+        "B": "Geologists",
+        "C": "Botanists",
+        "D": "Chemists"
+      },
+      "correct": "C"
+    },
+    {
+      "id": 495,
+      "category": "Science & Nature",
+      "question": "What is photosynthesis?",
+      "answers": {
+        "A": "How animals eat",
+        "B": "How plants make food using sunlight",
+        "C": "How water evaporates",
+        "D": "How rocks form"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 496,
+      "category": "Science & Nature",
+      "question": "What does a thermometer measure?",
+      "answers": {
+        "A": "Wind speed",
+        "B": "Temperature",
+        "C": "Rainfall",
+        "D": "Air pressure"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 497,
+      "category": "Science & Nature",
+      "question": "What is the process of water becoming vapor called?",
+      "answers": {
+        "A": "Condensation",
+        "B": "Evaporation",
+        "C": "Precipitation",
+        "D": "Filtration"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 498,
+      "category": "Science & Nature",
+      "question": "What are the three states of matter?",
+      "answers": {
+        "A": "Hard, soft, medium",
+        "B": "Solid, liquid, gas",
+        "C": "Big, small, medium",
+        "D": "Hot, cold, warm"
+      },
+      "correct": "B"
+    },
+    {
+      "id": 499,
+      "category": "Science & Nature",
+      "question": "What makes day and night on Earth?",
+      "answers": {
+        "A": "Earth's rotation",
+        "B": "Moon's movement",
+        "C": "Sun's movement",
+        "D": "Cloud movement"
+      },
+      "correct": "A"
+    },
+    {
+      "id": 500,
+      "category": "Science & Nature",
+      "question": "What is the process of a caterpillar becoming a butterfly?",
+      "answers": {
+        "A": "Hibernation",
+        "B": "Migration",
+        "C": "Metamorphosis",
+        "D": "Evolution"
+      },
+      "correct": "C"
+    }
+  ]
+}

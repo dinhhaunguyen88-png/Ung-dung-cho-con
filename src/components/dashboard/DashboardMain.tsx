@@ -152,6 +152,13 @@ export function DashboardMain({
                     : 'missing config';
     const heroPetSize = pet.type === 'dragon' ? 300 : 250;
     const heroPetLabel = isVi ? PET_INFO[pet.type].nameVi : PET_INFO[pet.type].name;
+    const getQuestionBadge = (count?: number, type: 'subject' | 'total' = 'subject') => {
+        if (typeof count !== 'number') return undefined;
+        if (type === 'total') {
+            return isVi ? `Tong ${count} cau` : `Total ${count}`;
+        }
+        return isVi ? `${count} cau` : `${count} questions`;
+    };
 
     return (
         <section className="flex flex-1 flex-col gap-6">
@@ -414,6 +421,7 @@ export function DashboardMain({
                     subtitle={t('dashboard.activity.addSubtract')}
                     action={t('dashboard.activity.startTraining')}
                     color="bg-emerald-100 text-emerald-600 shadow-emerald-100"
+                    badge={getQuestionBadge(questionCounts?.bySubject.math)}
                     onClick={() => onStartQuest('math')}
                 />
                 <ActivityCard
@@ -422,6 +430,7 @@ export function DashboardMain({
                     subtitle={t('dashboard.activity.readingWriting')}
                     action={t('dashboard.activity.startTraining')}
                     color="bg-purple-100 text-purple-600 shadow-purple-100"
+                    badge={getQuestionBadge(questionCounts?.bySubject.vietnamese)}
                     onClick={() => onStartQuest('vietnamese')}
                 />
                 <ActivityCard
@@ -430,7 +439,17 @@ export function DashboardMain({
                     subtitle={t('dashboard.activity.numbersTo1000')}
                     action={t('dashboard.activity.continueLesson')}
                     color="bg-blue-100 text-blue-600 shadow-blue-100"
+                    badge={getQuestionBadge(questionCounts?.total, 'total')}
                     onClick={() => onStartQuest('math')}
+                />
+                <ActivityCard
+                    icon={<Languages size={32} />}
+                    title={t('dashboard.activity.englishPractice')}
+                    subtitle={t('dashboard.activity.vocabGrammar')}
+                    action={t('dashboard.activity.startTraining')}
+                    color="bg-sky-100 text-sky-600 shadow-sky-100"
+                    badge={getQuestionBadge(questionCounts?.bySubject.english)}
+                    onClick={() => onStartQuest('english')}
                 />
                 <ActivityCard
                     icon={<BrainCircuit size={32} />}
@@ -438,6 +457,7 @@ export function DashboardMain({
                     subtitle={t('dashboard.activity.scienceTopics')}
                     action={t('dashboard.activity.startTraining')}
                     color="bg-orange-100 text-orange-600 shadow-orange-100"
+                    badge={getQuestionBadge(questionCounts?.bySubject.science)}
                     onClick={() => onStartQuest('science')}
                 />
                 <ActivityCard
@@ -545,6 +565,7 @@ function ActivityCard({
     subtitle,
     action,
     color,
+    badge,
     onClick,
 }: {
     icon: ReactNode;
@@ -552,6 +573,7 @@ function ActivityCard({
     subtitle: string;
     action: string;
     color: string;
+    badge?: string;
     onClick: () => void;
 }) {
     return (
@@ -562,9 +584,18 @@ function ActivityCard({
             <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${color}`}>
                 {icon}
             </div>
-            <div>
-                <h4 className="font-bold text-slate-900">{title}</h4>
-                <p className="text-sm text-slate-500">{subtitle}</p>
+            <div className="min-w-0 flex-1">
+                <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                        <h4 className="font-bold text-slate-900">{title}</h4>
+                        <p className="text-sm text-slate-500">{subtitle}</p>
+                    </div>
+                    {badge && (
+                        <span className="shrink-0 rounded-full bg-slate-50 px-3 py-1 text-[11px] font-black text-slate-500 shadow-sm">
+                            {badge}
+                        </span>
+                    )}
+                </div>
                 <button className="mt-1 inline-block text-xs font-bold text-primary hover:underline">
                     {action}
                 </button>
